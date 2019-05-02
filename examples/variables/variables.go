@@ -1,6 +1,5 @@
-// In Go, _variables_ are explicitly declared and used by
-// the compiler to e.g. check type-correctness of function
-// calls.
+// Goでは、_変数_は明示的に宣言されます。コンパイラはこれを使って、
+// 関数呼び出しの型の正しさをチェックなどをします。
 
 package main
 
@@ -8,27 +7,25 @@ import "fmt"
 
 func main() {
 
-    // `var` declares 1 or more variables.
-    var a = "initial"
-    fmt.Println(a)
+	// `var`はひとつ以上の変数を宣言します。
+	var a = "initial"
+	fmt.Println(a)
 
-    // You can declare multiple variables at once.
-    var b, c int = 1, 2
-    fmt.Println(b, c)
+	// 複数の変数を一度に宣言できます。
+	var b, c int = 1, 2
+	fmt.Println(b, c)
 
-    // Go will infer the type of initialized variables.
-    var d = true
-    fmt.Println(d)
+	// Goは初期化された変数の型を推論します。
+	var d = true
+	fmt.Println(d)
 
-    // Variables declared without a corresponding
-    // initialization are _zero-valued_. For example, the
-    // zero value for an `int` is `0`.
-    var e int
-    fmt.Println(e)
+	// 初期値がセットされない変数は_ゼロ値_です。例えば、
+	// `int`のゼロ値は`0`です。
+	var e int
+	fmt.Println(e)
 
-    // The `:=` syntax is shorthand for declaring and
-    // initializing a variable, e.g. for
-    // `var f string = "short"` in this case.
-    f := "short"
-    fmt.Println(f)
+	// `:=`という構文は変数の宣言と初期化の簡易表記です。
+	// この例は、`var f string = "short"`と同じです。
+	f := "short"
+	fmt.Println(f)
 }

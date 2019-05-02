@@ -1,6 +1,5 @@
-// Go has various value types including strings,
-// integers, floats, booleans, etc. Here are a few
-// basic examples.
+// Goにはさまざまな値型があります。文字列、整数、浮動小数点数、ブーリアンなどです。
+// いくつか基本的な例を示します。
 
 package main
 
@@ -8,15 +7,15 @@ import "fmt"
 
 func main() {
 
-    // Strings, which can be added together with `+`.
-    fmt.Println("go" + "lang")
+	// 文字列です。`+`で結合できます。
+	fmt.Println("go" + "lang")
 
-    // Integers and floats.
-    fmt.Println("1+1 =", 1+1)
-    fmt.Println("7.0/3.0 =", 7.0/3.0)
+	// 整数と浮動小数点数です。
+	fmt.Println("1+1 =", 1+1)
+	fmt.Println("7.0/3.0 =", 7.0/3.0)
 
-    // Booleans, with boolean operators as you'd expect.
-    fmt.Println(true && false)
-    fmt.Println(true || false)
-    fmt.Println(!true)
+	// ブーリアンです。おなじみの演算子が使えます。
+	fmt.Println(true && false)
+	fmt.Println(true || false)
+	fmt.Println(!true)
 }

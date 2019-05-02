@@ -25,12 +25,12 @@
         
         <tr>
           <td class="docs">
-            <p>Our first program will print the classic &ldquo;hello world&rdquo;
-message. Here&rsquo;s the full source code.</p>
+            <p>最初のプログラムはおなじみの&rdquo;hello world&rdquo;を表示します。
+以下が完全なコードです。</p>
 
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/2C7wwJ6nxG"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/tN9U1k8BQDn"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
