@@ -6,7 +6,7 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script type="text/javascript">
-    if (window.location.host == "gobyexample.com") {
+    if (window.location.host == "gobyexample.tokutakes.com") {
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-34996217-1']);
       _gaq.push(['_trackPageview']);
@@ -314,7 +314,7 @@ the <a href="http://golang.org/pkg/regexp/"><code>regexp</code></a> package docs
       
       
       <p class="next">
-        Next example: <a href="json">JSON</a>.
+        次の例: <a href="json">JSON</a>.
       </p>
       
       <p class="footer">

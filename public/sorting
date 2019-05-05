@@ -6,7 +6,7 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script type="text/javascript">
-    if (window.location.host == "gobyexample.com") {
+    if (window.location.host == "gobyexample.tokutakes.com") {
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-34996217-1']);
       _gaq.push(['_trackPageview']);
@@ -146,7 +146,7 @@ slices and <code>true</code> as the result of our <code>AreSorted</code> test.</
       
       
       <p class="next">
-        Next example: <a href="sorting-by-functions">Sorting by Functions</a>.
+        次の例: <a href="sorting-by-functions">Sorting by Functions</a>.
       </p>
       
       <p class="footer">

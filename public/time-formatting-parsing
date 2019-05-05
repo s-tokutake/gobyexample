@@ -6,7 +6,7 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script type="text/javascript">
-    if (window.location.host == "gobyexample.com") {
+    if (window.location.host == "gobyexample.tokutakes.com") {
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-34996217-1']);
       _gaq.push(['_trackPageview']);
@@ -186,7 +186,7 @@ RFC3339に基づきます。対応するレイアウト定数を使っていま�
       
       
       <p class="next">
-        Next example: <a href="random-numbers">Random Numbers</a>.
+        次の例: <a href="random-numbers">Random Numbers</a>.
       </p>
       
       <p class="footer">

@@ -6,7 +6,7 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script type="text/javascript">
-    if (window.location.host == "gobyexample.com") {
+    if (window.location.host == "gobyexample.tokutakes.com") {
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-34996217-1']);
       _gaq.push(['_trackPageview']);
@@ -159,7 +159,7 @@ parsing and formatting.</p>
       
       
       <p class="next">
-        Next example: <a href="time-formatting-parsing">Time Formatting / Parsing</a>.
+        次の例: <a href="time-formatting-parsing">Time Formatting / Parsing</a>.
       </p>
       
       <p class="footer">

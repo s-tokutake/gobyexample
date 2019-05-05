@@ -6,7 +6,7 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script type="text/javascript">
-    if (window.location.host == "gobyexample.com") {
+    if (window.location.host == "gobyexample.tokutakes.com") {
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-34996217-1']);
       _gaq.push(['_trackPageview']);
@@ -202,7 +202,7 @@ state.</p>
       
       
       <p class="next">
-        Next example: <a href="mutexes">Mutexes</a>.
+        次の例: <a href="mutexes">Mutexes</a>.
       </p>
       
       <p class="footer">

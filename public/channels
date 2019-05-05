@@ -6,7 +6,7 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script type="text/javascript">
-    if (window.location.host == "gobyexample.com") {
+    if (window.location.host == "gobyexample.tokutakes.com") {
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-34996217-1']);
       _gaq.push(['_trackPageview']);
@@ -155,7 +155,7 @@ message without having to use any other synchronization.</p>
       
       
       <p class="next">
-        Next example: <a href="channel-buffering">Channel Buffering</a>.
+        次の例: <a href="channel-buffering">Channel Buffering</a>.
       </p>
       
       <p class="footer">

@@ -6,7 +6,7 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script type="text/javascript">
-    if (window.location.host == "gobyexample.com") {
+    if (window.location.host == "gobyexample.tokutakes.com") {
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-34996217-1']);
       _gaq.push(['_trackPageview']);
@@ -173,7 +173,7 @@ but they both decode to the original string as desired.</p>
       
       
       <p class="next">
-        Next example: <a href="reading-files">Reading Files</a>.
+        次の例: <a href="reading-files">Reading Files</a>.
       </p>
       
       <p class="footer">
