@@ -161,8 +161,7 @@
         
         <tr>
           <td class="docs">
-            <p>The last feature of functions we&rsquo;ll look at for now is
-recursion.</p>
+            <p>最後に紹介する関数の特徴は再帰です。</p>
 
           </td>
           <td class="code empty">
@@ -179,7 +178,7 @@ recursion.</p>
       </p>
       
       <p class="footer">
-        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/closures">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/closures">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
       </p>
     </div>
   </body>

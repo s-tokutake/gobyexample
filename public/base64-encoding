@@ -141,9 +141,8 @@ b64という名前でインポートします。これによっていくらか�
         
         <tr>
           <td class="docs">
-            <p>The string encodes to slightly different values with the
-standard and URL base64 encoders (trailing <code>+</code> vs <code>-</code>)
-but they both decode to the original string as desired.</p>
+            <p>標準とURLのbase64エンコーダではエンコード結果がわずかに違います(末尾の <code>+</code>と<code>-</code>)。
+しかし、デコードは望み通りの元の文字列になります。</p>
 
           </td>
           <td class="code leading">
@@ -177,7 +176,7 @@ but they both decode to the original string as desired.</p>
       </p>
       
       <p class="footer">
-        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/base64-encoding">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/base64-encoding">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
       </p>
     </div>
   </body>

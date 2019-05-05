@@ -196,9 +196,7 @@
         
         <tr>
           <td class="docs">
-            <p>See the <a href="http://golang.org/pkg/math/rand/"><code>math/rand</code></a>
-package docs for references on other random quantities
-that Go can provide.</p>
+            <p>Goが提供する他の乱数処理については<a href="http://golang.org/pkg/math/rand/"><code>math/rand</code></a>パッケージのドキュメントでを見てください。</p>
 
           </td>
           <td class="code empty">
@@ -215,7 +213,7 @@ that Go can provide.</p>
       </p>
       
       <p class="footer">
-        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/random-numbers">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/random-numbers">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
       </p>
     </div>
   </body>

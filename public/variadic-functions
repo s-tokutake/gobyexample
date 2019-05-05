@@ -142,8 +142,7 @@
         
         <tr>
           <td class="docs">
-            <p>Another key aspect of functions in Go is their ability
-to form closures, which we&rsquo;ll look at next.</p>
+            <p>次に紹介するクロージャもGoの関数にとって重要な機能です。</p>
 
           </td>
           <td class="code empty">
@@ -160,7 +159,7 @@ to form closures, which we&rsquo;ll look at next.</p>
       </p>
       
       <p class="footer">
-        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/variadic-functions">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/variadic-functions">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
       </p>
     </div>
   </body>

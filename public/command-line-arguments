@@ -124,8 +124,8 @@
         
         <tr>
           <td class="docs">
-            <p>To experiment with command-line arguments it&rsquo;s best to
-build a binary with <code>go build</code> first.</p>
+            <p>コマンドライン引数の挙動を確かめるには
+<code>go build</code>でバイナリをビルドするのがいいでしょう。</p>
 
           </td>
           <td class="code leading">
@@ -142,8 +142,7 @@ build a binary with <code>go build</code> first.</p>
         
         <tr>
           <td class="docs">
-            <p>Next we&rsquo;ll look at more advanced command-line processing
-with flags.</p>
+            <p>次はフラグを使ったコマンドラインの処理を紹介します。</p>
 
           </td>
           <td class="code empty">
@@ -160,7 +159,7 @@ with flags.</p>
       </p>
       
       <p class="footer">
-        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/command-line-arguments">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/command-line-arguments">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
       </p>
     </div>
   </body>

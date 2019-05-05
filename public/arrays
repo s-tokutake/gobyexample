@@ -155,8 +155,7 @@
         
         <tr>
           <td class="docs">
-            <p>Note that arrays appear in the form <code>[v1 v2 v3 ...]</code>
-when printed with <code>fmt.Println</code>.</p>
+            <p><code>fmt.Println</code>をすると配列は<code>[v1 v2 v3 ...]</code>という形式で表示されます。</p>
 
           </td>
           <td class="code leading">
@@ -175,8 +174,8 @@ when printed with <code>fmt.Println</code>.</p>
         
         <tr>
           <td class="docs">
-            <p>You&rsquo;ll see <em>slices</em> much more often than arrays in
-typical Go. We&rsquo;ll look at slices next.</p>
+            <p>典型的なGoのコードでは配列よりも_スライス_を多く見かけます。
+次はスライスを見ましょう。</p>
 
           </td>
           <td class="code empty">
@@ -193,7 +192,7 @@ typical Go. We&rsquo;ll look at slices next.</p>
       </p>
       
       <p class="footer">
-        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/arrays">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/arrays">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
       </p>
     </div>
   </body>

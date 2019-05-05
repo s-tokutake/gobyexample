@@ -124,9 +124,7 @@
         
         <tr>
           <td class="docs">
-            <p>This example also showed that it&rsquo;s possible to close
-a non-empty channel but still have the remaining
-values be received.</p>
+            <p>この例はまだ受信できる値がある、空でないチャンネルも閉じることができることを示しています。</p>
 
           </td>
           <td class="code empty">
@@ -143,7 +141,7 @@ values be received.</p>
       </p>
       
       <p class="footer">
-        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/range-over-channels">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/range-over-channels">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
       </p>
     </div>
   </body>

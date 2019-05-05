@@ -264,7 +264,7 @@
         
         <tr>
           <td class="docs">
-            <p>Next we&rsquo;ll look at writing files.</p>
+            <p>次はファイルの書き込みです。</p>
 
           </td>
           <td class="code empty">
@@ -281,7 +281,7 @@
       </p>
       
       <p class="footer">
-        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/reading-files">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/reading-files">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
       </p>
     </div>
   </body>

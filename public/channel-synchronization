@@ -151,9 +151,8 @@
         
         <tr>
           <td class="docs">
-            <p>If you removed the <code>&lt;- done</code> line from this program, the
-program would exit before the <code>worker</code> even
-started.</p>
+            <p>このプログラムから<code>&lt;- done</code>を削除すると<code>worker</code>が開始していなくても
+プログラムは終了してしまいます。</p>
 
           </td>
           <td class="code empty">
@@ -170,7 +169,7 @@ started.</p>
       </p>
       
       <p class="footer">
-        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/channel-synchronization">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/channel-synchronization">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
       </p>
     </div>
   </body>

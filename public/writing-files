@@ -223,7 +223,7 @@
         
         <tr>
           <td class="docs">
-            <p>Try running the file-writing code.</p>
+            <p>file-writingを実行してみましょう。</p>
 
           </td>
           <td class="code leading">
@@ -239,7 +239,7 @@
         
         <tr>
           <td class="docs">
-            <p>Then check the contents of the written files.</p>
+            <p>次にファイルの中身を確認します。</p>
 
           </td>
           <td class="code leading">
@@ -258,8 +258,8 @@
         
         <tr>
           <td class="docs">
-            <p>Next we&rsquo;ll look at applying some of the file I/O ideas
-we&rsquo;ve just seen to the <code>stdin</code> and <code>stdout</code> streams.</p>
+            <p>次は今まで学んできたI/Oのアイディアを
+<code>stdin</code>と<code>stdout</code>のストリームに応用してみます。</p>
 
           </td>
           <td class="code empty">
@@ -276,7 +276,7 @@ we&rsquo;ve just seen to the <code>stdin</code> and <code>stdout</code> streams.
       </p>
       
       <p class="footer">
-        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/writing-files">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/writing-files">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
       </p>
     </div>
   </body>

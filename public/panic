@@ -110,9 +110,9 @@
         
         <tr>
           <td class="docs">
-            <p>Running this program will cause it to panic, print
-an error message and goroutine traces, and exit with
-a non-zero status.</p>
+            <p>これを実行するとpanicが発生します。
+エラーメッセージとゴルーチンのトレースが表示され
+0でないステータスが返ります。</p>
 
           </td>
           <td class="code leading">
@@ -142,9 +142,8 @@ a non-zero status.</p>
         
         <tr>
           <td class="docs">
-            <p>Note that unlike some languages which use exceptions
-for handling of many errors, in Go it is idiomatic
-to use error-indicating return values wherever possible.</p>
+            <p>エラー処理で例外を使う他の言語と違い、
+Goは可能な場合はエラーを示す戻り値を返すのが普通です。</p>
 
           </td>
           <td class="code empty">
@@ -161,7 +160,7 @@ to use error-indicating return values wherever possible.</p>
       </p>
       
       <p class="footer">
-        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/panic">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/panic">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
       </p>
     </div>
   </body>

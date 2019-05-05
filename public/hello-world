@@ -69,8 +69,8 @@
         
         <tr>
           <td class="docs">
-            <p>To run the program, put the code in <code>hello-world.go</code> and
-use <code>go run</code>.</p>
+            <p>プログラムを実行するには<code>hello-world.go</code>というファイルにコードを書いて
+<code>go run</code>を実行します。</p>
 
           </td>
           <td class="code leading">
@@ -84,8 +84,7 @@ use <code>go run</code>.</p>
         
         <tr>
           <td class="docs">
-            <p>Sometimes we&rsquo;ll want to build our programs into
-binaries. We can do this using <code>go build</code>.</p>
+            <p>プログラムをバイナリにビルドしたい場合は<code>go build</code>です。</p>
 
           </td>
           <td class="code leading">
@@ -100,7 +99,7 @@ binaries. We can do this using <code>go build</code>.</p>
         
         <tr>
           <td class="docs">
-            <p>We can then execute the built binary directly.</p>
+            <p>ビルドしたバイナリを直接実行できます。</p>
 
           </td>
           <td class="code leading">
@@ -114,8 +113,8 @@ binaries. We can do this using <code>go build</code>.</p>
         
         <tr>
           <td class="docs">
-            <p>Now that we can run and build basic Go programs, let&rsquo;s
-learn more about the language.</p>
+            <p>基本的なGoプログラムの実行とビルドができるようになりました。
+学習を進めていきましょう。</p>
 
           </td>
           <td class="code empty">
@@ -132,7 +131,7 @@ learn more about the language.</p>
       </p>
       
       <p class="footer">
-        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/hello-world">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/hello-world">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
       </p>
     </div>
   </body>

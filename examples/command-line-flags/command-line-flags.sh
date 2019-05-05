@@ -1,6 +1,5 @@
-# To experiment with the command-line flags program it's
-# best to first compile it and then run the resulting
-# binary directly.
+# コマンドラインフラグの挙動を確かめるにはコンパイルして
+# バイナリを直接実行するといいでしょう。
 $ go build command-line-flags.go
 
 # Try out the built program by first giving it values for

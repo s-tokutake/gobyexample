@@ -166,8 +166,7 @@
         
         <tr>
           <td class="docs">
-            <p>The idea of closed channels leads naturally to our next
-example: <code>range</code> over channels.</p>
+            <p>チャンネルを閉じるというアイディアは自然と次のチャンネルに対する<code>range</code>に繋がります。</p>
 
           </td>
           <td class="code empty">
@@ -184,7 +183,7 @@ example: <code>range</code> over channels.</p>
       </p>
       
       <p class="footer">
-        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/closing-channels">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/closing-channels">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
       </p>
     </div>
   </body>

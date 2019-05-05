@@ -1,5 +1,4 @@
-# Running this program shows the first operation timing
-# out and the second succeeding.
+# このプログラムを実行すると最初の操作がタイムアウトし次が成功するのがわかります。
 $ go run timeouts.go 
 timeout 1
 result 2

@@ -1,6 +1,6 @@
-# Running this program will cause it to panic, print
-# an error message and goroutine traces, and exit with
-# a non-zero status.
+# これを実行するとpanicが発生します。
+# エラーメッセージとゴルーチンのトレースが表示され
+# 0でないステータスが返ります。
 $ go run panic.go
 panic: a problem
 
@@ -10,6 +10,5 @@ main.main()
 ...
 exit status 2
 
-# Note that unlike some languages which use exceptions
-# for handling of many errors, in Go it is idiomatic
-# to use error-indicating return values wherever possible.
+# エラー処理で例外を使う他の言語と違い、
+# Goは可能な場合はエラーを示す戻り値を返すのが普通です。

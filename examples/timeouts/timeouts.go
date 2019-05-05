@@ -1,7 +1,6 @@
-// _タイムアウト_は are important for programs that connect to
-// external resources or that otherwise need to bound
-// execution time. Implementing timeouts in Go is easy and
-// elegant thanks to channels and `select`.
+// _タイムアウト_は外部のリソースに接続するプログラムにとって重要です。
+// タイムアウトがなければ実行時間を抑制する必要があります。
+// チャンネルと`select`のおかげてGoでタイムアウトを実装するのは簡単です。
 
 package main
 
@@ -10,7 +9,7 @@ import "fmt"
 
 func main() {
 
-    // For our example, suppose we're executing an external
+    // この例では2秒後に`c1`チャンネルに結果を返すFor our example, suppose we're executing an external
     // call that returns its result on a channel `c1`
     // after 2s.
     c1 := make(chan string, 1)
