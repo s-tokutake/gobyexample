@@ -9,20 +9,20 @@ import "time"
 
 func main() {
 
-	// `time.Now`の`Unix`と`UnixNano`でUnixエポックからの経過時間を
-	// 秒とナノ秒で取得できます。
-	now := time.Now()
-	secs := now.Unix()
-	nanos := now.UnixNano()
-	fmt.Println(now)
+    // `time.Now`の`Unix`と`UnixNano`でUnixエポックからの経過時間を
+    // 秒とナノ秒で取得できます。
+    now := time.Now()
+    secs := now.Unix()
+    nanos := now.UnixNano()
+    fmt.Println(now)
 
-	// `UnixMillis`はありません。ミリ秒で取得するにはナノ秒から計算します。
-	millis := nanos / 1000000
-	fmt.Println(secs)
-	fmt.Println(millis)
-	fmt.Println(nanos)
+    // `UnixMillis`はありません。ミリ秒で取得するにはナノ秒から計算します。
+    millis := nanos / 1000000
+    fmt.Println(secs)
+    fmt.Println(millis)
+    fmt.Println(nanos)
 
-	// 整数値の秒やナノ秒を対応する`time`に変換できます。
-	fmt.Println(time.Unix(secs, 0))
-	fmt.Println(time.Unix(0, nanos))
+    // 整数値の秒やナノ秒を対応する`time`に変換できます。
+    fmt.Println(time.Unix(secs, 0))
+    fmt.Println(time.Unix(0, nanos))
 }

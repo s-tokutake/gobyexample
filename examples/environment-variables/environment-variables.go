@@ -10,20 +10,20 @@ import "fmt"
 
 func main() {
 
-	// キー/値のペアを設定するには`os.Setenv`を使います。
-	// キーの値を取り出すには`os.Getenv`を使います。
-	// 環境にキーがなければ空の文字列を返します。
-	os.Setenv("FOO", "1")
-	fmt.Println("FOO:", os.Getenv("FOO"))
-	fmt.Println("BAR:", os.Getenv("BAR"))
+    // キー/値のペアを設定するには`os.Setenv`を使います。
+    // キーの値を取り出すには`os.Getenv`を使います。
+    // 環境にキーがなければ空の文字列を返します。
+    os.Setenv("FOO", "1")
+    fmt.Println("FOO:", os.Getenv("FOO"))
+    fmt.Println("BAR:", os.Getenv("BAR"))
 
-	// 環境内のキー/値のペアをすべて一覧するには`os.Environ`を使います。
-	// これは`KEY=value`という形式の文字列のスライスを返します。
-	// `strings.Split`を使ってキーと値を取り出せます。
-	// ここでは全てのキーを表示指定ます。
-	fmt.Println()
-	for _, e := range os.Environ() {
-		pair := strings.Split(e, "=")
-		fmt.Println(pair[0])
-	}
+    // 環境内のキー/値のペアをすべて一覧するには`os.Environ`を使います。
+    // これは`KEY=value`という形式の文字列のスライスを返します。
+    // `strings.Split`を使ってキーと値を取り出せます。
+    // ここでは全てのキーを表示指定ます。
+    fmt.Println()
+    for _, e := range os.Environ() {
+        pair := strings.Split(e, "=")
+        fmt.Println(pair[0])
+    }
 }

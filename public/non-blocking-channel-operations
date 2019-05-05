@@ -25,10 +25,9 @@
         
         <tr>
           <td class="docs">
-            <p>Basic sends and receives on channels are blocking.
-However, we can use <code>select</code> with a <code>default</code> clause to
-implement <em>non-blocking</em> sends, receives, and even
-non-blocking multi-way <code>select</code>s.</p>
+            <p>基本的なチャンネルの送受信はブロッキングです。
+しかし、<code>default</code>句のある<code>select</code>を使うことで
+_ノンブロッキング_な送受信やノンブロッキングで複数チャンネルを扱う<code>select</code>を実装できます。</p>
 
           </td>
           <td class="code empty leading">
@@ -42,7 +41,7 @@ non-blocking multi-way <code>select</code>s.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/n5ttmOsMrrJ"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/yRg5Of8sn6z"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -77,10 +76,9 @@ non-blocking multi-way <code>select</code>s.</p>
         
         <tr>
           <td class="docs">
-            <p>Here&rsquo;s a non-blocking receive. If a value is
-available on <code>messages</code> then <code>select</code> will take
-the <code>&lt;-messages</code> <code>case</code> with that value. If not
-it will immediately take the <code>default</code> case.</p>
+            <p>これがノンブロッキングな受信です。<code>messages</code>の値が利用可能なら
+<code>select</code>は<code>&lt;-messages</code>の<code>case</code>を選択し値を取得します。
+そうでないなら即座に<code>default</code>を選択します。</p>
 
           </td>
           <td class="code leading">
@@ -98,10 +96,9 @@ it will immediately take the <code>default</code> case.</p>
         
         <tr>
           <td class="docs">
-            <p>A non-blocking send works similarly. Here <code>msg</code>
-cannot be sent to the <code>messages</code> channel, because
-the channel has no buffer and there is no receiver.
-Therefore the <code>default</code> case is selected.</p>
+            <p>ノンブロッキングな送信も同様です。ここでは<code>msg</code>は<code>messages</code>チャンネルに送信されません。
+チャンネルがバッファなしであり、対応する受信がないからです。
+それゆえ、<code>default</code>が選択されます。</p>
 
           </td>
           <td class="code leading">
@@ -120,10 +117,9 @@ Therefore the <code>default</code> case is selected.</p>
         
         <tr>
           <td class="docs">
-            <p>We can use multiple <code>case</code>s above the <code>default</code>
-clause to implement a multi-way non-blocking
-select. Here we attempt non-blocking receives
-on both <code>messages</code> and <code>signals</code>.</p>
+            <p>複数の<code>case</code>を<code>default</code>の前に書くことでノンブロッキングで
+複数チャンネルを扱うselectを実装できます。
+ここでは、<code>messages</code>と<code>signals</code>からの受信をノンブロッキングで行なっています。</p>
 
           </td>
           <td class="code">

@@ -25,8 +25,7 @@
         
         <tr>
           <td class="docs">
-            <p>Writing files in Go follows similar patterns to the
-ones we saw earlier for reading.</p>
+            <p>Goのファイル書き込みは前に見た読み込みと同じようなパターンに従います。</p>
 
           </td>
           <td class="code empty leading">
@@ -40,7 +39,7 @@ ones we saw earlier for reading.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/5usz1Oc-xY"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/5n7OI6kBWY2"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -94,8 +93,7 @@ ones we saw earlier for reading.</p>
         
         <tr>
           <td class="docs">
-            <p>To start, here&rsquo;s how to dump a string (or just
-bytes) into a file.</p>
+            <p>まず文字列(つまり単なるバイト)をファイルにダンプします。</p>
 
           </td>
           <td class="code leading">
@@ -110,7 +108,7 @@ bytes) into a file.</p>
         
         <tr>
           <td class="docs">
-            <p>For more granular writes, open a file for writing.</p>
+            <p>もっと細かく書き込みを行うには書き込み用のファイルを開きます。</p>
 
           </td>
           <td class="code leading">
@@ -124,8 +122,7 @@ bytes) into a file.</p>
         
         <tr>
           <td class="docs">
-            <p>It&rsquo;s idiomatic to defer a <code>Close</code> immediately
-after opening a file.</p>
+            <p>ファイルを開いたら直後に<code>Close</code>をdefer付きで実行します。</p>
 
           </td>
           <td class="code leading">
@@ -138,7 +135,7 @@ after opening a file.</p>
         
         <tr>
           <td class="docs">
-            <p>You can <code>Write</code> byte slices as you&rsquo;d expect.</p>
+            <p>バイトのスライスを<code>Write</code>できます。</p>
 
           </td>
           <td class="code leading">
@@ -154,7 +151,7 @@ after opening a file.</p>
         
         <tr>
           <td class="docs">
-            <p>A <code>WriteString</code> is also available.</p>
+            <p><code>WriteString</code>も可能です。</p>
 
           </td>
           <td class="code leading">
@@ -168,7 +165,7 @@ after opening a file.</p>
         
         <tr>
           <td class="docs">
-            <p>Issue a <code>Sync</code> to flush writes to stable storage.</p>
+            <p><code>Sync</code>を使うと安定的なストレージに書き込みをフラッシュします。</p>
 
           </td>
           <td class="code leading">
@@ -181,8 +178,8 @@ after opening a file.</p>
         
         <tr>
           <td class="docs">
-            <p><code>bufio</code> provides buffered writers in addition
-to the buffered readers we saw earlier.</p>
+            <p><code>bufio</code>は前に紹介したバッファ付き読み込みに加え
+バッファ付きの書き込みを提供します。</p>
 
           </td>
           <td class="code leading">
@@ -197,8 +194,7 @@ to the buffered readers we saw earlier.</p>
         
         <tr>
           <td class="docs">
-            <p>Use <code>Flush</code> to ensure all buffered operations have
-been applied to the underlying writer.</p>
+            <p><code>Flush</code>を使うとすべてのバッファされた操作が適用されます。</p>
 
           </td>
           <td class="code leading">

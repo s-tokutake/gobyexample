@@ -25,8 +25,7 @@
         
         <tr>
           <td class="docs">
-            <p>Use <code>os.Exit</code> to immediately exit with a given
-status.</p>
+            <p><code>os.Exit</code>を使えば特定のステータスでプログラムを終了できます。</p>
 
           </td>
           <td class="code empty leading">
@@ -40,7 +39,7 @@ status.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/CDiAh9SXRM"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/AACddl11Ani"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -74,8 +73,8 @@ status.</p>
         
         <tr>
           <td class="docs">
-            <p><code>defer</code>s will <em>not</em> be run when using <code>os.Exit</code>, so
-this <code>fmt.Println</code> will never be called.</p>
+            <p>os.Exit<code>を使う場合、</code>defer<code>は実行_されません_。したがって、
+この</code>fmt.Println`は実行されません。</p>
 
           </td>
           <td class="code leading">
@@ -88,7 +87,7 @@ this <code>fmt.Println</code> will never be called.</p>
         
         <tr>
           <td class="docs">
-            <p>Exit with status 3.</p>
+            <p>ステータス3でプログラムを終了します。</p>
 
           </td>
           <td class="code leading">
@@ -102,10 +101,8 @@ this <code>fmt.Println</code> will never be called.</p>
         
         <tr>
           <td class="docs">
-            <p>Note that unlike e.g. C, Go does not use an integer
-return value from <code>main</code> to indicate exit status. If
-you&rsquo;d like to exit with a non-zero status you should
-use <code>os.Exit</code>.</p>
+            <p>Cとは違い、Goは<code>main</code>で整数の戻り値を使ってステータスを示しません。
+0でないステータスでプログラムを終えたいなら、<code>os.Exit</code>を使う必要があります。</p>
 
           </td>
           <td class="code empty">

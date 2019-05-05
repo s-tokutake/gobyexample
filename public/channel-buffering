@@ -25,12 +25,11 @@
         
         <tr>
           <td class="docs">
-            <p>By default channels are <em>unbuffered</em>, meaning that they
-will only accept sends (<code>chan &lt;-</code>) if there is a
-corresponding receive (<code>&lt;- chan</code>) ready to receive the
-sent value. <em>Buffered channels</em> accept a limited
-number of  values without a corresponding receiver for
-those values.</p>
+            <p>デフォルトではチャンネルは_バッファなし_です。
+つまり、送信(<code>chan &lt;-</code>)を受け付けるのは対応する受信(<code>&lt;- chan</code>)が
+送信された値を受け取る準備ができているときだけです。
+_バッファありチャンネル_の場合、対応する受信がなくても指定した数の値を
+受け付けることができます。</p>
 
           </td>
           <td class="code empty leading">
@@ -44,7 +43,7 @@ those values.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/34PVHwO6Bn"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/yCpoILEVgTv"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -77,8 +76,7 @@ those values.</p>
         
         <tr>
           <td class="docs">
-            <p>Here we <code>make</code> a channel of strings buffering up to
-2 values.</p>
+            <p><code>make</code>でバッファが2の文字列のチャンネルを作ります。</p>
 
           </td>
           <td class="code leading">
@@ -91,9 +89,8 @@ those values.</p>
         
         <tr>
           <td class="docs">
-            <p>Because this channel is buffered, we can send these
-values into the channel without a corresponding
-concurrent receive.</p>
+            <p>バッファありなので対応する平行の受信がなくても
+これらの送信ができます。</p>
 
           </td>
           <td class="code leading">
@@ -107,7 +104,7 @@ concurrent receive.</p>
         
         <tr>
           <td class="docs">
-            <p>Later we can receive these two values as usual.</p>
+            <p>受信も普通にできます。</p>
 
           </td>
           <td class="code">

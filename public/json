@@ -25,9 +25,8 @@
         
         <tr>
           <td class="docs">
-            <p>Go offers built-in support for JSON encoding and
-decoding, including to and from built-in and custom
-data types.</p>
+            <p>Goは組み込みでJSONのエンコーディングとデコーディングをサポートします。
+組み込みのデータ型とカスタムのデータ型のエンコーディングとデコーディングを提供します。</p>
 
           </td>
           <td class="code empty leading">
@@ -41,7 +40,7 @@ data types.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/UGeNKd-cw34"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/xUTNwhHdEQQ"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -64,8 +63,8 @@ data types.</p>
         
         <tr>
           <td class="docs">
-            <p>We&rsquo;ll use these two structs to demonstrate encoding and
-decoding of custom types below.</p>
+            <p>ふたつの構造体を使ってカスタムの型の
+エンコーディングとデコーディングをを実演します。</p>
 
           </td>
           <td class="code leading">
@@ -97,9 +96,8 @@ decoding of custom types below.</p>
         
         <tr>
           <td class="docs">
-            <p>First we&rsquo;ll look at encoding basic data types to
-JSON strings. Here are some examples for atomic
-values.</p>
+            <p>まず、基本データ型をJSON文字列にします。
+いくつかのアトミックな値の例を示します。</p>
 
           </td>
           <td class="code leading">
@@ -152,8 +150,8 @@ values.</p>
         
         <tr>
           <td class="docs">
-            <p>And here are some for slices and maps, which encode
-to JSON arrays and objects as you&rsquo;d expect.</p>
+            <p>スライスとマップは予想通りの
+JSON配列とJSONオブジェクトにエンコーディングされます。</p>
 
           </td>
           <td class="code leading">
@@ -182,10 +180,9 @@ to JSON arrays and objects as you&rsquo;d expect.</p>
         
         <tr>
           <td class="docs">
-            <p>The JSON package can automatically encode your
-custom data types. It will only include exported
-fields in the encoded output and will by default
-use those names as the JSON keys.</p>
+            <p>JSONパッケージを使うとカスタムのデータ型を自動的にエンコードできます。
+出力に含まれるのは公開されているフィールドだけであり、
+デフォルトではフィールド名はJSONのキーとして使われます。</p>
 
           </td>
           <td class="code leading">
@@ -202,10 +199,9 @@ use those names as the JSON keys.</p>
         
         <tr>
           <td class="docs">
-            <p>You can use tags on struct field declarations
-to customize the encoded JSON key names. Check the
-definition of <code>response2</code> above to see an example
-of such tags.</p>
+            <p>構造体のフィールド宣言にタグを付けることで
+JSONのキー名をカスタマイズできます。
+上の<code>response2</code>の定義のタグを見てください。</p>
 
           </td>
           <td class="code leading">
@@ -222,9 +218,8 @@ of such tags.</p>
         
         <tr>
           <td class="docs">
-            <p>Now let&rsquo;s look at decoding JSON data into Go
-values. Here&rsquo;s an example for a generic data
-structure.</p>
+            <p>JSONのデータをGoの値にデコードします。
+この例は一般的なデータ構造です。</p>
 
           </td>
           <td class="code leading">
@@ -237,10 +232,9 @@ structure.</p>
         
         <tr>
           <td class="docs">
-            <p>We need to provide a variable where the JSON
-package can put the decoded data. This
-<code>map[string]interface{}</code> will hold a map of strings
-to arbitrary data types.</p>
+            <p>JSONパッケージがデコードしたデータを設定するための
+変数を宣言する必要があります。この<code>map[string]interface{}</code>は
+文字列から任意のデータ型へのマップを保持します。</p>
 
           </td>
           <td class="code leading">
@@ -253,8 +247,7 @@ to arbitrary data types.</p>
         
         <tr>
           <td class="docs">
-            <p>Here&rsquo;s the actual decoding, and a check for
-associated errors.</p>
+            <p>実際にデコードします。関連するエラーをチェックしています。</p>
 
           </td>
           <td class="code leading">
@@ -270,10 +263,9 @@ associated errors.</p>
         
         <tr>
           <td class="docs">
-            <p>In order to use the values in the decoded map,
-we&rsquo;ll need to cast them to their appropriate type.
-For example here we cast the value in <code>num</code> to
-the expected <code>float64</code> type.</p>
+            <p>デコードされたマップの値を使うには
+適切な型にキャストする必要があります。
+この例では<code>num</code>を<code>float64</code>にキャストしています。</p>
 
           </td>
           <td class="code leading">
@@ -287,8 +279,7 @@ the expected <code>float64</code> type.</p>
         
         <tr>
           <td class="docs">
-            <p>Accessing nested data requires a series of
-casts.</p>
+            <p>ネストしたデータにはひと続きのキャストが必要です。</p>
 
           </td>
           <td class="code leading">
@@ -303,11 +294,10 @@ casts.</p>
         
         <tr>
           <td class="docs">
-            <p>We can also decode JSON into custom data types.
-This has the advantages of adding additional
-type-safety to our programs and eliminating the
-need for type assertions when accessing the decoded
-data.</p>
+            <p>JSONをカスタムのデータ型にデコードすることもできます。
+こうするとプログラムはよりタイプセーフになり、
+デコードしたデータにアクセスするときに、
+型アサーションが必要なくなります。</p>
 
           </td>
           <td class="code leading">
@@ -324,11 +314,9 @@ data.</p>
         
         <tr>
           <td class="docs">
-            <p>In the examples above we always used bytes and
-strings as intermediates between the data and
-JSON representation on standard out. We can also
-stream JSON encodings directly to <code>os.Writer</code>s like
-<code>os.Stdout</code> or even HTTP response bodies.</p>
+            <p>上の例ではバイトと文字列をデータとJSONの間の媒介として使いました。
+JSONを直接<code>os.Stdout</code>のような<code>os.Writer</code>にストリームすることができます。
+HTTPレスポンスのボディにもストリームできます。</p>
 
           </td>
           <td class="code">

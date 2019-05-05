@@ -25,14 +25,11 @@
         
         <tr>
           <td class="docs">
-            <p>In Go it&rsquo;s idiomatic to communicate errors via an
-explicit, separate return value. This contrasts with
-the exceptions used in languages like Java and Ruby and
-the overloaded single result / error value sometimes
-used in C. Go&rsquo;s approach makes it easy to see which
-functions return errors and to handle them using the
-same language constructs employed for any other,
-non-error tasks.</p>
+            <p>Goでは慣用的に明示的な分離された戻り値でエラーを扱います。
+これはJavaやRubyのような例外を使う言語や
+C言語で使われることがあるオーバーロードされた単一の結果/エラー値
+とは対称的です。Goのアプローチはどの関数がエラーを返しそのエラーを
+エラーでない処理を行うのと同じ書き方で処理するのを簡単にします。</p>
 
           </td>
           <td class="code empty leading">
@@ -46,7 +43,7 @@ non-error tasks.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/mP_ZR1qjUvA"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/lRLnuFX9Q6u"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -68,8 +65,8 @@ non-error tasks.</p>
         
         <tr>
           <td class="docs">
-            <p>By convention, errors are the last return value and
-have type <code>error</code>, a built-in interface.</p>
+            <p>規約によりエラーは最後の戻り値になり
+組み込みのインターフェースである<code>error</code>型を持ちます。</p>
 
           </td>
           <td class="code leading">
@@ -83,8 +80,8 @@ have type <code>error</code>, a built-in interface.</p>
         
         <tr>
           <td class="docs">
-            <p><code>errors.New</code> constructs a basic <code>error</code> value
-with the given error message.</p>
+            <p><code>errors.New</code>は基本的な<code>error</code>値を作成します。
+エラーメッセージを与えられます。</p>
 
           </td>
           <td class="code leading">
@@ -109,8 +106,7 @@ with the given error message.</p>
         
         <tr>
           <td class="docs">
-            <p>A <code>nil</code> value in the error position indicates that
-there was no error.</p>
+            <p>エラーの位置が<code>nil</code>なのはエラーがないことを示します。</p>
 
           </td>
           <td class="code leading">
@@ -124,10 +120,8 @@ there was no error.</p>
         
         <tr>
           <td class="docs">
-            <p>It&rsquo;s possible to use custom types as <code>error</code>s by
-implementing the <code>Error()</code> method on them. Here&rsquo;s a
-variant on the example above that uses a custom type
-to explicitly represent an argument error.</p>
+            <p><code>Error()</code>メソッドを実装すれば<code>error</code>としてカスタムの型を定義できます。
+ ここでは上の例を変え、引数エラーであることを明示的に示すカスタム型を使います。</p>
 
           </td>
           <td class="code leading">
@@ -170,9 +164,8 @@ to explicitly represent an argument error.</p>
         
         <tr>
           <td class="docs">
-            <p>In this case we use <code>&amp;argError</code> syntax to build
-a new struct, supplying values for the two
-fields <code>arg</code> and <code>prob</code>.</p>
+            <p><code>&amp;argError</code>という構文で新しい構造体を作ります。
+そして、<code>arg</code>と<code>prob</code>フィールドに値を設定します。</p>
 
           </td>
           <td class="code leading">
@@ -200,10 +193,8 @@ fields <code>arg</code> and <code>prob</code>.</p>
         
         <tr>
           <td class="docs">
-            <p>The two loops below test out each of our
-error-returning functions. Note that the use of an
-inline error check on the <code>if</code> line is a common
-idiom in Go code.</p>
+            <p>下のふたつのループで上で定義したエラーを返す関数をテストします。
+ループの中の<code>if</code>を使ったエラーのチェックはGoでは一般的なイディオムです。</p>
 
           </td>
           <td class="code leading">
@@ -229,10 +220,8 @@ idiom in Go code.</p>
         
         <tr>
           <td class="docs">
-            <p>If you want to programmatically use the data in
-a custom error, you&rsquo;ll need to get the error as an
-instance of the custom error type via type
-assertion.</p>
+            <p>カスタムエラーのデータをプログラムから使いたいなら
+型アサーション経由でカスタムエラー型のインスタンスを取得する必要があります。</p>
 
           </td>
           <td class="code">

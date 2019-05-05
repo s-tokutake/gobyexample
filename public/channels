@@ -25,10 +25,9 @@
         
         <tr>
           <td class="docs">
-            <p><em>Channels</em> are the pipes that connect concurrent
-goroutines. You can send values into channels from one
-goroutine and receive those values into another
-goroutine.</p>
+            <p>_チャンネル_は平行しているゴルーチン同士をつなぐパイプです。
+ひとつのゴルーチンがチャンネルに値を送信し、
+別のゴルーチンがその値を受信できます。</p>
 
           </td>
           <td class="code empty leading">
@@ -42,7 +41,7 @@ goroutine.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/Kd8B0T_JGK"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/_xdJd4UT-L0"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -75,8 +74,8 @@ goroutine.</p>
         
         <tr>
           <td class="docs">
-            <p>Create a new channel with <code>make(chan val-type)</code>.
-Channels are typed by the values they convey.</p>
+            <p><code>make(chan val-type)</code>で新しいチャンネルを作ります。
+チャンネルは送受信する値で型付けされます。</p>
 
           </td>
           <td class="code leading">
@@ -89,9 +88,8 @@ Channels are typed by the values they convey.</p>
         
         <tr>
           <td class="docs">
-            <p><em>Send</em> a value into a channel using the <code>channel &lt;-</code>
-syntax. Here we send <code>&quot;ping&quot;</code>  to the <code>messages</code>
-channel we made above, from a new goroutine.</p>
+            <p>チャンネルへの値の_送信_は<code>channel &lt;-</code>という構文を使います。
+ここでは新しいゴルーチンから<code>&quot;ping&quot;</code>を<code>messages</code>チャンネルに送信しています。</p>
 
           </td>
           <td class="code leading">
@@ -104,9 +102,9 @@ channel we made above, from a new goroutine.</p>
         
         <tr>
           <td class="docs">
-            <p>The <code>&lt;-channel</code> syntax <em>receives</em> a value from the
-channel. Here we&rsquo;ll receive the <code>&quot;ping&quot;</code> message
-we sent above and print it out.</p>
+            <p><code>&lt;-channel</code>という構文でチャンネルから値を_受信_します。
+ここでは、上で送信した<code>&quot;ping&quot;</code>メッセージを受信し、
+プリントしています。</p>
 
           </td>
           <td class="code">

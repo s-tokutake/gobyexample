@@ -10,15 +10,15 @@ import "fmt"
 
 func main() {
 
-	// `make`でバッファが2の文字列のチャンネルを作ります。
-	messages := make(chan string, 2)
+    // `make`でバッファが2の文字列のチャンネルを作ります。
+    messages := make(chan string, 2)
 
-	// バッファありなので対応する平行の受信がなくても
-	// これらの送信ができます。
-	messages <- "buffered"
-	messages <- "channel"
+    // バッファありなので対応する平行の受信がなくても
+    // これらの送信ができます。
+    messages <- "buffered"
+    messages <- "channel"
 
-	// 受信も普通にできます。
-	fmt.Println(<-messages)
-	fmt.Println(<-messages)
+    // 受信も普通にできます。
+    fmt.Println(<-messages)
+    fmt.Println(<-messages)
 }

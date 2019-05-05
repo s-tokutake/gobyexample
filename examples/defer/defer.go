@@ -11,31 +11,31 @@ import "os"
 // ここでは`defer`を使ってこれを実現します。
 func main() {
 
-	// `createFile`でファイルオブジェクトを取得した直後、
-	// `closeFile`でファイルを閉じる処理をdeferを使って実行します。
-	// これによって`closeFile`は`writeFile`が完了した後、This will be executed at the end
-	// この関数(`main`)の最後に実行されます。
-	f := createFile("/tmp/defer.txt")
-	defer closeFile(f)
-	writeFile(f)
+    // `createFile`でファイルオブジェクトを取得した直後、
+    // `closeFile`でファイルを閉じる処理をdeferを使って実行します。
+    // これによって`closeFile`は`writeFile`が完了した後、This will be executed at the end
+    // この関数(`main`)の最後に実行されます。
+    f := createFile("/tmp/defer.txt")
+    defer closeFile(f)
+    writeFile(f)
 }
 
 func createFile(p string) *os.File {
-	fmt.Println("creating")
-	f, err := os.Create(p)
-	if err != nil {
-		panic(err)
-	}
-	return f
+    fmt.Println("creating")
+    f, err := os.Create(p)
+    if err != nil {
+        panic(err)
+    }
+    return f
 }
 
 func writeFile(f *os.File) {
-	fmt.Println("writing")
-	fmt.Fprintln(f, "data")
+    fmt.Println("writing")
+    fmt.Fprintln(f, "data")
 
 }
 
 func closeFile(f *os.File) {
-	fmt.Println("closing")
-	f.Close()
+    fmt.Println("closing")
+    f.Close()
 }

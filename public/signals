@@ -25,12 +25,10 @@
         
         <tr>
           <td class="docs">
-            <p>Sometimes we&rsquo;d like our Go programs to intelligently
-handle <a href="http://en.wikipedia.org/wiki/Unix_signal">Unix signals</a>.
-For example, we might want a server to gracefully
-shutdown when it receives a <code>SIGTERM</code>, or a command-line
-tool to stop processing input if it receives a <code>SIGINT</code>.
-Here&rsquo;s how to handle signals in Go with channels.</p>
+            <p>Goで<a href="http://en.wikipedia.org/wiki/Unix_signal">Unixシグナル</a>を賢く扱いたい場合があります。
+例えば、<code>SIGTERM</code>を受信した場合、サーバをきれいに停止したり、
+<code>SIGINT</code>を受信したら入力の処理を停止するコマンドラインツールを作ったりする場合です。
+ここではチャンネルを使ってシグナルを処理する方法を示します。</p>
 
           </td>
           <td class="code empty leading">
@@ -44,7 +42,7 @@ Here&rsquo;s how to handle signals in Go with channels.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/BlkqAtKsxo"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/3Iog6uIQQRt"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -80,10 +78,9 @@ Here&rsquo;s how to handle signals in Go with channels.</p>
         
         <tr>
           <td class="docs">
-            <p>Go signal notification works by sending <code>os.Signal</code>
-values on a channel. We&rsquo;ll create a channel to
-receive these notifications (we&rsquo;ll also make one to
-notify us when the program can exit).</p>
+            <p>Goのシグナル通知は<code>os.Signal</code>値をチャンネルに送信することで実現します。
+<code>os.Signal</code>を受け取るためのチャンネルを作ります。
+(また、プログラムが終了できることを通知するチャンネルも作ります)</p>
 
           </td>
           <td class="code leading">
@@ -97,8 +94,7 @@ notify us when the program can exit).</p>
         
         <tr>
           <td class="docs">
-            <p><code>signal.Notify</code> registers the given channel to
-receive notifications of the specified signals.</p>
+            <p><code>signal.Notify</code>でチャンネルを登録し、定義したシグナルの通知を受信するようにします。</p>
 
           </td>
           <td class="code leading">
@@ -111,9 +107,8 @@ receive notifications of the specified signals.</p>
         
         <tr>
           <td class="docs">
-            <p>This goroutine executes a blocking receive for
-signals. When it gets one it&rsquo;ll print it out
-and then notify the program that it can finish.</p>
+            <p>このゴルーチンがブロックしながらシグナルの受信をします。
+シグナルを受信したら表示してプログラムが終了できることを通知します。</p>
 
           </td>
           <td class="code leading">
@@ -131,9 +126,8 @@ and then notify the program that it can finish.</p>
         
         <tr>
           <td class="docs">
-            <p>The program will wait here until it gets the
-expected signal (as indicated by the goroutine
-above sending a value on <code>done</code>) and then exit.</p>
+            <p>期待されるシグナル(<code>done</code>に値を送っている上のゴルーチンが示す)を得るまで
+プログラムは停止し、その後、終了します。</p>
 
           </td>
           <td class="code">

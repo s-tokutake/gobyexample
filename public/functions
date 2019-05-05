@@ -25,8 +25,8 @@
         
         <tr>
           <td class="docs">
-            <p><em>Functions</em> are central in Go. We&rsquo;ll learn about
-functions with a few different examples.</p>
+            <p>_関数_はGoの中心です。ここではいくつかの異なる例を
+通じて関数を学びます。</p>
 
           </td>
           <td class="code empty leading">
@@ -40,7 +40,7 @@ functions with a few different examples.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/9Nky-Dn49f"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/yD5taNdY5YZ"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -61,8 +61,7 @@ functions with a few different examples.</p>
         
         <tr>
           <td class="docs">
-            <p>Here&rsquo;s a function that takes two <code>int</code>s and returns
-their sum as an <code>int</code>.</p>
+            <p>ふたつの<code>int</code>を受け取ってその合計を返す関数です。</p>
 
           </td>
           <td class="code leading">
@@ -75,9 +74,8 @@ their sum as an <code>int</code>.</p>
         
         <tr>
           <td class="docs">
-            <p>Go requires explicit returns, i.e. it won&rsquo;t
-automatically return the value of the last
-expression.</p>
+            <p>Goでは明示的なreturnが必要です。最後の式の値を
+を自動的に返すことはしません。</p>
 
           </td>
           <td class="code leading">
@@ -91,10 +89,9 @@ expression.</p>
         
         <tr>
           <td class="docs">
-            <p>When you have multiple consecutive parameters of
-the same type, you may omit the type name for the
-like-typed parameters up to the final parameter that
-declares the type.</p>
+            <p>同じ型の連続した複数のパラメータを取る場合は、
+最後のパラメータまで型の名前を省略できます。
+最後のパラメータで型を宣言します。</p>
 
           </td>
           <td class="code leading">
@@ -121,8 +118,7 @@ declares the type.</p>
         
         <tr>
           <td class="docs">
-            <p>Call a function just as you&rsquo;d expect, with
-<code>name(args)</code>.</p>
+            <p>関数呼び出しはおなじみの<code>name(args)</code>という形式です。</p>
 
           </td>
           <td class="code leading">

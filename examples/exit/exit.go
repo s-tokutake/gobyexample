@@ -7,12 +7,12 @@ import "os"
 
 func main() {
 
-	// os.Exit`を使う場合、`defer`は実行_されません_。したがって、
-	// この`fmt.Println`は実行されません。
-	defer fmt.Println("!")
+    // os.Exit`を使う場合、`defer`は実行_されません_。したがって、
+    // この`fmt.Println`は実行されません。
+    defer fmt.Println("!")
 
-	// ステータス3でプログラムを終了します。
-	os.Exit(3)
+    // ステータス3でプログラムを終了します。
+    os.Exit(3)
 }
 
 // Cとは違い、Goは`main`で整数の戻り値を使ってステータスを示しません。

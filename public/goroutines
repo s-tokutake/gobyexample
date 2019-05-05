@@ -25,7 +25,7 @@
         
         <tr>
           <td class="docs">
-            <p>A <em>goroutine</em> is a lightweight thread of execution.</p>
+            <p>_ゴルーチン_は軽量なスレッドの実行です。</p>
 
           </td>
           <td class="code empty leading">
@@ -39,7 +39,7 @@
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/6Y8t3Yxd1LD"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/2XfnSc0vjtG"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -88,9 +88,8 @@
         
         <tr>
           <td class="docs">
-            <p>Suppose we have a function call <code>f(s)</code>. Here&rsquo;s how
-we&rsquo;d call that in the usual way, running it
-synchronously.</p>
+            <p><code>f(s)</code>という関数呼び出しがあります。
+この普通の呼び出し方では同期で実行されます。</p>
 
           </td>
           <td class="code leading">
@@ -103,9 +102,8 @@ synchronously.</p>
         
         <tr>
           <td class="docs">
-            <p>To invoke this function in a goroutine, use
-<code>go f(s)</code>. This new goroutine will execute
-concurrently with the calling one.</p>
+            <p>ゴルーチンで実行するなら<code>go f(s)</code>と書きます。
+この場合、呼び出しをしたゴルーチンと平行で実行されます。</p>
 
           </td>
           <td class="code leading">
@@ -118,8 +116,7 @@ concurrently with the calling one.</p>
         
         <tr>
           <td class="docs">
-            <p>You can also start a goroutine for an anonymous
-function call.</p>
+            <p>無名関数の呼び出しもゴルーチンで開始できます。</p>
 
           </td>
           <td class="code leading">
@@ -134,10 +131,9 @@ function call.</p>
         
         <tr>
           <td class="docs">
-            <p>Our two function calls are running asynchronously in
-separate goroutines now, so execution falls through
-to here. This <code>Scanln</code> requires we press a key
-before the program exits.</p>
+            <p>上のふたつの関数が非同期で別々のゴルーチンで実行されています。
+ここで実行が止まります。
+<code>Scanln</code>でプログラムが終了する前にキーを押下する必要があるためです。</p>
 
           </td>
           <td class="code">

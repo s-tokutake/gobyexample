@@ -25,8 +25,7 @@
         
         <tr>
           <td class="docs">
-            <p><em>Switch statements</em> express conditionals across many
-branches.</p>
+            <p>_スイッチ文_は多くの分岐の条件を示します。</p>
 
           </td>
           <td class="code empty leading">
@@ -40,7 +39,7 @@ branches.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/TJ4Az0KuLfL"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/ilr7VRycwdV"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -74,7 +73,7 @@ branches.</p>
         
         <tr>
           <td class="docs">
-            <p>Here&rsquo;s a basic <code>switch</code>.</p>
+            <p>基本的な<code>switch</code>です。</p>
 
           </td>
           <td class="code leading">
@@ -96,9 +95,8 @@ branches.</p>
         
         <tr>
           <td class="docs">
-            <p>You can use commas to separate multiple expressions
-in the same <code>case</code> statement. We use the optional
-<code>default</code> case in this example as well.</p>
+            <p>カンマを使って同じ<code>case</code>文の中で複数の式を書けます。
+<code>default</code>ケースは任意です。</p>
 
           </td>
           <td class="code leading">
@@ -116,9 +114,8 @@ in the same <code>case</code> statement. We use the optional
         
         <tr>
           <td class="docs">
-            <p><code>switch</code> without an expression is an alternate way
-to express if/else logic. Here we also show how the
-<code>case</code> expressions can be non-constants.</p>
+            <p>式のない<code>switch</code>はif/elseの別表現です。
+またここでは、<code>case</code>式が非定数でどのように書くかも示しています。</p>
 
           </td>
           <td class="code leading">
@@ -137,10 +134,9 @@ to express if/else logic. Here we also show how the
         
         <tr>
           <td class="docs">
-            <p>A type <code>switch</code> compares types instead of values.  You
-can use this to discover the type of an interface
-value.  In this example, the variable <code>t</code> will have the
-type corresponding to its clause.</p>
+            <p>型の<code>switch</code>は値ではなく型を比較します。
+インターフェース値の型を見つけるのに使えます。
+例えば、ここでは、変数<code>t</code>がcase文に書いてある型かどうかを判定しています。</p>
 
           </td>
           <td class="code">

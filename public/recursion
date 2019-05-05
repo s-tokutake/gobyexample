@@ -25,9 +25,8 @@
         
         <tr>
           <td class="docs">
-            <p>Go supports
-<a href="http://en.wikipedia.org/wiki/Recursion_(computer_science)"><em>recursive functions</em></a>.
-Here&rsquo;s a classic factorial example.</p>
+            <p>Goは<a href="http://en.wikipedia.org/wiki/Recursion_(computer_science)"><em>再帰関数</em></a>をサポートします。
+おなじみの階乗の例を示します。</p>
 
           </td>
           <td class="code empty leading">
@@ -41,7 +40,7 @@ Here&rsquo;s a classic factorial example.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/RFn-rf42ap"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/--Vo-HM_sa7"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -62,8 +61,7 @@ Here&rsquo;s a classic factorial example.</p>
         
         <tr>
           <td class="docs">
-            <p>This <code>fact</code> function calls itself until it reaches the
-base case of <code>fact(0)</code>.</p>
+            <p>この<code>fact</code>関数は<code>fact(0)</code>にたどり着くまで自分自身を呼びます。</p>
 
           </td>
           <td class="code leading">

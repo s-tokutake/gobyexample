@@ -25,9 +25,8 @@
         
         <tr>
           <td class="docs">
-            <p>Go&rsquo;s <em>select</em> lets you wait on multiple channel
-operations. Combining goroutines and channels with
-select is a powerful feature of Go.</p>
+            <p>_select_を使うと複数のチャンネル操作を待てます。
+selectとゴルーチン、チャンネルの組み合わせはGoの強力な特徴です。</p>
 
           </td>
           <td class="code empty leading">
@@ -41,7 +40,7 @@ select is a powerful feature of Go.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/ZdSOPe1Gj13"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/yQmjKO1vbGo"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -75,7 +74,7 @@ select is a powerful feature of Go.</p>
         
         <tr>
           <td class="docs">
-            <p>For our example we&rsquo;ll select across two channels.</p>
+            <p>この例ではふたつのチャンネルをselectします。</p>
 
           </td>
           <td class="code leading">
@@ -89,9 +88,9 @@ select is a powerful feature of Go.</p>
         
         <tr>
           <td class="docs">
-            <p>Each channel will receive a value after some amount
-of time, to simulate e.g. blocking RPC operations
-executing in concurrent goroutines.</p>
+            <p>それぞれのチャンネルは値を受信します。
+ブロッキングのRPC操作を平行ゴルーチンで実行しているのをシュミレートするため
+いくらかの時間が経過したあと受信を行います。</p>
 
           </td>
           <td class="code leading">
@@ -111,8 +110,8 @@ executing in concurrent goroutines.</p>
         
         <tr>
           <td class="docs">
-            <p>We&rsquo;ll use <code>select</code> to await both of these values
-simultaneously, printing each one as it arrives.</p>
+            <p><code>select</code>を使って両方の値を同時に待ちます。
+値が到着したら表示します。</p>
 
           </td>
           <td class="code">

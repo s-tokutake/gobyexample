@@ -25,9 +25,9 @@
         
         <tr>
           <td class="docs">
-            <p><em>Closing</em> a channel indicates that no more values
-will be sent on it. This can be useful to communicate
-completion to the channel&rsquo;s receivers.</p>
+            <p>チャンネルを_閉じる_ことは、これ以上そのチャンネルを通じて
+値が送信されることがない、ということを示します。
+これはチャンネルの受信側に完了を伝えるのに使えます。</p>
 
           </td>
           <td class="code empty leading">
@@ -41,7 +41,7 @@ completion to the channel&rsquo;s receivers.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/eFZ2SeKswH"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/jyHu8fh1dIC"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -62,10 +62,10 @@ completion to the channel&rsquo;s receivers.</p>
         
         <tr>
           <td class="docs">
-            <p>In this example we&rsquo;ll use a <code>jobs</code> channel to
-communicate work to be done from the <code>main()</code> goroutine
-to a worker goroutine. When we have no more jobs for
-the worker we&rsquo;ll <code>close</code> the <code>jobs</code> channel.</p>
+            <p>ここでは<code>jobs</code>チャンネルを使って<code>main()</code>ゴルーチンからワーカーの
+ゴルーチンへ処理が完了したことを通知します。
+ワーカーが処理しなければならないジョブがなくなったら
+ワーカーは<code>jobs</code>チャンネルを<code>close</code>します。</p>
 
           </td>
           <td class="code leading">
@@ -80,13 +80,12 @@ the worker we&rsquo;ll <code>close</code> the <code>jobs</code> channel.</p>
         
         <tr>
           <td class="docs">
-            <p>Here&rsquo;s the worker goroutine. It repeatedly receives
-from <code>jobs</code> with <code>j, more := &lt;-jobs</code>. In this
-special 2-value form of receive, the <code>more</code> value
-will be <code>false</code> if <code>jobs</code> has been <code>close</code>d and all
-values in the channel have already been received.
-We use this to notify on <code>done</code> when we&rsquo;ve worked
-all our jobs.</p>
+            <p>これがワーカーのゴルーチンです。<code>j, more := &lt;-jobs</code>で
+<code>jobs</code>チャンネルから繰り返し受信をします。この特別なふたつの値の受信では、
+<code>more</code>の値は<code>jobs</code>チャンネルが<code>close</code>されており
+チャンネル内のすべての値が受信されていたらfalseを返します。
+これを使ってワーカーがすべてのジョブを処理し終わったことを
+<code>done</code>チャンネルに通知します。</p>
 
           </td>
           <td class="code leading">
@@ -110,8 +109,8 @@ all our jobs.</p>
         
         <tr>
           <td class="docs">
-            <p>This sends 3 jobs to the worker over the <code>jobs</code>
-channel, then closes it.</p>
+            <p>ここで<code>jobs</code>チャンネル経由でワーカーに
+3つのジョブを送信し、チャンネルを閉じます。</p>
 
           </td>
           <td class="code leading">
@@ -129,9 +128,7 @@ channel, then closes it.</p>
         
         <tr>
           <td class="docs">
-            <p>We await the worker using the
-<a href="channel-synchronization">synchronization</a> approach
-we saw earlier.</p>
+            <p>前の例で見た<a href="チャンネル同期">同期</a>アプローチでワーカーを待ちます。</p>
 
           </td>
           <td class="code">

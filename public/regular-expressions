@@ -25,9 +25,8 @@
         
         <tr>
           <td class="docs">
-            <p>Go offers built-in support for <a href="http://en.wikipedia.org/wiki/Regular_expression">regular expressions</a>.
-Here are some examples of  common regexp-related tasks
-in Go.</p>
+            <p>Goは<a href="http://en.wikipedia.org/wiki/Regular_expression">正規表現</a>を組み込みでサポートします。
+ここでは正規表現に関するいくつかの一般的な例を表示します。</p>
 
           </td>
           <td class="code empty leading">
@@ -41,7 +40,7 @@ in Go.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/YeSiBTfhFq"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/qhE8r1nx1iI"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -76,7 +75,7 @@ in Go.</p>
         
         <tr>
           <td class="docs">
-            <p>This tests whether a pattern matches a string.</p>
+            <p>これは文字列がパターンにマッチするかどうかをテストします。</p>
 
           </td>
           <td class="code leading">
@@ -90,9 +89,8 @@ in Go.</p>
         
         <tr>
           <td class="docs">
-            <p>Above we used a string pattern directly, but for
-other regexp tasks you&rsquo;ll need to <code>Compile</code> an
-optimized <code>Regexp</code> struct.</p>
+            <p>上の例では文字列のパターンを直接使いました。
+他の処理も実施するには最適化された<code>Regexp</code>構造体を<code>Compile</code>する必要があります。</p>
 
           </td>
           <td class="code leading">
@@ -105,8 +103,8 @@ optimized <code>Regexp</code> struct.</p>
         
         <tr>
           <td class="docs">
-            <p>Many methods are available on these structs. Here&rsquo;s
-a match test like we saw earlier.</p>
+            <p>この構造体では多くのメソッドが使えます。
+これは先に見たマッチのテストです。</p>
 
           </td>
           <td class="code leading">
@@ -119,7 +117,7 @@ a match test like we saw earlier.</p>
         
         <tr>
           <td class="docs">
-            <p>This finds the match for the regexp.</p>
+            <p>マッチした文字列を見つけます。</p>
 
           </td>
           <td class="code leading">
@@ -132,9 +130,8 @@ a match test like we saw earlier.</p>
         
         <tr>
           <td class="docs">
-            <p>This also finds the first match but returns the
-start and end indexes for the match instead of the
-matching text.</p>
+            <p>最初のマッチを見つけますが、マッチした文字列ではなく
+マッチした文字列の最初と最後のインデックスを返します。</p>
 
           </td>
           <td class="code leading">
@@ -147,10 +144,9 @@ matching text.</p>
         
         <tr>
           <td class="docs">
-            <p>The <code>Submatch</code> variants include information about
-both the whole-pattern matches and the submatches
-within those matches. For example this will return
-information for both <code>p([a-z]+)ch</code> and <code>([a-z]+)</code>.</p>
+            <p><code>Submatch</code>には全体のパターンマッチの結果と
+その中に含まれているサブマッチの結果を返します。
+この例なら<code>p([a-z]+)ch</code>と<code>([a-z]+)</code>の両方の情報を返します。</p>
 
           </td>
           <td class="code leading">
@@ -163,8 +159,7 @@ information for both <code>p([a-z]+)ch</code> and <code>([a-z]+)</code>.</p>
         
         <tr>
           <td class="docs">
-            <p>Similarly this will return information about the
-indexes of matches and submatches.</p>
+            <p>同じようにマッチとサブマッチのインデックスの情報を返します。</p>
 
           </td>
           <td class="code leading">
@@ -177,9 +172,8 @@ indexes of matches and submatches.</p>
         
         <tr>
           <td class="docs">
-            <p>The <code>All</code> variants of these functions apply to all
-matches in the input, not just the first. For
-example to find all matches for a regexp.</p>
+            <p><code>All</code>が付いている場合は最初のマッチだけではなく全てのマッチが対象になります。
+この例ではすべてのマッチを見つけています。</p>
 
           </td>
           <td class="code leading">
@@ -192,8 +186,7 @@ example to find all matches for a regexp.</p>
         
         <tr>
           <td class="docs">
-            <p>These <code>All</code> variants are available for the other
-functions we saw above as well.</p>
+            <p>この<code>All</code>は上と同じように他の関数にもあります。</p>
 
           </td>
           <td class="code leading">
@@ -207,9 +200,7 @@ functions we saw above as well.</p>
         
         <tr>
           <td class="docs">
-            <p>Providing a non-negative integer as the second
-argument to these functions will limit the number
-of matches.</p>
+            <p>2つ目の引数に負でない整数を与えるとマッチの数を制限できます。</p>
 
           </td>
           <td class="code leading">
@@ -222,10 +213,8 @@ of matches.</p>
         
         <tr>
           <td class="docs">
-            <p>Our examples above had string arguments and used
-names like <code>MatchString</code>. We can also provide
-<code>[]byte</code> arguments and drop <code>String</code> from the
-function name.</p>
+            <p>上の例の関数は<code>MatchString</code>のような名前で文字列の引数を取りました。
+<code>[]byte</code>の引数を取る関数もあります。関数名から<code>String</code>を削除します。</p>
 
           </td>
           <td class="code leading">
@@ -238,10 +227,8 @@ function name.</p>
         
         <tr>
           <td class="docs">
-            <p>When creating constants with regular expressions
-you can use the <code>MustCompile</code> variation of
-<code>Compile</code>. A plain <code>Compile</code> won&rsquo;t work for
-constants because it has 2 return values.</p>
+            <p>正規表現の定数を作成する場合、<code>Compile</code>の変種である<code>MustCompile</code>を使います。
+<code>Compile</code>はふたつの値を返すため定数には使えます。</p>
 
           </td>
           <td class="code leading">
@@ -255,8 +242,7 @@ constants because it has 2 return values.</p>
         
         <tr>
           <td class="docs">
-            <p>The <code>regexp</code> package can also be used to replace
-subsets of strings with other values.</p>
+            <p><code>regexp</code>パッケージは文字列の一部を他の文字列に置換するのにも使われます。</p>
 
           </td>
           <td class="code leading">
@@ -269,8 +255,7 @@ subsets of strings with other values.</p>
         
         <tr>
           <td class="docs">
-            <p>The <code>Func</code> variant allows you to transform matched
-text with a given function.</p>
+            <p><code>Func</code>を使えばマッチした文字列に対して引数に与えた関数を適用できます。</p>
 
           </td>
           <td class="code">

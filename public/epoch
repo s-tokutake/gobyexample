@@ -25,10 +25,9 @@
         
         <tr>
           <td class="docs">
-            <p>A common requirement in programs is getting the number
-of seconds, milliseconds, or nanoseconds since the
-<a href="http://en.wikipedia.org/wiki/Unix_time">Unix epoch</a>.
-Here&rsquo;s how to do it in Go.</p>
+            <p><a href="http://en.wikipedia.org/wiki/Unix_time">Unixエポック</a>からの秒、ミリ秒、ナノ秒を取得する
+のはプログラムの一般的な要件です。
+ここではGoでの実現方法を示します。</p>
 
           </td>
           <td class="code empty leading">
@@ -42,7 +41,7 @@ Here&rsquo;s how to do it in Go.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/GP_zEjhlWk"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/nbH3yE4PcUo"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -76,9 +75,8 @@ Here&rsquo;s how to do it in Go.</p>
         
         <tr>
           <td class="docs">
-            <p>Use <code>time.Now</code> with <code>Unix</code> or <code>UnixNano</code> to get
-elapsed time since the Unix epoch in seconds or
-nanoseconds, respectively.</p>
+            <p><code>time.Now</code>の<code>Unix</code>と<code>UnixNano</code>でUnixエポックからの経過時間を
+秒とナノ秒で取得できます。</p>
 
           </td>
           <td class="code leading">
@@ -94,9 +92,7 @@ nanoseconds, respectively.</p>
         
         <tr>
           <td class="docs">
-            <p>Note that there is no <code>UnixMillis</code>, so to get the
-milliseconds since epoch you&rsquo;ll need to manually
-divide from nanoseconds.</p>
+            <p><code>UnixMillis</code>はありません。ミリ秒で取得するにはナノ秒から計算します。</p>
 
           </td>
           <td class="code leading">
@@ -112,8 +108,7 @@ divide from nanoseconds.</p>
         
         <tr>
           <td class="docs">
-            <p>You can also convert integer seconds or nanoseconds
-since the epoch into the corresponding <code>time</code>.</p>
+            <p>整数値の秒やナノ秒を対応する<code>time</code>に変換できます。</p>
 
           </td>
           <td class="code">

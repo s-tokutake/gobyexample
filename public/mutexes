@@ -25,10 +25,9 @@
         
         <tr>
           <td class="docs">
-            <p>In the previous example we saw how to manage simple
-counter state using <a href="atomic-counters">atomic operations</a>.
-For more complex state we can use a <em><a href="http://en.wikipedia.org/wiki/Mutual_exclusion">mutex</a></em>
-to safely access data across multiple goroutines.</p>
+            <p>前の例では単純なカウンタの状態を<a href="atomic-counters">アトミックな操作</a>で管理する方法を示しました。
+より複雑な状態の場合は<em><a href="http://en.wikipedia.org/wiki/Mutual_exclusion">mutex</a></em>を使って複数のゴルーチンから
+安全にデータにアクセスできます。</p>
 
           </td>
           <td class="code empty leading">
@@ -42,7 +41,7 @@ to safely access data across multiple goroutines.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/IRewFKz2OPN"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/4JFxhSiWCsN"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -81,7 +80,7 @@ to safely access data across multiple goroutines.</p>
         
         <tr>
           <td class="docs">
-            <p>For our example the <code>state</code> will be a map.</p>
+            <p>この例では<code>state</code>はマップです。</p>
 
           </td>
           <td class="code leading">
@@ -94,7 +93,7 @@ to safely access data across multiple goroutines.</p>
         
         <tr>
           <td class="docs">
-            <p>This <code>mutex</code> will synchronize access to <code>state</code>.</p>
+            <p><code>mutex</code>で<code>state</code>に対するアクセスを同期させます。</p>
 
           </td>
           <td class="code leading">
@@ -107,8 +106,7 @@ to safely access data across multiple goroutines.</p>
         
         <tr>
           <td class="docs">
-            <p>We&rsquo;ll keep track of how many read and write
-operations we do.</p>
+            <p>何回読み取りと書き込みをしたのかを追跡します。</p>
 
           </td>
           <td class="code leading">
@@ -122,9 +120,8 @@ operations we do.</p>
         
         <tr>
           <td class="docs">
-            <p>Here we start 100 goroutines to execute repeated
-reads against the state, once per millisecond in
-each goroutine.</p>
+            <p>100のゴルーチンを開始しstateに対して読み取りを繰り返し実行します。
+各ゴルーチンで1ミリ秒に1回読み取りを行います。</p>
 
           </td>
           <td class="code leading">
@@ -140,12 +137,11 @@ each goroutine.</p>
         
         <tr>
           <td class="docs">
-            <p>For each read we pick a key to access,
-<code>Lock()</code> the <code>mutex</code> to ensure
-exclusive access to the <code>state</code>, read
-the value at the chosen key,
-<code>Unlock()</code> the mutex, and increment
-the <code>readOps</code> count.</p>
+            <p>読み取り1回につき、アクセスのためのキーを取り出し、
+<code>mutex</code>を<code>Lock()</code>して<code>state</code>に対する排他アクセスを保証し、
+選択したキーの値を読み、
+<code>mutex</code>を<code>Unlock()</code>して、
+<code>readOps</code>をインクリメントします。</p>
 
           </td>
           <td class="code leading">
@@ -162,7 +158,7 @@ the <code>readOps</code> count.</p>
         
         <tr>
           <td class="docs">
-            <p>Wait a bit between reads.</p>
+            <p>読み取り処理の間に少し待ちます。</p>
 
           </td>
           <td class="code leading">
@@ -178,8 +174,8 @@ the <code>readOps</code> count.</p>
         
         <tr>
           <td class="docs">
-            <p>We&rsquo;ll also start 10 goroutines to simulate writes,
-using the same pattern we did for reads.</p>
+            <p>10のゴルーチンを開始して書き込みをシュミレートします。
+処理のパターンは読み取りと同じです。</p>
 
           </td>
           <td class="code leading">
@@ -204,8 +200,7 @@ using the same pattern we did for reads.</p>
         
         <tr>
           <td class="docs">
-            <p>Let the 10 goroutines work on the <code>state</code> and
-<code>mutex</code> for a second.</p>
+            <p>1秒間、待って10のゴルーチンが<code>state</code>と<code>mutex</code>に対する処理をするのを待ちます。</p>
 
           </td>
           <td class="code leading">
@@ -218,7 +213,7 @@ using the same pattern we did for reads.</p>
         
         <tr>
           <td class="docs">
-            <p>Take and report final operation counts.</p>
+            <p>最終の処理回数を取得し表示します。</p>
 
           </td>
           <td class="code leading">
@@ -234,7 +229,7 @@ using the same pattern we did for reads.</p>
         
         <tr>
           <td class="docs">
-            <p>With a final lock of <code>state</code>, show how it ended up.</p>
+            <p>最後に<code>state</code>をロックして状態を表示します。</p>
 
           </td>
           <td class="code">

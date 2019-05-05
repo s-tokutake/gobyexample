@@ -1,37 +1,31 @@
-// [_SHA1 hashes_](http://en.wikipedia.org/wiki/SHA-1) are
-// frequently used to compute short identities for binary
-// or text blobs. For example, the [git revision control
-// system](http://git-scm.com/) uses SHA1s extensively to
-// identify versioned files and directories. Here's how to
-// compute SHA1 hashes in Go.
+// [_SHA1ハッシュ_](http://en.wikipedia.org/wiki/SHA-1)はバイナリや文字列の短い識別子を計算するのによく使われます。
+// 例えば、[git](http://git-scm.com/)はSHA1を広く活用してファイルとディレクトリのバージョンを特定します。
+// ここではGoでSHA1ハッシュを計算する方法を示します。
 
 package main
 
-// Go implements several hash functions in various
-// `crypto/*` packages.
+// Goは`crypto/*`パッケージでいくつかのハッシュ関数を実装しています。
 import "crypto/sha1"
 import "fmt"
 
 func main() {
     s := "sha1 this string"
 
-    // The pattern for generating a hash is `sha1.New()`,
-    // `sha1.Write(bytes)`, then `sha1.Sum([]byte{})`.
-    // Here we start with a new hash.
+    // ハッシュ生成のパターンは`sha1.New()`を実行し、
+    // `sha1.Write(bytes)`を実行し、最後に`sha1.Sum([]byte{})`を実行します。
+    // まず新しいハッシュを作成します。
     h := sha1.New()
 
-    // `Write` expects bytes. If you have a string `s`,
-    // use `[]byte(s)` to coerce it to bytes.
+    // `Write`はバイトを受け取ります。文字列`s`なら`[]byte(s)`でバイトにします。
     h.Write([]byte(s))
 
-    // This gets the finalized hash result as a byte
-    // slice. The argument to `Sum` can be used to append
-    // to an existing byte slice: it usually isn't needed.
+    // ここでバイトのスライスでハッシュ結果を取得します。
+    // `Sum`の引数は既存のバイトスライスを追記するのに使われます。
+    // 通常は不要です。
     bs := h.Sum(nil)
 
-    // SHA1 values are often printed in hex, for example
-    // in git commits. Use the `%x` format verb to convert
-    // a hash results to a hex string.
+    // SHA1の値はHEXでで表示されます。例えば、gitのコミットです。
+    // `%x`を使ってハッシュの結果を文字列で表示しています。
     fmt.Println(s)
     fmt.Printf("%x\n", bs)
 }

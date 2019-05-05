@@ -1,6 +1,5 @@
-// Go offers built-in support for [regular expressions](http://en.wikipedia.org/wiki/Regular_expression).
-// Here are some examples of  common regexp-related tasks
-// in Go.
+// Goは[正規表現](http://en.wikipedia.org/wiki/Regular_expression)を組み込みでサポートします。
+// ここでは正規表現に関するいくつかの一般的な例を表示します。
 
 package main
 
@@ -10,71 +9,57 @@ import "regexp"
 
 func main() {
 
-    // This tests whether a pattern matches a string.
+    // これは文字列がパターンにマッチするかどうかをテストします。
     match, _ := regexp.MatchString("p([a-z]+)ch", "peach")
     fmt.Println(match)
 
-    // Above we used a string pattern directly, but for
-    // other regexp tasks you'll need to `Compile` an
-    // optimized `Regexp` struct.
+    // 上の例では文字列のパターンを直接使いました。
+    // 他の処理も実施するには最適化された`Regexp`構造体を`Compile`する必要があります。
     r, _ := regexp.Compile("p([a-z]+)ch")
 
-    // Many methods are available on these structs. Here's
-    // a match test like we saw earlier.
+    // この構造体では多くのメソッドが使えます。
+    // これは先に見たマッチのテストです。
     fmt.Println(r.MatchString("peach"))
 
-    // This finds the match for the regexp.
+    // マッチした文字列を見つけます。
     fmt.Println(r.FindString("peach punch"))
 
-    // This also finds the first match but returns the
-    // start and end indexes for the match instead of the
-    // matching text.
+    // 最初のマッチを見つけますが、マッチした文字列ではなく
+    // マッチした文字列の最初と最後のインデックスを返します。
     fmt.Println(r.FindStringIndex("peach punch"))
 
-    // The `Submatch` variants include information about
-    // both the whole-pattern matches and the submatches
-    // within those matches. For example this will return
-    // information for both `p([a-z]+)ch` and `([a-z]+)`.
+    // `Submatch`には全体のパターンマッチの結果と
+    // その中に含まれているサブマッチの結果を返します。
+    // この例なら`p([a-z]+)ch`と`([a-z]+)`の両方の情報を返します。
     fmt.Println(r.FindStringSubmatch("peach punch"))
 
-    // Similarly this will return information about the
-    // indexes of matches and submatches.
+    // 同じようにマッチとサブマッチのインデックスの情報を返します。
     fmt.Println(r.FindStringSubmatchIndex("peach punch"))
 
-    // The `All` variants of these functions apply to all
-    // matches in the input, not just the first. For
-    // example to find all matches for a regexp.
+    // `All`が付いている場合は最初のマッチだけではなく全てのマッチが対象になります。
+    // この例ではすべてのマッチを見つけています。
     fmt.Println(r.FindAllString("peach punch pinch", -1))
 
-    // These `All` variants are available for the other
-    // functions we saw above as well.
+    // この`All`は上と同じように他の関数にもあります。
     fmt.Println(r.FindAllStringSubmatchIndex(
         "peach punch pinch", -1))
 
-    // Providing a non-negative integer as the second
-    // argument to these functions will limit the number
-    // of matches.
+    // 2つ目の引数に負でない整数を与えるとマッチの数を制限できます。
     fmt.Println(r.FindAllString("peach punch pinch", 2))
 
-    // Our examples above had string arguments and used
-    // names like `MatchString`. We can also provide
-    // `[]byte` arguments and drop `String` from the
-    // function name.
+    // 上の例の関数は`MatchString`のような名前で文字列の引数を取りました。
+    // `[]byte`の引数を取る関数もあります。関数名から`String`を削除します。
     fmt.Println(r.Match([]byte("peach")))
 
-    // When creating constants with regular expressions
-    // you can use the `MustCompile` variation of
-    // `Compile`. A plain `Compile` won't work for
-    // constants because it has 2 return values.
+    // 正規表現の定数を作成する場合、`Compile`の変種である`MustCompile`を使います。
+    // `Compile`はふたつの値を返すため定数には使えます。
     r = regexp.MustCompile("p([a-z]+)ch")
     fmt.Println(r)
 
-    // The `regexp` package can also be used to replace
-    // subsets of strings with other values.
+    // `regexp`パッケージは文字列の一部を他の文字列に置換するのにも使われます。
     fmt.Println(r.ReplaceAllString("a peach", "<fruit>"))
 
-    // The `Func` variant allows you to transform matched
-    // text with a given function.
+    // `Func`を使えばマッチした文字列に対して引数に与えた関数を適用できます。
     in := []byte("a peach")
     out := r.ReplaceAllFunc(in, bytes.ToUpper)
     fmt.Println(string(out))

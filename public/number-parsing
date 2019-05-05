@@ -25,8 +25,8 @@
         
         <tr>
           <td class="docs">
-            <p>Parsing numbers from strings is a basic but common task
-in many programs; here&rsquo;s how to do it in Go.</p>
+            <p>文字列から数値へのパースは基本的ですが多くのプログラムで一般的です。
+Goでの実現方法を示します。</p>
 
           </td>
           <td class="code empty leading">
@@ -40,7 +40,7 @@ in many programs; here&rsquo;s how to do it in Go.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/N90EppECFk"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/2vMHFUS3pIW"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -49,8 +49,7 @@ in many programs; here&rsquo;s how to do it in Go.</p>
         
         <tr>
           <td class="docs">
-            <p>The built-in package <code>strconv</code> provides the number
-parsing.</p>
+            <p>組み込みの<code>strconv</code>パッケージは数値のパースを提供します。</p>
 
           </td>
           <td class="code leading">
@@ -76,8 +75,7 @@ parsing.</p>
         
         <tr>
           <td class="docs">
-            <p>With <code>ParseFloat</code>, this <code>64</code> tells how many bits of
-precision to parse.</p>
+            <p><code>ParseFloat</code>の<code>64</code>はパースの精度をビットで指定しています。</p>
 
           </td>
           <td class="code leading">
@@ -91,9 +89,8 @@ precision to parse.</p>
         
         <tr>
           <td class="docs">
-            <p>For <code>ParseInt</code>, the <code>0</code> means infer the base from
-the string. <code>64</code> requires that the result fit in 64
-bits.</p>
+            <p><code>ParseInt</code>の<code>0</code>は文字列から基数を推論することを示します。
+<code>64</code>は結果が64ビットに適合することを要求します。</p>
 
           </td>
           <td class="code leading">
@@ -107,7 +104,7 @@ bits.</p>
         
         <tr>
           <td class="docs">
-            <p><code>ParseInt</code> will recognize hex-formatted numbers.</p>
+            <p><code>ParseInt</code>はHEXフォーマットの数値にも対応しています。</p>
 
           </td>
           <td class="code leading">
@@ -121,7 +118,7 @@ bits.</p>
         
         <tr>
           <td class="docs">
-            <p>A <code>ParseUint</code> is also available.</p>
+            <p><code>ParseUint</code>もあります。</p>
 
           </td>
           <td class="code leading">
@@ -135,8 +132,7 @@ bits.</p>
         
         <tr>
           <td class="docs">
-            <p><code>Atoi</code> is a convenience function for basic base-10
-<code>int</code> parsing.</p>
+            <p><code>Atoi</code>は基数が10の便利な<code>int</code>パース関数です。</p>
 
           </td>
           <td class="code leading">
@@ -150,7 +146,7 @@ bits.</p>
         
         <tr>
           <td class="docs">
-            <p>Parse functions return an error on bad input.</p>
+            <p>入力がおかしい場合はエラーを返します。</p>
 
           </td>
           <td class="code">

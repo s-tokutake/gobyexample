@@ -25,7 +25,7 @@
         
         <tr>
           <td class="docs">
-            <p>Go supports <em>methods</em> defined on struct types.</p>
+            <p>Goは構造体上で_メソッド_を宣言できます。</p>
 
           </td>
           <td class="code empty leading">
@@ -39,7 +39,7 @@
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/254m_9Yjwa"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/72tVeDnJr7E"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -74,7 +74,7 @@
         
         <tr>
           <td class="docs">
-            <p>This <code>area</code> method has a <em>receiver type</em> of <code>*rect</code>.</p>
+            <p>この<code>area</code>メソッドは<code>*rect</code>の_レシーバ型_を持ちます。</p>
 
           </td>
           <td class="code leading">
@@ -89,8 +89,8 @@
         
         <tr>
           <td class="docs">
-            <p>Methods can be defined for either pointer or value
-receiver types. Here&rsquo;s an example of a value receiver.</p>
+            <p>メソッドはポインタレシーバ型でも値レシーバ型でも定義できます。
+これは値レシーバの例です。</p>
 
           </td>
           <td class="code leading">
@@ -118,7 +118,7 @@ receiver types. Here&rsquo;s an example of a value receiver.</p>
         
         <tr>
           <td class="docs">
-            <p>Here we call the 2 methods defined for our struct.</p>
+            <p>ここでふたつのメソッドを呼び出します。</p>
 
           </td>
           <td class="code leading">
@@ -132,11 +132,10 @@ receiver types. Here&rsquo;s an example of a value receiver.</p>
         
         <tr>
           <td class="docs">
-            <p>Go automatically handles conversion between values
-and pointers for method calls. You may want to use
-a pointer receiver type to avoid copying on method
-calls or to allow the method to mutate the
-receiving struct.</p>
+            <p>Goはメソッド呼び出しのとき、値とポインタを自動的に変換します。
+メソッド呼び出しでのコピーを避けるため、または、
+メソッドがレシーバとなる構造体を変えられるようにするために、
+ポインタのレシーバ型を使うことができます。</p>
 
           </td>
           <td class="code">

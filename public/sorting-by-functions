@@ -25,11 +25,9 @@
         
         <tr>
           <td class="docs">
-            <p>Sometimes we&rsquo;ll want to sort a collection by something
-other than its natural order. For example, suppose we
-wanted to sort strings by their length instead of
-alphabetically. Here&rsquo;s an example of custom sorts
-in Go.</p>
+            <p>自然な順ではない順でコレクションをソートしたい場合があります。
+例えば、アルファベット順ではなく長さで文字列をソートしたい場合です。
+ここではGoでの実現方法を示します。</p>
 
           </td>
           <td class="code empty leading">
@@ -43,7 +41,7 @@ in Go.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/4b7_qiGp33y"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/zKJosICou3d"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -65,10 +63,9 @@ in Go.</p>
         
         <tr>
           <td class="docs">
-            <p>In order to sort by a custom function in Go, we need a
-corresponding type. Here we&rsquo;ve created a <code>byLength</code>
-type that is just an alias for the builtin <code>[]string</code>
-type.</p>
+            <p>Goでカスタムの関数でソートをするためには
+対応する型が必要です。ここでは<code>byLength</code>型を定義します。
+これは単に<code>[]string</code>のエイリアスです。</p>
 
           </td>
           <td class="code leading">
@@ -81,13 +78,12 @@ type.</p>
         
         <tr>
           <td class="docs">
-            <p>We implement <code>sort.Interface</code> - <code>Len</code>, <code>Less</code>, and
-<code>Swap</code> - on our type so we can use the <code>sort</code> package&rsquo;s
-generic <code>Sort</code> function. <code>Len</code> and <code>Swap</code>
-will usually be similar across types and <code>Less</code> will
-hold the actual custom sorting logic. In our case we
-want to sort in order of increasing string length, so
-we use <code>len(s[i])</code> and <code>len(s[j])</code> here.</p>
+            <p><code>sort.Interface</code>を実装します。<code>Len</code>、<code>Less</code>、<code>Swap</code>を持ちます。
+これによって <code>sort</code>パッケージのジェネリックな<code>Sort</code>関数を使えます。
+<code>Len</code>と<code>Swap</code>は多くの型で同じような実装になります。
+<code>Less</code>は実際のカスタムの並べ替えのロジックを持ちます。
+この例では、文字列の長さの昇順に並べます。
+したがって、<code>len(s[i])</code>と<code>len(s[j])</code>を使います。</p>
 
           </td>
           <td class="code leading">
@@ -108,10 +104,8 @@ we use <code>len(s[i])</code> and <code>len(s[j])</code> here.</p>
         
         <tr>
           <td class="docs">
-            <p>With all of this in place, we can now implement our
-custom sort by casting the original <code>fruits</code> slice to
-<code>byLength</code>, and then use <code>sort.Sort</code> on that typed
-slice.</p>
+            <p>準備が整いました。<code>fruits</code>スライスを<code>byLength</code>にキャストし、
+<code>sort.Sort</code>を使ってカスタムのソートを実行します。</p>
 
           </td>
           <td class="code">

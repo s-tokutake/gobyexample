@@ -25,10 +25,9 @@
         
         <tr>
           <td class="docs">
-            <p>Go supports <a href="http://en.wikipedia.org/wiki/Anonymous_function"><em>anonymous functions</em></a>,
-which can form <a href="http://en.wikipedia.org/wiki/Closure_(computer_science)"><em>closures</em></a>.
-Anonymous functions are useful when you want to define
-a function inline without having to name it.</p>
+            <p>Goは<a href="https://ja.wikipedia.org/wiki/%E7%84%A1%E5%90%8D%E9%96%A2%E6%95%B0"><em>無名関数</em></a>をサポートします。
+これは<a href="https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B8%E3%83%A3"><em>クロージャ</em></a>を作ります。
+無名関数は名付けることなくインラインで関数を定義したい場合に便利です。</p>
 
           </td>
           <td class="code empty leading">
@@ -42,7 +41,7 @@ a function inline without having to name it.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/zb93qzV6iN3"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/oXO_hSGe3m9"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -63,10 +62,9 @@ a function inline without having to name it.</p>
         
         <tr>
           <td class="docs">
-            <p>This function <code>intSeq</code> returns another function, which
-we define anonymously in the body of <code>intSeq</code>. The
-returned function <em>closes over</em> the variable <code>i</code> to
-form a closure.</p>
+            <p>この<code>intSeq</code>関数は別の関数を返します。
+<code>intSeq</code>の内部で無名で定義された関数です。
+この無名の関数は変数<code>i</code>を_閉じ込めて_クロージャを作ります。</p>
 
           </td>
           <td class="code leading">
@@ -97,10 +95,9 @@ form a closure.</p>
         
         <tr>
           <td class="docs">
-            <p>We call <code>intSeq</code>, assigning the result (a function)
-to <code>nextInt</code>. This function value captures its
-own <code>i</code> value, which will be updated each time
-we call <code>nextInt</code>.</p>
+            <p><code>intSeq</code>を呼び出し、<code>nextInt</code>に設定します。
+この関数値は<code>i</code>の値を捕捉しています。
+この値は<code>nextInt</code>を呼び出すたびに更新されます。</p>
 
           </td>
           <td class="code leading">
@@ -113,8 +110,7 @@ we call <code>nextInt</code>.</p>
         
         <tr>
           <td class="docs">
-            <p>See the effect of the closure by calling <code>nextInt</code>
-a few times.</p>
+            <p><code>nextInt</code>を何回か呼び出してクロージャの挙動を確かめてみます。</p>
 
           </td>
           <td class="code leading">
@@ -129,8 +125,8 @@ a few times.</p>
         
         <tr>
           <td class="docs">
-            <p>To confirm that the state is unique to that
-particular function, create and test a new one.</p>
+            <p>状態が個別の関数でユニークであること確認するため、
+新しい関数値を作って実行してみます。</p>
 
           </td>
           <td class="code">

@@ -25,8 +25,7 @@
         
         <tr>
           <td class="docs">
-            <p>Go supports time formatting and parsing via
-pattern-based layouts.</p>
+            <p>Goはパターンベースのレイアウトで時間のフォーマットとパースを実現します。</p>
 
           </td>
           <td class="code empty leading">
@@ -40,7 +39,7 @@ pattern-based layouts.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/BFw556nWcM"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/35kXeaxucoT"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -75,9 +74,8 @@ pattern-based layouts.</p>
         
         <tr>
           <td class="docs">
-            <p>Here&rsquo;s a basic example of formatting a time
-according to RFC3339, using the corresponding layout
-constant.</p>
+            <p>ここでは基本的な時間のフォーマットを示します。
+RFC3339に基づきます。対応するレイアウト定数を使っています。</p>
 
           </td>
           <td class="code leading">
@@ -91,7 +89,7 @@ constant.</p>
         
         <tr>
           <td class="docs">
-            <p>Time parsing uses the same layout values as <code>Format</code>.</p>
+            <p>時間のパースは<code>Format</code>と同じレイアウト値を使います。</p>
 
           </td>
           <td class="code leading">
@@ -107,13 +105,12 @@ constant.</p>
         
         <tr>
           <td class="docs">
-            <p><code>Format</code> and <code>Parse</code> use example-based layouts. Usually
-you&rsquo;ll use a constant from <code>time</code> for these layouts, but
-you can also supply custom layouts. Layouts must use the
-reference time <code>Mon Jan 2 15:04:05 MST 2006</code> to show the
-pattern with which to format/parse a given time/string.
-The example time must be exactly as shown: the year 2006,
-15 for the hour, Monday for the day of the week, etc.</p>
+            <p><code>Format</code>と<code>Parse</code>は事例ベースレイアウトを使います。
+これらのレイアウトとして多くの場合、<code>time</code>の定数を使います。
+カスタムのレイアウトも使えます。
+カスタムレイアウトの場合は<code>Mon Jan 2 15:04:05 MST 2006</code>を使って
+与えられた時間/文字列をフォーマット/パースするためのパターンを示します。
+年は2006であり時間は15、曜日はMonday、他の要素も正確にこの通りである必要があります。</p>
 
           </td>
           <td class="code leading">
@@ -131,9 +128,8 @@ The example time must be exactly as shown: the year 2006,
         
         <tr>
           <td class="docs">
-            <p>For purely numeric representations you can also
-use standard string formatting with the extracted
-components of the time value.</p>
+            <p>純粋な数値表現のためには、timeの個別の値を取り出して
+標準的な文字列のフォーマッティングを使うこともできます。</p>
 
           </td>
           <td class="code leading">
@@ -148,8 +144,7 @@ components of the time value.</p>
         
         <tr>
           <td class="docs">
-            <p><code>Parse</code> will return an error on malformed input
-explaining the parsing problem.</p>
+            <p>入力が不正な場合<code>Parse</code>はエラーを返しパースの問題を示します。</p>
 
           </td>
           <td class="code">

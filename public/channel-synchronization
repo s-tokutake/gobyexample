@@ -25,9 +25,8 @@
         
         <tr>
           <td class="docs">
-            <p>We can use channels to synchronize execution
-across goroutines. Here&rsquo;s an example of using a
-blocking receive to wait for a goroutine to finish.</p>
+            <p>チャンネルはゴルーチン間の同期実行に使えます。
+ここではゴルーチンの完了を待つ、受信によるブロッキングを使った例を示します。</p>
 
           </td>
           <td class="code empty leading">
@@ -41,7 +40,7 @@ blocking receive to wait for a goroutine to finish.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/0DfW-1RMqi"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/OpqttYsLqk3"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -63,9 +62,9 @@ blocking receive to wait for a goroutine to finish.</p>
         
         <tr>
           <td class="docs">
-            <p>This is the function we&rsquo;ll run in a goroutine. The
-<code>done</code> channel will be used to notify another
-goroutine that this function&rsquo;s work is done.</p>
+            <p>これはゴルーチン内で実行する関数です。
+<code>done</code>チャンネルは別のゴルーチンに
+この関数が完了したことを通知します。</p>
 
           </td>
           <td class="code leading">
@@ -81,7 +80,7 @@ goroutine that this function&rsquo;s work is done.</p>
         
         <tr>
           <td class="docs">
-            <p>Send a value to notify that we&rsquo;re done.</p>
+            <p>値を送信して完了を通知します。</p>
 
           </td>
           <td class="code leading">
@@ -107,8 +106,7 @@ goroutine that this function&rsquo;s work is done.</p>
         
         <tr>
           <td class="docs">
-            <p>Start a worker goroutine, giving it the channel to
-notify on.</p>
+            <p>ワーカーのゴルーチンを開始し、引数に通知用のチャンネルを渡します。</p>
 
           </td>
           <td class="code leading">
@@ -122,8 +120,7 @@ notify on.</p>
         
         <tr>
           <td class="docs">
-            <p>Block until we receive a notification from the
-worker on the channel.</p>
+            <p>ワーカーからの通知を受信するまで待ちます。</p>
 
           </td>
           <td class="code">

@@ -25,9 +25,8 @@
         
         <tr>
           <td class="docs">
-            <p><em>range</em> iterates over elements in a variety of data
-structures. Let&rsquo;s see how to use <code>range</code> with some
-of the data structures we&rsquo;ve already learned.</p>
+            <p>_range_はさまざまなデータ構造の要素を反復処理します。
+すでに学習したデータ構造に対して<code>range</code>がどのように働くか紹介します。</p>
 
           </td>
           <td class="code empty leading">
@@ -41,7 +40,7 @@ of the data structures we&rsquo;ve already learned.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/SkL_AS-1Jd"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/9oR-2zgkrOi"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -74,8 +73,8 @@ of the data structures we&rsquo;ve already learned.</p>
         
         <tr>
           <td class="docs">
-            <p>Here we use <code>range</code> to sum the numbers in a slice.
-Arrays work like this too.</p>
+            <p>ここでは<code>range</code>を使ってスライス内の数を合計しています。
+配列でも同様のことができます。</p>
 
           </td>
           <td class="code leading">
@@ -93,11 +92,9 @@ Arrays work like this too.</p>
         
         <tr>
           <td class="docs">
-            <p><code>range</code> on arrays and slices provides both the
-index and value for each entry. Above we didn&rsquo;t
-need the index, so we ignored it with the
-blank identifier <code>_</code>. Sometimes we actually want
-the indexes though.</p>
+            <p>配列とスライスに対する<code>range</code>はインデックスと値の両方を提供します。
+上の例ではインデックスは必要ないので、ブランク識別子<code>_</code>を使って無視しました。
+インデックスを使いたい場合もあります。</p>
 
           </td>
           <td class="code leading">
@@ -114,7 +111,7 @@ the indexes though.</p>
         
         <tr>
           <td class="docs">
-            <p><code>range</code> on map iterates over key/value pairs.</p>
+            <p>マップに対する<code>range</code>はキー/値のペアを反復します。</p>
 
           </td>
           <td class="code leading">
@@ -130,7 +127,7 @@ the indexes though.</p>
         
         <tr>
           <td class="docs">
-            <p><code>range</code> can also iterate over just the keys of a map.</p>
+            <p>マップのキーだけを反復することもできます。</p>
 
           </td>
           <td class="code leading">
@@ -145,9 +142,8 @@ the indexes though.</p>
         
         <tr>
           <td class="docs">
-            <p><code>range</code> on strings iterates over Unicode code
-points. The first value is the starting byte index
-of the <code>rune</code> and the second the <code>rune</code> itself.</p>
+            <p>文字列に対する<code>range</code>ではUnicodeのコードポイントを反復します。
+最初の値は<code>rune</code>の開始のバイトのインデックス、ふたつ目は<code>rune</code>そのものです。</p>
 
           </td>
           <td class="code">

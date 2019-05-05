@@ -25,8 +25,8 @@
         
         <tr>
           <td class="docs">
-            <p>Branching with <code>if</code> and <code>else</code> in Go is
-straight-forward.</p>
+            <p>Goでは<code>if</code>と<code>else</code>を使った分岐は
+直截的です。</p>
 
           </td>
           <td class="code empty leading">
@@ -40,7 +40,7 @@ straight-forward.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/g-aqMz0Ivf"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/TdwJgM94TPz"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -73,7 +73,7 @@ straight-forward.</p>
         
         <tr>
           <td class="docs">
-            <p>Here&rsquo;s a basic example.</p>
+            <p>基本的な例です。</p>
 
           </td>
           <td class="code leading">
@@ -90,7 +90,7 @@ straight-forward.</p>
         
         <tr>
           <td class="docs">
-            <p>You can have an <code>if</code> statement without an else.</p>
+            <p><code>if</code>文はelseなしでも使えます。</p>
 
           </td>
           <td class="code leading">
@@ -105,9 +105,8 @@ straight-forward.</p>
         
         <tr>
           <td class="docs">
-            <p>A statement can precede conditionals; any variables
-declared in this statement are available in all
-branches.</p>
+            <p>文は条件に先行することができます。この文で宣言された変数は
+すべての分岐で有効です。</p>
 
           </td>
           <td class="code leading">
@@ -127,8 +126,8 @@ branches.</p>
         
         <tr>
           <td class="docs">
-            <p>Note that you don&rsquo;t need parentheses around conditions
-in Go, but that the braces are required.</p>
+            <p>Goの場合、条件を囲む丸括弧は不要です。
+しかし、波括弧は必要です。</p>
 
           </td>
           <td class="code empty">

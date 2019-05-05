@@ -25,14 +25,12 @@
         
         <tr>
           <td class="docs">
-            <p>In the previous example we used explicit locking with
-<a href="mutexes">mutexes</a> to synchronize access to shared state
-across multiple goroutines. Another option is to use the
-built-in synchronization features of  goroutines and
-channels to achieve the same result. This channel-based
-approach aligns with Go&rsquo;s ideas of sharing memory by
-communicating and having each piece of data owned
-by exactly 1 goroutine.</p>
+            <p>前の例では<a href="mutexes">mutex</a>を使って明示的にロックをして
+共有する状態に対する複数ゴルーチンからのアクセスを同期しました。
+別の選択肢としてゴルーチンとチャンネルの組み込みの同期機構を使っても
+同じことを実現できます。このチャンネルを使ったアプローチは
+通信をしてひとつだけのゴルーチンがデータを持つことでメモリの共有を実現する、
+というGoのアイディアと整合します。</p>
 
           </td>
           <td class="code empty leading">
@@ -46,7 +44,7 @@ by exactly 1 goroutine.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/dlfBGF-qff6"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/MiV1FotE0KP"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -72,14 +70,11 @@ by exactly 1 goroutine.</p>
         
         <tr>
           <td class="docs">
-            <p>In this example our state will be owned by a single
-goroutine. This will guarantee that the data is never
-corrupted with concurrent access. In order to read or
-write that state, other goroutines will send messages
-to the owning goroutine and receive corresponding
-replies. These <code>readOp</code> and <code>writeOp</code> <code>struct</code>s
-encapsulate those requests and a way for the owning
-goroutine to respond.</p>
+            <p>この例では状態はひとつのゴルーチンに所有されます。
+これによって平行アクセスでデータが汚されないようになります。
+状態を読み書きするためには、他のゴルーチンはオーナーのゴルーチンにメッセージを送信し
+返答をもらいます。この<code>readOp</code>と<code>writeOp</code>という構造体は
+この読み書きの要求とオーナーゴルーチンの応答をカプセル化します。</p>
 
           </td>
           <td class="code leading">
@@ -112,7 +107,7 @@ goroutine to respond.</p>
         
         <tr>
           <td class="docs">
-            <p>As before we&rsquo;ll count how many operations we perform.</p>
+            <p>前回同様、実行する操作の回数を数えます。</p>
 
           </td>
           <td class="code leading">
@@ -126,9 +121,7 @@ goroutine to respond.</p>
         
         <tr>
           <td class="docs">
-            <p>The <code>reads</code> and <code>writes</code> channels will be used by
-other goroutines to issue read and write requests,
-respectively.</p>
+            <p><code>reads</code>と<code>writes</code>は読み書きの要求を発行するために他のゴルーチンから使われます。</p>
 
           </td>
           <td class="code leading">
@@ -142,15 +135,12 @@ respectively.</p>
         
         <tr>
           <td class="docs">
-            <p>Here is the goroutine that owns the <code>state</code>, which
-is a map as in the previous example but now private
-to the stateful goroutine. This goroutine repeatedly
-selects on the <code>reads</code> and <code>writes</code> channels,
-responding to requests as they arrive. A response
-is executed by first performing the requested
-operation and then sending a value on the response
-channel <code>resp</code> to indicate success (and the desired
-value in the case of <code>reads</code>).</p>
+            <p><code>state</code>を所有するゴルーチンです。前の例と同様<code>state</code>はマップです。
+しかし、今回は状態を持つゴルーチン内で閉じています。
+このゴルーチンは<code>reads</code>チャンネルと<code>writes</code>チャンネルに対して
+selectを繰り返し、到着した要求に応答します。
+応答はまず、要求された処理を行い、その後に<code>resp</code>チャンネルに値を送信して
+成功したこと(<code>reads</code>のcase文の場合は望みの値)を通知します。</p>
 
           </td>
           <td class="code leading">
@@ -174,11 +164,9 @@ value in the case of <code>reads</code>).</p>
         
         <tr>
           <td class="docs">
-            <p>This starts 100 goroutines to issue reads to the
-state-owning goroutine via the <code>reads</code> channel.
-Each read requires constructing a <code>readOp</code>, sending
-it over the <code>reads</code> channel, and the receiving the
-result over the provided <code>resp</code> channel.</p>
+            <p>100のゴルーチンを開始し<code>reads</code>チャンネル経由で状態を持つゴルーチンに対して読み取りを要求します。
+それぞれの読み取りで<code>readOp</code>を作り<code>reads</code>チャンネル経由で送信し、
+<code>resp</code>チャンネルから結果を受信します。</p>
 
           </td>
           <td class="code leading">
@@ -203,8 +191,8 @@ result over the provided <code>resp</code> channel.</p>
         
         <tr>
           <td class="docs">
-            <p>We start 10 writes as well, using a similar
-approach.</p>
+            <p>書き込みも10のゴルーチンで行います。
+内容は読み取りと似ています。</p>
 
           </td>
           <td class="code leading">
@@ -230,7 +218,7 @@ approach.</p>
         
         <tr>
           <td class="docs">
-            <p>Let the goroutines work for a second.</p>
+            <p>ゴルーチンの処理を1秒待地ます。</p>
 
           </td>
           <td class="code leading">
@@ -243,7 +231,7 @@ approach.</p>
         
         <tr>
           <td class="docs">
-            <p>Finally, capture and report the op counts.</p>
+            <p>最後に処理回数を取り出して表示します。</p>
 
           </td>
           <td class="code">

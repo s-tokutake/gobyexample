@@ -25,8 +25,8 @@
         
         <tr>
           <td class="docs">
-            <p>URLs provide a <a href="https://adam.herokuapp.com/past/2010/3/30/urls_are_the_uniform_way_to_locate_resources/">uniform way to locate resources</a>.
-Here&rsquo;s how to parse URLs in Go.</p>
+            <p>URLは<a href="https://adam.herokuapp.com/past/2010/3/30/urls_are_the_uniform_way_to_locate_resources/">リソースを見つけるための統一された方法</a>を提供します。
+ここではGoでURLをパースする方法を示します。</p>
 
           </td>
           <td class="code empty leading">
@@ -40,7 +40,7 @@ Here&rsquo;s how to parse URLs in Go.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/AL79Lv-9CWo"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/tD86hTQQqQV"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -75,9 +75,8 @@ Here&rsquo;s how to parse URLs in Go.</p>
         
         <tr>
           <td class="docs">
-            <p>We&rsquo;ll parse this example URL, which includes a
-scheme, authentication info, host, port, path,
-query params, and query fragment.</p>
+            <p>このサンプルのURLをパースします。スキーム、認証情報、ホスト、
+ポート、パス、クエリパラメータ、クエリフラグメントが含まれています。</p>
 
           </td>
           <td class="code leading">
@@ -90,7 +89,7 @@ query params, and query fragment.</p>
         
         <tr>
           <td class="docs">
-            <p>Parse the URL and ensure there are no errors.</p>
+            <p>URLをパースしエラーがないことを確かめます。</p>
 
           </td>
           <td class="code leading">
@@ -106,7 +105,7 @@ query params, and query fragment.</p>
         
         <tr>
           <td class="docs">
-            <p>Accessing the scheme is straightforward.</p>
+            <p>スキームへのアクセスは直截的です。</p>
 
           </td>
           <td class="code leading">
@@ -119,9 +118,8 @@ query params, and query fragment.</p>
         
         <tr>
           <td class="docs">
-            <p><code>User</code> contains all authentication info; call
-<code>Username</code> and <code>Password</code> on this for individual
-values.</p>
+            <p><code>User</code>には認証情報が含まれています。
+<code>Username</code>と<code>Password</code>が個別に取得できます。</p>
 
           </td>
           <td class="code leading">
@@ -137,8 +135,8 @@ values.</p>
         
         <tr>
           <td class="docs">
-            <p>The <code>Host</code> contains both the hostname and the port,
-if present. Use <code>SplitHostPort</code> to extract them.</p>
+            <p><code>Host</code>にはホスト名とポートが含まれます。
+<code>SplitHostPort</code>を使うとホストとポートを別々に取得できます。</p>
 
           </td>
           <td class="code leading">
@@ -154,8 +152,7 @@ if present. Use <code>SplitHostPort</code> to extract them.</p>
         
         <tr>
           <td class="docs">
-            <p>Here we extract the <code>path</code> and the fragment after
-the <code>#</code>.</p>
+            <p><code>path</code>と<code>#</code>の後のフラグメントを取り出します。</p>
 
           </td>
           <td class="code leading">
@@ -169,11 +166,10 @@ the <code>#</code>.</p>
         
         <tr>
           <td class="docs">
-            <p>To get query params in a string of <code>k=v</code> format,
-use <code>RawQuery</code>. You can also parse query params
-into a map. The parsed query param maps are from
-strings to slices of strings, so index into <code>[0]</code>
-if you only want the first value.</p>
+            <p><code>k=v</code>という文字列形式のクエリパラメータを取得するには
+<code>RawQuery</code>を使います。また、マップにパースすることもできます。
+このマップは文字列から文字列のスライスへのマップです。
+したがって最初の値だけが欲しいなら<code>[0]</code>で取得できます。</p>
 
           </td>
           <td class="code">

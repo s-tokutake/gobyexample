@@ -25,13 +25,14 @@
         
         <tr>
           <td class="docs">
-            <p><em>Maps</em> are Go&rsquo;s built-in <a href="http://en.wikipedia.org/wiki/Associative_array">associative data type</a>
-(sometimes called <em>hashes</em> or <em>dicts</em> in other languages).</p>
+            <p>_マップ_はGoの組み込みの<a href="http://en.wikipedia.org/wiki/Associative_array">連想データ型</a>です</p>
 
           </td>
-          <td class="code empty leading">
+          <td class="code leading">
 	        
-            
+            <div class="highlight"><pre><span class="c1">//(他の言語では_ハッシュ_や_ディクショナリ_と呼ばれます)。</span>
+</pre></div>
+
           </td>
         </tr>
         
@@ -40,7 +41,7 @@
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/U67R66Oab8r"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/9Sgm_o-9-Qz"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -73,8 +74,8 @@
         
         <tr>
           <td class="docs">
-            <p>To create an empty map, use the builtin <code>make</code>:
-<code>make(map[key-type]val-type)</code>.</p>
+            <p>空のマップを作成するには組み込みの<code>make</code>を使います。
+<code>make(map[key-type]val-type)</code></p>
 
           </td>
           <td class="code leading">
@@ -87,8 +88,7 @@
         
         <tr>
           <td class="docs">
-            <p>Set key/value pairs using typical <code>name[key] = val</code>
-syntax.</p>
+            <p>おなじみの構文<code>name[key] = val</code>でキーと値のペアを設定します。</p>
 
           </td>
           <td class="code leading">
@@ -102,8 +102,8 @@ syntax.</p>
         
         <tr>
           <td class="docs">
-            <p>Printing a map with e.g. <code>fmt.Println</code> will show all of
-its key/value pairs.</p>
+            <p><code>fmt.Println</code>などを使ってマップを表示するとすべての
+キーと値のペアを表示します。</p>
 
           </td>
           <td class="code leading">
@@ -116,7 +116,7 @@ its key/value pairs.</p>
         
         <tr>
           <td class="docs">
-            <p>Get a value for a key with <code>name[key]</code>.</p>
+            <p><code>name[key]</code>で値を取り出します。</p>
 
           </td>
           <td class="code leading">
@@ -130,8 +130,8 @@ its key/value pairs.</p>
         
         <tr>
           <td class="docs">
-            <p>The builtin <code>len</code> returns the number of key/value
-pairs when called on a map.</p>
+            <p>マップに対して組み込みの<code>len</code>を呼び出すと
+キー/値のペアの数を返します。</p>
 
           </td>
           <td class="code leading">
@@ -144,8 +144,7 @@ pairs when called on a map.</p>
         
         <tr>
           <td class="docs">
-            <p>The builtin <code>delete</code> removes key/value pairs from
-a map.</p>
+            <p>組み込みの<code>delete</code>はマップからキー/値のペアを削除します。</p>
 
           </td>
           <td class="code leading">
@@ -159,13 +158,11 @@ a map.</p>
         
         <tr>
           <td class="docs">
-            <p>The optional second return value when getting a
-value from a map indicates if the key was present
-in the map. This can be used to disambiguate
-between missing keys and keys with zero values
-like <code>0</code> or <code>&quot;&quot;</code>. Here we didn&rsquo;t need the value
-itself, so we ignored it with the <em>blank identifier</em>
-<code>_</code>.</p>
+            <p>マップから値を取り出す時のオプショナルな2番目の戻り値は
+そのキーがマップにあるかどうかを返します。
+これによってキーがない場合とキーがあって値が<code>0</code>や<code>&quot;&quot;</code>などのゼロ値の場合
+を明確に区別できます。
+ここでは値自体は使っていないので、_ブランク識別子_である<code>_</code>を使って無視しています。</p>
 
           </td>
           <td class="code leading">
@@ -179,8 +176,8 @@ itself, so we ignored it with the <em>blank identifier</em>
         
         <tr>
           <td class="docs">
-            <p>You can also declare and initialize a new map in
-the same line with this syntax.</p>
+            <p>次のような構文を使えばひとつの行で
+新しいマップの宣言と初期化が行えます。</p>
 
           </td>
           <td class="code">

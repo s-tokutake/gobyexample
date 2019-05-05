@@ -25,10 +25,8 @@
         
         <tr>
           <td class="docs">
-            <p><a href="http://en.wikipedia.org/wiki/Command-line_interface#Command-line_option"><em>Command-line flags</em></a>
-are a common way to specify options for command-line
-programs. For example, in <code>wc -l</code> the <code>-l</code> is a
-command-line flag.</p>
+            <p><a href="http://en.wikipedia.org/wiki/Command-line_interface#Command-line_option"><em>コマンドラインフラグ</em></a>はコマンドラインプログラムの
+オプションを定義する一般的な方法です。例えば、<code>wc -l</code>では<code>-l</code>がコマンドラインフラグです。</p>
 
           </td>
           <td class="code empty leading">
@@ -42,7 +40,7 @@ command-line flag.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/NASEOq2R3n"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/Q33iZYqqZaI"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -51,9 +49,8 @@ command-line flag.</p>
         
         <tr>
           <td class="docs">
-            <p>Go provides a <code>flag</code> package supporting basic
-command-line flag parsing. We&rsquo;ll use this package to
-implement our example command-line program.</p>
+            <p>Goは<code>flag</code>パッケージを提供し、コマンドラインフラグのパースをサポートします。
+ここではこのパッケージを使ってサンプルのコマンドラインプログラムを実装します。</p>
 
           </td>
           <td class="code leading">
@@ -79,12 +76,11 @@ implement our example command-line program.</p>
         
         <tr>
           <td class="docs">
-            <p>Basic flag declarations are available for string,
-integer, and boolean options. Here we declare a
-string flag <code>word</code> with a default value <code>&quot;foo&quot;</code>
-and a short description. This <code>flag.String</code> function
-returns a string pointer (not a string value);
-we&rsquo;ll see how to use this pointer below.</p>
+            <p>基本的なフラグの宣言は文字列、整数、ブーリアンを利用します。
+ここでは文字列のフラグ<code>word</code>を宣言し、デフォルトの値を<code>&quot;foo&quot;</code>にして、
+簡単な説明を設定しています。
+この<code>flag.String</code>関数は文字列のポインタ(文字列値そのものではない)を返します。
+このポインタの使い方は後述します。</p>
 
           </td>
           <td class="code leading">
@@ -97,8 +93,7 @@ we&rsquo;ll see how to use this pointer below.</p>
         
         <tr>
           <td class="docs">
-            <p>This declares <code>numb</code> and <code>fork</code> flags, using a
-similar approach to the <code>word</code> flag.</p>
+            <p><code>word</code>と同じように<code>numb</code>と<code>fork</code>フラグを定義します。</p>
 
           </td>
           <td class="code leading">
@@ -112,10 +107,8 @@ similar approach to the <code>word</code> flag.</p>
         
         <tr>
           <td class="docs">
-            <p>It&rsquo;s also possible to declare an option that uses an
-existing var declared elsewhere in the program.
-Note that we need to pass in a pointer to the flag
-declaration function.</p>
+            <p>プログラムのどこかに宣言した既存の変数を使ってオプションを宣言することもできます。
+フラグ宣言関数にポインタを渡す必要があることに注意してください。</p>
 
           </td>
           <td class="code leading">
@@ -129,8 +122,8 @@ declaration function.</p>
         
         <tr>
           <td class="docs">
-            <p>Once all flags are declared, call <code>flag.Parse()</code>
-to execute the command-line parsing.</p>
+            <p>すべてのフラグが宣言できたら<code>flag.Parse()</code>を呼び
+コマンドラインのパースを実行します。</p>
 
           </td>
           <td class="code leading">
@@ -143,10 +136,9 @@ to execute the command-line parsing.</p>
         
         <tr>
           <td class="docs">
-            <p>Here we&rsquo;ll just dump out the parsed options and
-any trailing positional arguments. Note that we
-need to dereference the pointers with e.g. <code>*wordPtr</code>
-to get the actual option values.</p>
+            <p>ここではパースされたオプションと後続する可能性のある引数をダンプします。
+<code>*wordPtr</code>というかたちでポインタをデリファレンスして実際の
+オプション値を取得する必要があることに注意してください。</p>
 
           </td>
           <td class="code">

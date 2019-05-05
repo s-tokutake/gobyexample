@@ -11,7 +11,7 @@ import "fmt"
 // `zeroval`は`ival`のコピーを受け取ります。
 // これは関数の呼び出し使われた値とは区別されます。
 func zeroval(ival int) {
-	ival = 0
+    ival = 0
 }
 
 // 対して、`zeroptr`のパラメータは`*int`です。
@@ -19,21 +19,21 @@ func zeroval(ival int) {
 // pointerのメモリアドレスからそのアドレスの現在の値を_デリファレンス_します。
 // デリファレンスされたポインタに値を設定すると参照されたアドレスの値が変わります。
 func zeroptr(iptr *int) {
-	*iptr = 0
+    *iptr = 0
 }
 
 func main() {
-	i := 1
-	fmt.Println("initial:", i)
+    i := 1
+    fmt.Println("initial:", i)
 
-	zeroval(i)
-	fmt.Println("zeroval:", i)
+    zeroval(i)
+    fmt.Println("zeroval:", i)
 
-	// `&i`という構文は`i`のメモリアドレス、
-	// つまり、`i`のポインタを返します。
-	zeroptr(&i)
-	fmt.Println("zeroptr:", i)
+    // `&i`という構文は`i`のメモリアドレス、
+    // つまり、`i`のポインタを返します。
+    zeroptr(&i)
+    fmt.Println("zeroptr:", i)
 
-	// ポインタもプリントすることができます。
-	fmt.Println("pointer:", &i)
+    // ポインタもプリントすることができます。
+    fmt.Println("pointer:", &i)
 }

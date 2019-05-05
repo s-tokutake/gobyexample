@@ -25,7 +25,7 @@
         
         <tr>
           <td class="docs">
-            <p><em>Timeouts</em> are important for programs that connect to
+            <p>_タイムアウト_は are important for programs that connect to
 external resources or that otherwise need to bound
 execution time. Implementing timeouts in Go is easy and
 elegant thanks to channels and <code>select</code>.</p>
@@ -42,7 +42,7 @@ elegant thanks to channels and <code>select</code>.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/MgcfA-xpJO9"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/6t0s75hnrr3"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 

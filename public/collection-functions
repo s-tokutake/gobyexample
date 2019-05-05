@@ -25,10 +25,9 @@
         
         <tr>
           <td class="docs">
-            <p>We often need our programs to perform operations on
-collections of data, like selecting all items that
-satisfy a given predicate or mapping all items to a new
-collection with a custom function.</p>
+            <p>私たちのプログラムはデータのコレクションに対して操作をする場合があります。
+与えられた条件を満たすすベての要素を取り出したり、
+カスタムの関数ですべての要素を新しいコレクションにマップしたりします。</p>
 
           </td>
           <td class="code empty leading">
@@ -39,11 +38,10 @@ collection with a custom function.</p>
         
         <tr>
           <td class="docs">
-            <p>In some languages it&rsquo;s idiomatic to use <a href="http://en.wikipedia.org/wiki/Generic_programming">generic</a>
-data structures and algorithms. Go does not support
-generics; in Go it&rsquo;s common to provide collection
-functions if and when they are specifically needed for
-your program and data types.</p>
+            <p>これを実現するとき、慣用的に<a href="http://en.wikipedia.org/wiki/Generic_programming">ジェネリック</a>な
+データ構造とアルゴリズムを使うプログラミング言語もあります。
+しかし、Goはジェネリックをサポートしません。
+Goでは必要に応じてコレクション関数を定義するのが一般的です。</p>
 
           </td>
           <td class="code empty leading">
@@ -54,12 +52,10 @@ your program and data types.</p>
         
         <tr>
           <td class="docs">
-            <p>Here are some example collection functions for slices
-of <code>strings</code>. You can use these examples to build your
-own functions. Note that in some cases it may be
-clearest to just inline the collection-manipulating
-code directly, instead of creating and calling a
-helper function.</p>
+            <p>ここでは<code>strings</code>のスライスのコレクション関数を示します。
+この例を使って独自の関数を構築することも可能です。
+ヘルパ関数を定義し呼び出すよりも、インラインでコレクション操作をするコードを
+直接書いた方がきれいな場合もあることに注意してください。</p>
 
           </td>
           <td class="code empty leading">
@@ -73,7 +69,7 @@ helper function.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/BJB_npWH516"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/bEYICG19nCX"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -95,8 +91,8 @@ helper function.</p>
         
         <tr>
           <td class="docs">
-            <p>Index returns the first index of the target string <code>t</code>, or
--1 if no match is found.</p>
+            <p>Indexは対象の文字列<code>t</code>の最初のインデックスを返します。
+見つからなかった場合は0を返します。</p>
 
           </td>
           <td class="code leading">
@@ -116,8 +112,7 @@ helper function.</p>
         
         <tr>
           <td class="docs">
-            <p>Include returns <code>true</code> if the target string t is in the
-slice.</p>
+            <p>Includeは対象文字列tがスライスに含まれている場合<code>true</code>を返します。</p>
 
           </td>
           <td class="code leading">
@@ -132,8 +127,7 @@ slice.</p>
         
         <tr>
           <td class="docs">
-            <p>Any returns <code>true</code> if one of the strings in the slice
-satisfies the predicate <code>f</code>.</p>
+            <p>Anyはスライス内のひとつ以上の文字列が術語<code>f</code>を満たす場合に<code>true</code>を返します。</p>
 
           </td>
           <td class="code leading">
@@ -153,8 +147,7 @@ satisfies the predicate <code>f</code>.</p>
         
         <tr>
           <td class="docs">
-            <p>All returns <code>true</code> if all of the strings in the slice
-satisfy the predicate <code>f</code>.</p>
+            <p>Allはスライス内のすべての文字列が術語<code>f</code>を満たす場合に<code>true</code>を返します。</p>
 
           </td>
           <td class="code leading">
@@ -174,8 +167,7 @@ satisfy the predicate <code>f</code>.</p>
         
         <tr>
           <td class="docs">
-            <p>Filter returns a new slice containing all strings in the
-slice that satisfy the predicate <code>f</code>.</p>
+            <p>Filterは与えられたスライス内の、術語<code>f</code>を満たすすべての文字列を含む新しいスライスを返します。</p>
 
           </td>
           <td class="code leading">
@@ -196,8 +188,7 @@ slice that satisfy the predicate <code>f</code>.</p>
         
         <tr>
           <td class="docs">
-            <p>Map returns a new slice containing the results of applying
-the function <code>f</code> to each string in the original slice.</p>
+            <p>Mapはもとのスライス内の文字列に関数<code>f</code>を適用した結果を含む新しいスライスを作成します。</p>
 
           </td>
           <td class="code leading">
@@ -228,7 +219,7 @@ the function <code>f</code> to each string in the original slice.</p>
         
         <tr>
           <td class="docs">
-            <p>Here we try out our various collection functions.</p>
+            <p>ここでコレクション関数を実行してみます。</p>
 
           </td>
           <td class="code leading">
@@ -307,9 +298,8 @@ the function <code>f</code> to each string in the original slice.</p>
         
         <tr>
           <td class="docs">
-            <p>The above examples all used anonymous functions,
-but you can also use named functions of the correct
-type.</p>
+            <p>上の例はすべて無名関数を使っていますが、
+正しい型の名前付きの関数を渡すこともできます。</p>
 
           </td>
           <td class="code leading">

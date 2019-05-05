@@ -25,10 +25,9 @@
         
         <tr>
           <td class="docs">
-            <p><em>Defer</em> is used to ensure that a function call is
-performed later in a program&rsquo;s execution, usually for
-purposes of cleanup. <code>defer</code> is often used where e.g.
-<code>ensure</code> and <code>finally</code> would be used in other languages.</p>
+            <p>_defer_はある関数呼び出しがプログラムの実行の後に行われることを保証します。
+クリーアップ目的で使われるのが一般的です。
+<code>defer</code>がよく使われるのは他の言語で<code>ensure</code>や<code>finally</code>が使われる場合です。</p>
 
           </td>
           <td class="code empty leading">
@@ -42,7 +41,7 @@ purposes of cleanup. <code>defer</code> is often used where e.g.
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/9aoHwzHcAo"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/hDHOE29-QJ7"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -64,9 +63,8 @@ purposes of cleanup. <code>defer</code> is often used where e.g.
         
         <tr>
           <td class="docs">
-            <p>Suppose we wanted to create a file, write to it,
-and then close when we&rsquo;re done. Here&rsquo;s how we could
-do that with <code>defer</code>.</p>
+            <p>ファイルを作成し書き込みをし、終わったらファイルを閉じたいとします。
+ここでは<code>defer</code>を使ってこれを実現します。</p>
 
           </td>
           <td class="code leading">
@@ -79,11 +77,10 @@ do that with <code>defer</code>.</p>
         
         <tr>
           <td class="docs">
-            <p>Immediately after getting a file object with
-<code>createFile</code>, we defer the closing of that file
-with <code>closeFile</code>. This will be executed at the end
-of the enclosing function (<code>main</code>), after
-<code>writeFile</code> has finished.</p>
+            <p><code>createFile</code>でファイルオブジェクトを取得した直後、
+<code>closeFile</code>でファイルを閉じる処理をdeferを使って実行します。
+これによって<code>closeFile</code>は<code>writeFile</code>が完了した後、This will be executed at the end
+この関数(<code>main</code>)の最後に実行されます。</p>
 
           </td>
           <td class="code leading">

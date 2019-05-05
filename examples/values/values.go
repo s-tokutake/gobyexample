@@ -7,15 +7,15 @@ import "fmt"
 
 func main() {
 
-	// 文字列です。`+`で結合できます。
-	fmt.Println("go" + "lang")
+    // 文字列です。`+`で結合できます。
+    fmt.Println("go" + "lang")
 
-	// 整数と浮動小数点数です。
-	fmt.Println("1+1 =", 1+1)
-	fmt.Println("7.0/3.0 =", 7.0/3.0)
+    // 整数と浮動小数点数です。
+    fmt.Println("1+1 =", 1+1)
+    fmt.Println("7.0/3.0 =", 7.0/3.0)
 
-	// ブーリアンです。おなじみの演算子が使えます。
-	fmt.Println(true && false)
-	fmt.Println(true || false)
-	fmt.Println(!true)
+    // ブーリアンです。おなじみの演算子が使えます。
+    fmt.Println(true && false)
+    fmt.Println(true || false)
+    fmt.Println(!true)
 }

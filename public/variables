@@ -25,9 +25,8 @@
         
         <tr>
           <td class="docs">
-            <p>In Go, <em>variables</em> are explicitly declared and used by
-the compiler to e.g. check type-correctness of function
-calls.</p>
+            <p>Goでは、_変数_は明示的に宣言されます。コンパイラはこれを使って、
+関数呼び出しの型の正しさをチェックなどをします。</p>
 
           </td>
           <td class="code empty leading">
@@ -41,7 +40,7 @@ calls.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/1FnG0dJfxs8"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/PpEyQ8hdYGt"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -74,7 +73,7 @@ calls.</p>
         
         <tr>
           <td class="docs">
-            <p><code>var</code> declares 1 or more variables.</p>
+            <p><code>var</code>はひとつ以上の変数を宣言します。</p>
 
           </td>
           <td class="code leading">
@@ -88,7 +87,7 @@ calls.</p>
         
         <tr>
           <td class="docs">
-            <p>You can declare multiple variables at once.</p>
+            <p>複数の変数を一度に宣言できます。</p>
 
           </td>
           <td class="code leading">
@@ -102,7 +101,7 @@ calls.</p>
         
         <tr>
           <td class="docs">
-            <p>Go will infer the type of initialized variables.</p>
+            <p>Goは初期化された変数の型を推論します。</p>
 
           </td>
           <td class="code leading">
@@ -116,9 +115,8 @@ calls.</p>
         
         <tr>
           <td class="docs">
-            <p>Variables declared without a corresponding
-initialization are <em>zero-valued</em>. For example, the
-zero value for an <code>int</code> is <code>0</code>.</p>
+            <p>初期値がセットされない変数は_ゼロ値_です。例えば、
+<code>int</code>のゼロ値は<code>0</code>です。</p>
 
           </td>
           <td class="code leading">
@@ -132,9 +130,8 @@ zero value for an <code>int</code> is <code>0</code>.</p>
         
         <tr>
           <td class="docs">
-            <p>The <code>:=</code> syntax is shorthand for declaring and
-initializing a variable, e.g. for
-<code>var f string = &quot;short&quot;</code> in this case.</p>
+            <p><code>:=</code>という構文は変数の宣言と初期化の簡易表記です。
+この例は、<code>var f string = &quot;short&quot;</code>と同じです。</p>
 
           </td>
           <td class="code">

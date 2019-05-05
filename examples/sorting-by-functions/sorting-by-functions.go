@@ -19,19 +19,19 @@ type byLength []string
 // この例では、文字列の長さの昇順に並べます。
 // したがって、`len(s[i])`と`len(s[j])`を使います。
 func (s byLength) Len() int {
-	return len(s)
+    return len(s)
 }
 func (s byLength) Swap(i, j int) {
-	s[i], s[j] = s[j], s[i]
+    s[i], s[j] = s[j], s[i]
 }
 func (s byLength) Less(i, j int) bool {
-	return len(s[i]) < len(s[j])
+    return len(s[i]) < len(s[j])
 }
 
 // 準備が整いました。`fruits`スライスを`byLength`にキャストし、
 // `sort.Sort`を使ってカスタムのソートを実行します。
 func main() {
-	fruits := []string{"peach", "banana", "kiwi"}
-	sort.Sort(byLength(fruits))
-	fmt.Println(fruits)
+    fruits := []string{"peach", "banana", "kiwi"}
+    sort.Sort(byLength(fruits))
+    fmt.Println(fruits)
 }

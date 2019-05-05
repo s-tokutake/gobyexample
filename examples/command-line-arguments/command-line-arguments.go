@@ -10,16 +10,16 @@ import "fmt"
 
 func main() {
 
-	// `os.Args`は生のコマンドライン引数へのアクセスを提供します。
-	// このスライスの最初の値がプログラムへのパスであり、
-	// `os.Args[1:]`にプログラムへの引数が含まれることに注意してください。
-	argsWithProg := os.Args
-	argsWithoutProg := os.Args[1:]
+    // `os.Args`は生のコマンドライン引数へのアクセスを提供します。
+    // このスライスの最初の値がプログラムへのパスであり、
+    // `os.Args[1:]`にプログラムへの引数が含まれることに注意してください。
+    argsWithProg := os.Args
+    argsWithoutProg := os.Args[1:]
 
-	// 個別の引数はふつうのインデックスで取得できます。
-	arg := os.Args[3]
+    // 個別の引数はふつうのインデックスで取得できます。
+    arg := os.Args[3]
 
-	fmt.Println(argsWithProg)
-	fmt.Println(argsWithoutProg)
-	fmt.Println(arg)
+    fmt.Println(argsWithProg)
+    fmt.Println(argsWithoutProg)
+    fmt.Println(arg)
 }

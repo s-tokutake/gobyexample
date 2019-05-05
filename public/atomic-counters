@@ -25,12 +25,11 @@
         
         <tr>
           <td class="docs">
-            <p>The primary mechanism for managing state in Go is
-communication over channels. We saw this for example
-with <a href="worker-pools">worker pools</a>. There are a few other
-options for managing state though. Here we&rsquo;ll
-look at using the <code>sync/atomic</code> package for <em>atomic
-counters</em> accessed by multiple goroutines.</p>
+            <p>Goの状態管理の第一の仕組みはチャンネルを使った通信です。
+この例は前に<a href="worker-pools">ワーカープール</a>で見ました。
+しかし、状態管理には他にも方法があります。
+ここでは<code>sync/atomic</code>パッケージを使って
+複数のゴルーチンからアクセスされる_アトミックカウンタ_を示します。</p>
 
           </td>
           <td class="code empty leading">
@@ -44,7 +43,7 @@ counters</em> accessed by multiple goroutines.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/KDr9EMMPMgi"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/wNkJeMJ1GO2"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -79,8 +78,8 @@ counters</em> accessed by multiple goroutines.</p>
         
         <tr>
           <td class="docs">
-            <p>We&rsquo;ll use an unsigned integer to represent our
-(always-positive) counter.</p>
+            <p>未割り当ての整数値を使って常に(常に正の整数)の
+カウンタを表現します。</p>
 
           </td>
           <td class="code leading">
@@ -93,9 +92,8 @@ counters</em> accessed by multiple goroutines.</p>
         
         <tr>
           <td class="docs">
-            <p>To simulate concurrent updates, we&rsquo;ll start 50
-goroutines that each increment the counter about
-once a millisecond.</p>
+            <p>平行の更新をシュミレートするため50のゴルーチンを開始し
+1ミリ秒に1回、カウンタをインクリメントします。</p>
 
           </td>
           <td class="code leading">
@@ -110,10 +108,9 @@ once a millisecond.</p>
         
         <tr>
           <td class="docs">
-            <p>To atomically increment the counter we
-use <code>AddUint64</code>, giving it the memory
-address of our <code>ops</code> counter with the
-<code>&amp;</code> syntax.</p>
+            <p>アトミックにカウンタをインクリメントするために
+<code>&amp;</code>構文を使って<code>AddUint64</code>に<code>ops</code>カウンタのメモリアドレスを
+渡します。</p>
 
           </td>
           <td class="code leading">
@@ -126,7 +123,7 @@ address of our <code>ops</code> counter with the
         
         <tr>
           <td class="docs">
-            <p>Wait a bit between increments.</p>
+            <p>インクリメント処理の間、少し待ちます。</p>
 
           </td>
           <td class="code leading">
@@ -142,7 +139,7 @@ address of our <code>ops</code> counter with the
         
         <tr>
           <td class="docs">
-            <p>Wait a second to allow some ops to accumulate.</p>
+            <p>1秒、opsのインクリメントが進むのを待ちます。</p>
 
           </td>
           <td class="code leading">
@@ -155,12 +152,9 @@ address of our <code>ops</code> counter with the
         
         <tr>
           <td class="docs">
-            <p>In order to safely use the counter while it&rsquo;s still
-being updated by other goroutines, we extract a
-copy of the current value into <code>opsFinal</code> via
-<code>LoadUint64</code>. As above we need to give this
-function the memory address <code>&amp;ops</code> from which to
-fetch the value.</p>
+            <p>他のゴルーチンによって更新されているカウンタに安全にアクセスするため
+<code>LoadUint64</code>を使って<code>opsFinal</code>に現在の値のコピーを取り出します。
+上と同じようにこの関数にもメモリアドレス<code>&amp;ops</code>を与え、値を取り出します。</p>
 
           </td>
           <td class="code">

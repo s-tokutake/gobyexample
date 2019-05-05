@@ -25,10 +25,8 @@
         
         <tr>
           <td class="docs">
-            <p>In a <a href="range">previous</a> example we saw how <code>for</code> and
-<code>range</code> provide iteration over basic data structures.
-We can also use this syntax to iterate over
-values received from a channel.</p>
+            <p><a href="range">前の</a>例では<code>for</code>と<code>range</code>の基本的なデータ構造に対する反復処理を紹介しました。
+チャンネルからの受信でもこの構文を使うことができます。</p>
 
           </td>
           <td class="code empty leading">
@@ -42,7 +40,7 @@ values received from a channel.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/I63ge2ISDs"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/vY9NhffAoSf"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -75,7 +73,7 @@ values received from a channel.</p>
         
         <tr>
           <td class="docs">
-            <p>We&rsquo;ll iterate over 2 values in the <code>queue</code> channel.</p>
+            <p><code>queue</code>チャンネルの2つの値を反復処理します。</p>
 
           </td>
           <td class="code leading">
@@ -91,10 +89,8 @@ values received from a channel.</p>
         
         <tr>
           <td class="docs">
-            <p>This <code>range</code> iterates over each element as it&rsquo;s
-received from <code>queue</code>. Because we <code>close</code>d the
-channel above, the iteration terminates after
-receiving the 2 elements.</p>
+            <p><code>range</code>を使って<code>queue</code>から受信した値を反復処理します。
+上でチャンネルを閉じているため2つの要素を受信して反復は終了します。</p>
 
           </td>
           <td class="code">

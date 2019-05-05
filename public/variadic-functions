@@ -25,10 +25,8 @@
         
         <tr>
           <td class="docs">
-            <p><a href="http://en.wikipedia.org/wiki/Variadic_function"><em>Variadic functions</em></a>
-can be called with any number of trailing arguments.
-For example, <code>fmt.Println</code> is a common variadic
-function.</p>
+            <p><a href="http://en.wikipedia.org/wiki/Variadic_function"><em>可変長引数関数</em></a>は任意の数の末尾引数を受け取ります。
+例えば、<code>fmt.Println</code>は可変長引数関数です。</p>
 
           </td>
           <td class="code empty leading">
@@ -42,7 +40,7 @@ function.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/7f0JlVhToDD"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/cxGsOTPpOVZ"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -63,8 +61,7 @@ function.</p>
         
         <tr>
           <td class="docs">
-            <p>Here&rsquo;s a function that will take an arbitrary number
-of <code>int</code>s as arguments.</p>
+            <p>この関数は任意の数の<code>int</code>を引数に取ります。</p>
 
           </td>
           <td class="code leading">
@@ -96,8 +93,7 @@ of <code>int</code>s as arguments.</p>
         
         <tr>
           <td class="docs">
-            <p>Variadic functions can be called in the usual way
-with individual arguments.</p>
+            <p>可変長引数関数は普通に個別の引数を渡して呼び出します。</p>
 
           </td>
           <td class="code leading">
@@ -111,9 +107,8 @@ with individual arguments.</p>
         
         <tr>
           <td class="docs">
-            <p>If you already have multiple args in a slice,
-apply them to a variadic function using
-<code>func(slice...)</code> like this.</p>
+            <p>スライスに複数の引数が入っているなら
+このように<code>func(slice...)</code>というかたちで渡せます。</p>
 
           </td>
           <td class="code">

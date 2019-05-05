@@ -25,8 +25,7 @@
         
         <tr>
           <td class="docs">
-            <p>In Go, an <em>array</em> is a numbered sequence of elements of a
-specific length.</p>
+            <p>Goでは_配列_は特定の長さの要素の番号付きのシーケンスです。</p>
 
           </td>
           <td class="code empty leading">
@@ -40,7 +39,7 @@ specific length.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/l-A8eBnwio"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/Xua4dDtKDD2"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -73,10 +72,9 @@ specific length.</p>
         
         <tr>
           <td class="docs">
-            <p>Here we create an array <code>a</code> that will hold exactly
-5 <code>int</code>s. The type of elements and length are both
-part of the array&rsquo;s type. By default an array is
-zero-valued, which for <code>int</code>s means <code>0</code>s.</p>
+            <p>ここでは<code>a</code>という配列を作成します。<code>a</code>は5つの整数を持ちます。
+要素の型と長さは両方とも配列の型の一部です。
+デフォルトでは配列はゼロ値になります。つまり、<code>int</code>なら<code>0</code>です。</p>
 
           </td>
           <td class="code leading">
@@ -90,9 +88,8 @@ zero-valued, which for <code>int</code>s means <code>0</code>s.</p>
         
         <tr>
           <td class="docs">
-            <p>We can set a value at an index using the
-<code>array[index] = value</code> syntax, and get a value with
-<code>array[index]</code>.</p>
+            <p>インデックスを使って<code>array[index] = value</code>という構文で値をセットできます。
+<code>array[index]</code>で値を取得します。</p>
 
           </td>
           <td class="code leading">
@@ -107,7 +104,7 @@ zero-valued, which for <code>int</code>s means <code>0</code>s.</p>
         
         <tr>
           <td class="docs">
-            <p>The builtin <code>len</code> returns the length of an array.</p>
+            <p>組み込みの<code>len</code>は配列の長さを返します。</p>
 
           </td>
           <td class="code leading">
@@ -120,8 +117,7 @@ zero-valued, which for <code>int</code>s means <code>0</code>s.</p>
         
         <tr>
           <td class="docs">
-            <p>Use this syntax to declare and initialize an array
-in one line.</p>
+            <p>1行で配列の宣言と初期化をするにはこのような書き方をします。</p>
 
           </td>
           <td class="code leading">
@@ -135,9 +131,7 @@ in one line.</p>
         
         <tr>
           <td class="docs">
-            <p>Array types are one-dimensional, but you can
-compose types to build multi-dimensional data
-structures.</p>
+            <p>配列は1次元ですが、多次元のデータ構造を構成できます。</p>
 
           </td>
           <td class="code">

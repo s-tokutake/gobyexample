@@ -25,8 +25,7 @@
         
         <tr>
           <td class="docs">
-            <p>In this example we&rsquo;ll look at how to implement
-a <em>worker pool</em> using goroutines and channels.</p>
+            <p>ゴルーチンとチャンネルを使った_ワーカープール_の実装を紹介します。</p>
 
           </td>
           <td class="code empty leading">
@@ -40,7 +39,7 @@ a <em>worker pool</em> using goroutines and channels.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/RTRcHA05vV"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/aEZtHuDY9_3"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -62,11 +61,9 @@ a <em>worker pool</em> using goroutines and channels.</p>
         
         <tr>
           <td class="docs">
-            <p>Here&rsquo;s the worker, of which we&rsquo;ll run several
-concurrent instances. These workers will receive
-work on the <code>jobs</code> channel and send the corresponding
-results on <code>results</code>. We&rsquo;ll sleep a second per job to
-simulate an expensive task.</p>
+            <p>まずワーカーです。平行で実行します。<code>jobs</code>チャンネルからジョブを受信し、
+<code>results</code>チャンネルに結果を送信します。重いタスクをシュミレートするため、
+処理の間に1秒待ちます。</p>
 
           </td>
           <td class="code leading">
@@ -98,9 +95,8 @@ simulate an expensive task.</p>
         
         <tr>
           <td class="docs">
-            <p>In order to use our pool of workers we need to send
-them work and collect their results. We make 2
-channels for this.</p>
+            <p>ワーカーのプールを使うためにジョブを送信し結果を集める必要があります。
+このためにふたつのチャンネルを作ります。</p>
 
           </td>
           <td class="code leading">
@@ -114,8 +110,7 @@ channels for this.</p>
         
         <tr>
           <td class="docs">
-            <p>This starts up 3 workers, initially blocked
-because there are no jobs yet.</p>
+            <p>3つのワーカーを立ち上げます。まだジョブがないのでブロックされます。</p>
 
           </td>
           <td class="code leading">
@@ -130,8 +125,7 @@ because there are no jobs yet.</p>
         
         <tr>
           <td class="docs">
-            <p>Here we send 5 <code>jobs</code> and then <code>close</code> that
-channel to indicate that&rsquo;s all the work we have.</p>
+            <p>5つの<code>jobs</code>を送信しチャンネルを<code>close</code>してこれ以上ジョブがないことを示します。</p>
 
           </td>
           <td class="code leading">
@@ -147,7 +141,7 @@ channel to indicate that&rsquo;s all the work we have.</p>
         
         <tr>
           <td class="docs">
-            <p>Finally we collect all the results of the work.</p>
+            <p>最後にすべての結果を受信します。</p>
 
           </td>
           <td class="code">

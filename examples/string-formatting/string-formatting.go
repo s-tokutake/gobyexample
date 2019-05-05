@@ -1,6 +1,5 @@
-// Go offers excellent support for string formatting in
-// the `printf` tradition. Here are some examples of
-// common string formatting tasks.
+// Goは従来の`printf`の文字列フォーマッティングに対して素晴らしいサポートを提供します。
+// ここではよくある文字列フォーマッティングの例を示します。
 
 package main
 
@@ -13,51 +12,46 @@ type point struct {
 
 func main() {
 
-    // Go offers several printing "verbs" designed to
-    // format general Go values. For example, this prints
-    // an instance of our `point` struct.
+    // Goはいくつかの表示の"verbs"を提供しGoの一般的な値をフォーマットできるようにしています。
+    // ここでは`point`構造体を表示しています。
     p := point{1, 2}
     fmt.Printf("%v\n", p)
 
-    // If the value is a struct, the `%+v` variant will
-    // include the struct's field names.
+    // 値が構造体の場合、`%+v`を使うと構造体のフィールド名が含まれます。
     fmt.Printf("%+v\n", p)
 
-    // The `%#v` variant prints a Go syntax representation
-    // of the value, i.e. the source code snippet that
-    // would produce that value.
+    // `%#v`は対象の値のGoの構文表示です。
+    // つまり、対象の値を生成したソースコードスニペットを表示します。
     fmt.Printf("%#v\n", p)
 
-    // To print the type of a value, use `%T`.
+    // 値の型を出力するなら`%T`を使います。
     fmt.Printf("%T\n", p)
 
-    // Formatting booleans is straight-forward.
+    // ブーリアンの場合は直截的です。
     fmt.Printf("%t\n", true)
 
-    // There are many options for formatting integers.
-    // Use `%d` for standard, base-10 formatting.
+    // 整数のフォーマットにはたくさんのオプションがあります。
+    // `%d`が標準的です。基数10でフォーマッティングします。
     fmt.Printf("%d\n", 123)
 
-    // This prints a binary representation.
+    // バイナリで表示するにはこれです。
     fmt.Printf("%b\n", 14)
 
-    // This prints the character corresponding to the
-    // given integer.
+    // これは与えられた整数に対応するキャラクタを表示します。
     fmt.Printf("%c\n", 33)
 
-    // `%x` provides hex encoding.
+    // `%x`はHEXエンコーディングです。
     fmt.Printf("%x\n", 456)
 
-    // There are also several formatting options for
-    // floats. For basic decimal formatting use `%f`.
+    // 浮動小数点数にも多くのオプションがあります。
+    // 基本的な小数表記なら`%f`を使います。
     fmt.Printf("%f\n", 78.9)
 
-    // `%e` and `%E` format the float in (slightly
-    // different versions of) scientific notation.
+    // `%e`と`%E`は指数表記(わずかに異なるバージョン)で浮動小数点数を表します。
     fmt.Printf("%e\n", 123400000.0)
     fmt.Printf("%E\n", 123400000.0)
 
-    // For basic string printing use `%s`.
+    // 文字列は`%s`を使って基本的な出力をします。
     fmt.Printf("%s\n", "\"string\"")
 
     // To double-quote strings as in Go source, use `%q`.

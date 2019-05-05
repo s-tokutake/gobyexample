@@ -25,11 +25,8 @@
         
         <tr>
           <td class="docs">
-            <p><em><a href="http://en.wikipedia.org/wiki/Rate_limiting">Rate limiting</a></em>
-is an important mechanism for controlling resource
-utilization and maintaining quality of service. Go
-elegantly supports rate limiting with goroutines,
-channels, and <a href="tickers">tickers</a>.</p>
+            <p><em><a href="http://en.wikipedia.org/wiki/Rate_limiting">律速</a></em>はリソース利用の制御とサービスの質の維持にとって重要な仕組みです。
+Goはゴルーチンとチャンネルとtickers](tickers)を使って律速をエレガントにサポートします。</p>
 
           </td>
           <td class="code empty leading">
@@ -43,7 +40,7 @@ channels, and <a href="tickers">tickers</a>.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/l4uDE-RCDpa"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/5AFGdKn-ChB"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -77,10 +74,8 @@ channels, and <a href="tickers">tickers</a>.</p>
         
         <tr>
           <td class="docs">
-            <p>First we&rsquo;ll look at basic rate limiting. Suppose
-we want to limit our handling of incoming requests.
-We&rsquo;ll serve these requests off a channel of the
-same name.</p>
+            <p>最初は基本的な例です。処理するリクエスト数を制限したいとします。
+ここではrequestsという名のチャンネルでリクエストを処理します。</p>
 
           </td>
           <td class="code leading">
@@ -97,9 +92,8 @@ same name.</p>
         
         <tr>
           <td class="docs">
-            <p>This <code>limiter</code> channel will receive a value
-every 200 milliseconds. This is the regulator in
-our rate limiting scheme.</p>
+            <p><code>limiter</code>チャンネルは200ミリ秒ごとに値を受信します。
+これが律速の調整弁いなります。</p>
 
           </td>
           <td class="code leading">
@@ -112,9 +106,8 @@ our rate limiting scheme.</p>
         
         <tr>
           <td class="docs">
-            <p>By blocking on a receive from the <code>limiter</code> channel
-before serving each request, we limit ourselves to
-1 request every 200 milliseconds.</p>
+            <p>リクエストを処理する前のlimiter`チャンネルからの受信でブロックされることで
+200ミリ秒に1リクエスト処理するという制限がかかります。</p>
 
           </td>
           <td class="code leading">
@@ -130,11 +123,9 @@ before serving each request, we limit ourselves to
         
         <tr>
           <td class="docs">
-            <p>We may want to allow short bursts of requests in
-our rate limiting scheme while preserving the
-overall rate limit. We can accomplish this by
-buffering our limiter channel. This <code>burstyLimiter</code>
-channel will allow bursts of up to 3 events.</p>
+            <p>全体の律速は一定に保ったままリクエストが短い間バーストするのはを許容したい
+場合があります。これは<code>limiter</code>チャンネルをバッファありにすることで実現できます。
+この<code>burstyLimiter</code>チャンネルは3回までバーストを許容します。</p>
 
           </td>
           <td class="code leading">
@@ -147,7 +138,7 @@ channel will allow bursts of up to 3 events.</p>
         
         <tr>
           <td class="docs">
-            <p>Fill up the channel to represent allowed bursting.</p>
+            <p>チャンネルを埋めて許容されたバーストを表します。</p>
 
           </td>
           <td class="code leading">
@@ -162,8 +153,7 @@ channel will allow bursts of up to 3 events.</p>
         
         <tr>
           <td class="docs">
-            <p>Every 200 milliseconds we&rsquo;ll try to add a new
-value to <code>burstyLimiter</code>, up to its limit of 3.</p>
+            <p>200ミリ秒ごとに上限の3つまで新しい値を<code>burstyLimiter</code>に追加します。</p>
 
           </td>
           <td class="code leading">
@@ -180,9 +170,8 @@ value to <code>burstyLimiter</code>, up to its limit of 3.</p>
         
         <tr>
           <td class="docs">
-            <p>Now simulate 5 more incoming requests. The first
-3 of these will benefit from the burst capability
-of <code>burstyLimiter</code>.</p>
+            <p>ここで5つのリクエストをシュミレートします。最初の3つは
+<code>burstyLimiter</code>のバースト能力の恩恵を受けます。</p>
 
           </td>
           <td class="code">

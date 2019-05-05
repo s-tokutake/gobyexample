@@ -25,10 +25,9 @@
         
         <tr>
           <td class="docs">
-            <p>A <code>panic</code> typically means something went unexpectedly
-wrong. Mostly we use it to fail fast on errors that
-shouldn&rsquo;t occur during normal operation, or that we
-aren&rsquo;t prepared to handle gracefully.</p>
+            <p><code>panic</code>は通常、何か予期していない間違いが発生したことを示します。
+ほとんどの場合、普通の操作で起きるべきではないエラーについて早く失敗させるために使います。
+また、エラーをきれいに処理する準備ができていない場合にも使います。</p>
 
           </td>
           <td class="code empty leading">
@@ -42,7 +41,7 @@ aren&rsquo;t prepared to handle gracefully.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/c86oXzfQOt"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/OmaDfFFSnDD"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -75,9 +74,8 @@ aren&rsquo;t prepared to handle gracefully.</p>
         
         <tr>
           <td class="docs">
-            <p>We&rsquo;ll use panic throughout this site to check for
-unexpected errors. This is the only program on the
-site designed to panic.</p>
+            <p>このサイトではpanicは予期しないエラーをチェックするために使っています。
+この例はこのサイトで唯一panicのために設計されたプログラムです。</p>
 
           </td>
           <td class="code leading">
@@ -90,10 +88,8 @@ site designed to panic.</p>
         
         <tr>
           <td class="docs">
-            <p>A common use of panic is to abort if a function
-returns an error value that we don&rsquo;t know how to
-(or want to) handle. Here&rsquo;s an example of
-<code>panic</code>king if we get an unexpected error when creating a new file.</p>
+            <p>panicは関数が処理できないエラーを返したときに使うのが一般的です。
+ここでは新しいファイルを作成するときに予期しないエラーが発生した場合に<code>panic</code>しています。</p>
 
           </td>
           <td class="code">

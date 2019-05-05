@@ -25,9 +25,8 @@
         
         <tr>
           <td class="docs">
-            <p>Go offers excellent support for string formatting in
-the <code>printf</code> tradition. Here are some examples of
-common string formatting tasks.</p>
+            <p>Goは従来の<code>printf</code>の文字列フォーマッティングに対して素晴らしいサポートを提供します。
+ここではよくある文字列フォーマッティングの例を示します。</p>
 
           </td>
           <td class="code empty leading">
@@ -41,7 +40,7 @@ common string formatting tasks.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/JJAAFGxHVq"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/rx71pBp3XSK"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -89,9 +88,8 @@ common string formatting tasks.</p>
         
         <tr>
           <td class="docs">
-            <p>Go offers several printing &ldquo;verbs&rdquo; designed to
-format general Go values. For example, this prints
-an instance of our <code>point</code> struct.</p>
+            <p>Goはいくつかの表示の&rdquo;verbs&rdquo;を提供しGoの一般的な値をフォーマットできるようにしています。
+ここでは<code>point</code>構造体を表示しています。</p>
 
           </td>
           <td class="code leading">
@@ -105,8 +103,7 @@ an instance of our <code>point</code> struct.</p>
         
         <tr>
           <td class="docs">
-            <p>If the value is a struct, the <code>%+v</code> variant will
-include the struct&rsquo;s field names.</p>
+            <p>値が構造体の場合、<code>%+v</code>を使うと構造体のフィールド名が含まれます。</p>
 
           </td>
           <td class="code leading">
@@ -119,9 +116,8 @@ include the struct&rsquo;s field names.</p>
         
         <tr>
           <td class="docs">
-            <p>The <code>%#v</code> variant prints a Go syntax representation
-of the value, i.e. the source code snippet that
-would produce that value.</p>
+            <p><code>%#v</code>は対象の値のGoの構文表示です。
+つまり、対象の値を生成したソースコードスニペットを表示します。</p>
 
           </td>
           <td class="code leading">
@@ -134,7 +130,7 @@ would produce that value.</p>
         
         <tr>
           <td class="docs">
-            <p>To print the type of a value, use <code>%T</code>.</p>
+            <p>値の型を出力するなら<code>%T</code>を使います。</p>
 
           </td>
           <td class="code leading">
@@ -147,7 +143,7 @@ would produce that value.</p>
         
         <tr>
           <td class="docs">
-            <p>Formatting booleans is straight-forward.</p>
+            <p>ブーリアンの場合は直截的です。</p>
 
           </td>
           <td class="code leading">
@@ -160,8 +156,8 @@ would produce that value.</p>
         
         <tr>
           <td class="docs">
-            <p>There are many options for formatting integers.
-Use <code>%d</code> for standard, base-10 formatting.</p>
+            <p>整数のフォーマットにはたくさんのオプションがあります。
+<code>%d</code>が標準的です。基数10でフォーマッティングします。</p>
 
           </td>
           <td class="code leading">
@@ -174,7 +170,7 @@ Use <code>%d</code> for standard, base-10 formatting.</p>
         
         <tr>
           <td class="docs">
-            <p>This prints a binary representation.</p>
+            <p>バイナリで表示するにはこれです。</p>
 
           </td>
           <td class="code leading">
@@ -187,8 +183,7 @@ Use <code>%d</code> for standard, base-10 formatting.</p>
         
         <tr>
           <td class="docs">
-            <p>This prints the character corresponding to the
-given integer.</p>
+            <p>これは与えられた整数に対応するキャラクタを表示します。</p>
 
           </td>
           <td class="code leading">
@@ -201,7 +196,7 @@ given integer.</p>
         
         <tr>
           <td class="docs">
-            <p><code>%x</code> provides hex encoding.</p>
+            <p><code>%x</code>はHEXエンコーディングです。</p>
 
           </td>
           <td class="code leading">
@@ -214,8 +209,8 @@ given integer.</p>
         
         <tr>
           <td class="docs">
-            <p>There are also several formatting options for
-floats. For basic decimal formatting use <code>%f</code>.</p>
+            <p>浮動小数点数にも多くのオプションがあります。
+基本的な小数表記なら<code>%f</code>を使います。</p>
 
           </td>
           <td class="code leading">
@@ -228,8 +223,7 @@ floats. For basic decimal formatting use <code>%f</code>.</p>
         
         <tr>
           <td class="docs">
-            <p><code>%e</code> and <code>%E</code> format the float in (slightly
-different versions of) scientific notation.</p>
+            <p><code>%e</code>と<code>%E</code>は指数表記(わずかに異なるバージョン)で浮動小数点数を表します。</p>
 
           </td>
           <td class="code leading">
@@ -243,7 +237,7 @@ different versions of) scientific notation.</p>
         
         <tr>
           <td class="docs">
-            <p>For basic string printing use <code>%s</code>.</p>
+            <p>文字列は<code>%s</code>を使って基本的な出力をします。</p>
 
           </td>
           <td class="code leading">

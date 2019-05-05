@@ -25,9 +25,8 @@
         
         <tr>
           <td class="docs">
-            <p>Go&rsquo;s <code>sort</code> package implements sorting for builtins
-and user-defined types. We&rsquo;ll look at sorting for
-builtins first.</p>
+            <p>Goの<code>sort</code>パッケージは組み込みの型とユーザー定義の型に対する
+ソート処理を実装します。まずは、組み込み型に対するソートを見てみましょう。</p>
 
           </td>
           <td class="code empty leading">
@@ -41,7 +40,7 @@ builtins first.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/roQOJXtqAb"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/SNXs4rEcfHV"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -75,10 +74,10 @@ builtins first.</p>
         
         <tr>
           <td class="docs">
-            <p>Sort methods are specific to the builtin type;
-here&rsquo;s an example for strings. Note that sorting is
-in-place, so it changes the given slice and doesn&rsquo;t
-return a new one.</p>
+            <p>Sortメソッドは組み込みの型に使えます。
+ここでは文字列をソートしています。
+ソートはin-placeで行われます。
+したがって与えられたスライスをソートし、新しいスライスを返しません。</p>
 
           </td>
           <td class="code leading">
@@ -93,7 +92,7 @@ return a new one.</p>
         
         <tr>
           <td class="docs">
-            <p>An example of sorting <code>int</code>s.</p>
+            <p>これは<code>int</code>のソートです。</p>
 
           </td>
           <td class="code leading">
@@ -108,8 +107,8 @@ return a new one.</p>
         
         <tr>
           <td class="docs">
-            <p>We can also use <code>sort</code> to check if a slice is
-already in sorted order.</p>
+            <p><code>sort</code>パッケージを使って
+スライスがソート済みかどうかをチェックできます。</p>
 
           </td>
           <td class="code">

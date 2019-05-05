@@ -25,8 +25,7 @@
         
         <tr>
           <td class="docs">
-            <p><em>Interfaces</em> are named collections of method
-signatures.</p>
+            <p>_インターフェース_はメソッドのシグネチャの名前付きコレクションです。</p>
 
           </td>
           <td class="code empty leading">
@@ -40,7 +39,7 @@ signatures.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/313UebA3rD"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/lTflIMBLiRm"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -62,7 +61,7 @@ signatures.</p>
         
         <tr>
           <td class="docs">
-            <p>Here&rsquo;s a basic interface for geometric shapes.</p>
+            <p>これは図形のインターフェースです。</p>
 
           </td>
           <td class="code leading">
@@ -78,8 +77,7 @@ signatures.</p>
         
         <tr>
           <td class="docs">
-            <p>For our example we&rsquo;ll implement this interface on
-<code>rect</code> and <code>circle</code> types.</p>
+            <p>この例では<code>rect</code>型と<code>circle</code>型に上のインターフェースを実装します。</p>
 
           </td>
           <td class="code leading">
@@ -97,9 +95,9 @@ signatures.</p>
         
         <tr>
           <td class="docs">
-            <p>To implement an interface in Go, we just need to
-implement all the methods in the interface. Here we
-implement <code>geometry</code> on <code>rect</code>s.</p>
+            <p>Goでインターフェースを実装するには、
+単にインターフェースのすべてのメソッドを実装すればいいだけです。
+ここでは<code>rect</code>に<code>geometry</code>を実装します。</p>
 
           </td>
           <td class="code leading">
@@ -117,7 +115,7 @@ implement <code>geometry</code> on <code>rect</code>s.</p>
         
         <tr>
           <td class="docs">
-            <p>The implementation for <code>circle</code>s.</p>
+            <p>circle`に実装します。</p>
 
           </td>
           <td class="code leading">
@@ -135,10 +133,8 @@ implement <code>geometry</code> on <code>rect</code>s.</p>
         
         <tr>
           <td class="docs">
-            <p>If a variable has an interface type, then we can call
-methods that are in the named interface. Here&rsquo;s a
-generic <code>measure</code> function taking advantage of this
-to work on any <code>geometry</code>.</p>
+            <p>変数がインターフェース型の場合、その名前付きインターフェースのメソッドを呼び出せます。
+ここでは、この利点を生かしたどのような<code>geometry</code>にも使える<code>measure</code>関数を定義します。</p>
 
           </td>
           <td class="code leading">
@@ -169,10 +165,8 @@ to work on any <code>geometry</code>.</p>
         
         <tr>
           <td class="docs">
-            <p>The <code>circle</code> and <code>rect</code> struct types both
-implement the <code>geometry</code> interface so we can use
-instances of
-these structs as arguments to <code>measure</code>.</p>
+            <p><code>circle</code>も<code>rect</code>も<code>geometry</code>インターフェースを実装しています。
+したがって<code>measure</code>の引数として渡せます。</p>
 
           </td>
           <td class="code">

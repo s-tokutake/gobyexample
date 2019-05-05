@@ -9,17 +9,17 @@ import "fmt"
 // この関数のシグネチャの`(int, int)`は
 // ふたつの`int`を返す関数であることを示します。
 func vals() (int, int) {
-	return 3, 7
+    return 3, 7
 }
 
 func main() {
 
-	// _多重代入_でふたつ異なる戻り値を取得します。
-	a, b := vals()
-	fmt.Println(a)
-	fmt.Println(b)
+    // _多重代入_でふたつ異なる戻り値を取得します。
+    a, b := vals()
+    fmt.Println(a)
+    fmt.Println(b)
 
-	// 一部の戻り値だけ欲しいならブランク識別子`_`を使えます。
-	_, c := vals()
-	fmt.Println(c)
+    // 一部の戻り値だけ欲しいならブランク識別子`_`を使えます。
+    _, c := vals()
+    fmt.Println(c)
 }
