@@ -203,8 +203,8 @@
         
         <tr>
           <td class="docs">
-            <p>To learn more about Go&rsquo;s interfaces, check out this
-<a href="http://jordanorelli.tumblr.com/post/32665860244/how-to-use-interfaces-in-go">great blog post</a>.</p>
+            <p>インターフェースをさらに詳しく学ぶには
+<a href="http://jordanorelli.tumblr.com/post/32665860244/how-to-use-interfaces-in-go">この素晴らしい記事</a>を参考にしてください。</p>
 
           </td>
           <td class="code empty">

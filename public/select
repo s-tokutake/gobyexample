@@ -136,8 +136,7 @@ selectとゴルーチン、チャンネルの組み合わせはGoの強力な特
         
         <tr>
           <td class="docs">
-            <p>We receive the values <code>&quot;one&quot;</code> and then <code>&quot;two&quot;</code> as
-expected.</p>
+            <p>まず<code>&quot;one&quot;</code>を受け取り次に<code>&quot;two&quot;</code>を受け取ります。</p>
 
           </td>
           <td class="code leading">
@@ -152,9 +151,8 @@ expected.</p>
         
         <tr>
           <td class="docs">
-            <p>Note that the total execution time is only ~2 seconds
-since both the 1 and 2 second <code>Sleeps</code> execute
-concurrently.</p>
+            <p>トータルの実行時間は2秒程度です。
+1秒、2秒の<code>Sleeps</code>は平行で実行されるからです。</p>
 
           </td>
           <td class="code">

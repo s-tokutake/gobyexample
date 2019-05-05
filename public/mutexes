@@ -249,9 +249,8 @@
         
         <tr>
           <td class="docs">
-            <p>Running the program shows that we executed about
-90,000 total operations against our <code>mutex</code>-synchronized
-<code>state</code>.</p>
+            <p>実行すると<code>mutex</code>で同期処理にした<code>state</code>に対して
+およそ90,000回の操作が行われたのがわかります。</p>
 
           </td>
           <td class="code leading">
@@ -267,8 +266,7 @@
         
         <tr>
           <td class="docs">
-            <p>Next we&rsquo;ll look at implementing this same state
-management task using only goroutines and channels.</p>
+            <p>次はゴルーチンとチャンネルを使って同様の状態管理を実装してみましょう。</p>
 
           </td>
           <td class="code empty">
