@@ -1,40 +1,36 @@
-// Go supports [_anonymous functions_](http://en.wikipedia.org/wiki/Anonymous_function),
-// which can form <a href="http://en.wikipedia.org/wiki/Closure_(computer_science)"><em>closures</em></a>.
-// Anonymous functions are useful when you want to define
-// a function inline without having to name it.
+// Goは[_無名関数_](https://ja.wikipedia.org/wiki/%E7%84%A1%E5%90%8D%E9%96%A2%E6%95%B0)をサポートします。
+// これは<a href="https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B8%E3%83%A3"><em>クロージャ</em></a>を作ります。
+// 無名関数は名付けることなくインラインで関数を定義したい場合に便利です。
 
 package main
 
 import "fmt"
 
-// This function `intSeq` returns another function, which
-// we define anonymously in the body of `intSeq`. The
-// returned function _closes over_ the variable `i` to
-// form a closure.
+// この`intSeq`関数は別の関数を返します。
+// `intSeq`の内部で無名で定義された関数です。
+// この無名の関数は変数`i`を_閉じ込めて_クロージャを作ります。
 func intSeq() func() int {
-    i := 0
-    return func() int {
-        i++
-        return i
-    }
+	i := 0
+	return func() int {
+		i++
+		return i
+	}
 }
 
 func main() {
 
-    // We call `intSeq`, assigning the result (a function)
-    // to `nextInt`. This function value captures its
-    // own `i` value, which will be updated each time
-    // we call `nextInt`.
-    nextInt := intSeq()
+	// `intSeq`を呼び出し、`nextInt`に設定します。
+	// この関数値は`i`の値を捕捉しています。
+	// この値は`nextInt`を呼び出すたびに更新されます。
+	nextInt := intSeq()
 
-    // See the effect of the closure by calling `nextInt`
-    // a few times.
-    fmt.Println(nextInt())
-    fmt.Println(nextInt())
-    fmt.Println(nextInt())
+	// `nextInt`を何回か呼び出してクロージャの挙動を確かめてみます。
+	fmt.Println(nextInt())
+	fmt.Println(nextInt())
+	fmt.Println(nextInt())
 
-    // To confirm that the state is unique to that
-    // particular function, create and test a new one.
-    newInts := intSeq()
-    fmt.Println(newInts())
+	// 状態が個別の関数でユニークであること確認するため、
+	// 新しい関数値を作って実行してみます。
+	newInts := intSeq()
+	fmt.Println(newInts())
 }

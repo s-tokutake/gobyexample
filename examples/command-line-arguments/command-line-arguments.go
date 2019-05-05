@@ -1,7 +1,7 @@
-// [_Command-line arguments_](http://en.wikipedia.org/wiki/Command-line_interface#Arguments)
-// are a common way to parameterize execution of programs.
-// For example, `go run hello.go` uses `run` and
-// `hello.go` arguments to the `go` program.
+// [_コマンドライン引数_](http://en.wikipedia.org/wiki/Command-line_interface#Arguments)はプログラムの実行を
+// パラメータ化する一般的な方法です。
+// 例えば、`go run hello.go`は`run`と
+// `hello.go`というふたつの引数を`go`プログラムに渡しています。
 
 package main
 
@@ -10,17 +10,16 @@ import "fmt"
 
 func main() {
 
-    // `os.Args` provides access to raw command-line
-    // arguments. Note that the first value in this slice
-    // is the path to the program, and `os.Args[1:]`
-    // holds the arguments to the program.
-    argsWithProg := os.Args
-    argsWithoutProg := os.Args[1:]
+	// `os.Args`は生のコマンドライン引数へのアクセスを提供します。
+	// このスライスの最初の値がプログラムへのパスであり、
+	// `os.Args[1:]`にプログラムへの引数が含まれることに注意してください。
+	argsWithProg := os.Args
+	argsWithoutProg := os.Args[1:]
 
-    // You can get individual args with normal indexing.
-    arg := os.Args[3]
+	// 個別の引数はふつうのインデックスで取得できます。
+	arg := os.Args[3]
 
-    fmt.Println(argsWithProg)
-    fmt.Println(argsWithoutProg)
-    fmt.Println(arg)
+	fmt.Println(argsWithProg)
+	fmt.Println(argsWithoutProg)
+	fmt.Println(arg)
 }

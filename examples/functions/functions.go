@@ -1,35 +1,31 @@
-// _Functions_ are central in Go. We'll learn about
-// functions with a few different examples.
+// _関数_はGoの中心です。ここではいくつかの異なる例を
+// 通じて関数を学びます。
 
 package main
 
 import "fmt"
 
-// Here's a function that takes two `int`s and returns
-// their sum as an `int`.
+// ふたつの`int`を受け取ってその合計を返す関数です。
 func plus(a int, b int) int {
 
-    // Go requires explicit returns, i.e. it won't
-    // automatically return the value of the last
-    // expression.
-    return a + b
+	// Goでは明示的なreturnが必要です。最後の式の値を
+	// を自動的に返すことはしません。
+	return a + b
 }
 
-// When you have multiple consecutive parameters of
-// the same type, you may omit the type name for the
-// like-typed parameters up to the final parameter that
-// declares the type.
+// 同じ型の連続した複数のパラメータを取る場合は、
+// 最後のパラメータまで型の名前を省略できます。
+// 最後のパラメータで型を宣言します。
 func plusPlus(a, b, c int) int {
-    return a + b + c
+	return a + b + c
 }
 
 func main() {
 
-    // Call a function just as you'd expect, with
-    // `name(args)`.
-    res := plus(1, 2)
-    fmt.Println("1+2 =", res)
+	// 関数呼び出しはおなじみの`name(args)`という形式です。
+	res := plus(1, 2)
+	fmt.Println("1+2 =", res)
 
-    res = plusPlus(1, 2, 3)
-    fmt.Println("1+2+3 =", res)
+	res = plusPlus(1, 2, 3)
+	fmt.Println("1+2+3 =", res)
 }

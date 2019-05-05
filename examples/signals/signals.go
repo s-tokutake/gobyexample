@@ -1,9 +1,7 @@
-// Sometimes we'd like our Go programs to intelligently
-// handle [Unix signals](http://en.wikipedia.org/wiki/Unix_signal).
-// For example, we might want a server to gracefully
-// shutdown when it receives a `SIGTERM`, or a command-line
-// tool to stop processing input if it receives a `SIGINT`.
-// Here's how to handle signals in Go with channels.
+// Goで[Unixシグナル](http://en.wikipedia.org/wiki/Unix_signal)を賢く扱いたい場合があります。
+// 例えば、`SIGTERM`を受信した場合、サーバをきれいに停止したり、
+// `SIGINT`を受信したら入力の処理を停止するコマンドラインツールを作ったりする場合です。
+// ここではチャンネルを使ってシグナルを処理する方法を示します。
 
 package main
 
@@ -14,31 +12,27 @@ import "syscall"
 
 func main() {
 
-    // Go signal notification works by sending `os.Signal`
-    // values on a channel. We'll create a channel to
-    // receive these notifications (we'll also make one to
-    // notify us when the program can exit).
-    sigs := make(chan os.Signal, 1)
-    done := make(chan bool, 1)
+	// Goのシグナル通知は`os.Signal`値をチャンネルに送信することで実現します。
+	// `os.Signal`を受け取るためのチャンネルを作ります。
+	// (また、プログラムが終了できることを通知するチャンネルも作ります)
+	sigs := make(chan os.Signal, 1)
+	done := make(chan bool, 1)
 
-    // `signal.Notify` registers the given channel to
-    // receive notifications of the specified signals.
-    signal.Notify(sigs, syscall.SIGINT, syscall.SIGTERM)
+	// `signal.Notify`でチャンネルを登録し、定義したシグナルの通知を受信するようにします。
+	signal.Notify(sigs, syscall.SIGINT, syscall.SIGTERM)
 
-    // This goroutine executes a blocking receive for
-    // signals. When it gets one it'll print it out
-    // and then notify the program that it can finish.
-    go func() {
-        sig := <-sigs
-        fmt.Println()
-        fmt.Println(sig)
-        done <- true
-    }()
+	// このゴルーチンがブロックしながらシグナルの受信をします。
+	// シグナルを受信したら表示してプログラムが終了できることを通知します。
+	go func() {
+		sig := <-sigs
+		fmt.Println()
+		fmt.Println(sig)
+		done <- true
+	}()
 
-    // The program will wait here until it gets the
-    // expected signal (as indicated by the goroutine
-    // above sending a value on `done`) and then exit.
-    fmt.Println("awaiting signal")
-    <-done
-    fmt.Println("exiting")
+	// 期待されるシグナル(`done`に値を送っている上のゴルーチンが示す)を得るまで
+	// プログラムは停止し、その後、終了します。
+	fmt.Println("awaiting signal")
+	<-done
+	fmt.Println("exiting")
 }
