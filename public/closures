@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Go by Example: Closures</title>
+    <title>Go by Example: クロージャ</title>
     <link rel=stylesheet href="site.css">
   </head>
   <script type="text/javascript">
@@ -19,7 +19,7 @@
   </script>
   <body>
     <div class="example" id="closures">
-      <h2><a href="./">Go by Example</a>: Closures</h2>
+      <h2><a href="./">Go by Example</a>: クロージャ</h2>
       
       <table>
         
@@ -175,7 +175,7 @@ recursion.</p>
       
       
       <p class="next">
-        次の例: <a href="recursion">Recursion</a>.
+        次の例: <a href="recursion">再帰</a>.
       </p>
       
       <p class="footer">

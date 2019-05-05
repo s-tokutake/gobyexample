@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Go by Example: Reading Files</title>
+    <title>Go by Example: ファイル読み込み</title>
     <link rel=stylesheet href="site.css">
   </head>
   <script type="text/javascript">
@@ -19,7 +19,7 @@
   </script>
   <body>
     <div class="example" id="reading-files">
-      <h2><a href="./">Go by Example</a>: Reading Files</h2>
+      <h2><a href="./">Go by Example</a>: ファイル読み込み</h2>
       
       <table>
         
@@ -277,7 +277,7 @@
       
       
       <p class="next">
-        次の例: <a href="writing-files">Writing Files</a>.
+        次の例: <a href="writing-files">ファイル書き込み</a>.
       </p>
       
       <p class="footer">

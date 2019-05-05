@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Go by Example: Spawning Processes</title>
+    <title>Go by Example: プロセスの起動</title>
     <link rel=stylesheet href="site.css">
   </head>
   <script type="text/javascript">
@@ -19,7 +19,7 @@
   </script>
   <body>
     <div class="example" id="spawning-processes">
-      <h2><a href="./">Go by Example</a>: Spawning Processes</h2>
+      <h2><a href="./">Go by Example</a>: プロセスの起動</h2>
       
       <table>
         
@@ -235,7 +235,7 @@ as if we had run them directly from the command-line.</p>
       
       
       <p class="next">
-        次の例: <a href="execing-processes">Exec'ing Processes</a>.
+        次の例: <a href="execing-processes">プロセスの実行</a>.
       </p>
       
       <p class="footer">

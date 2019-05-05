@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Go by Example: Tickers</title>
+    <title>Go by Example: ティッカー</title>
     <link rel=stylesheet href="site.css">
   </head>
   <script type="text/javascript">
@@ -19,7 +19,7 @@
   </script>
   <body>
     <div class="example" id="tickers">
-      <h2><a href="./">Go by Example</a>: Tickers</h2>
+      <h2><a href="./">Go by Example</a>: ティッカー</h2>
       
       <table>
         
@@ -136,7 +136,7 @@ before we stop it.</p>
       
       
       <p class="next">
-        次の例: <a href="worker-pools">Worker Pools</a>.
+        次の例: <a href="worker-pools">ワーカープール</a>.
       </p>
       
       <p class="footer">

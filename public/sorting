@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Go by Example: Sorting</title>
+    <title>Go by Example: ソート</title>
     <link rel=stylesheet href="site.css">
   </head>
   <script type="text/javascript">
@@ -19,7 +19,7 @@
   </script>
   <body>
     <div class="example" id="sorting">
-      <h2><a href="./">Go by Example</a>: Sorting</h2>
+      <h2><a href="./">Go by Example</a>: ソート</h2>
       
       <table>
         
@@ -146,7 +146,7 @@ slices and <code>true</code> as the result of our <code>AreSorted</code> test.</
       
       
       <p class="next">
-        次の例: <a href="sorting-by-functions">Sorting by Functions</a>.
+        次の例: <a href="sorting-by-functions">関数によるソート</a>.
       </p>
       
       <p class="footer">

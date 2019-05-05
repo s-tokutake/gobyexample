@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Go by Example: SHA1 Hashes</title>
+    <title>Go by Example: SHA1ハッシュ</title>
     <link rel=stylesheet href="site.css">
   </head>
   <script type="text/javascript">
@@ -19,7 +19,7 @@
   </script>
   <body>
     <div class="example" id="sha1-hashes">
-      <h2><a href="./">Go by Example</a>: SHA1 Hashes</h2>
+      <h2><a href="./">Go by Example</a>: SHA1ハッシュ</h2>
       
       <table>
         
@@ -184,7 +184,7 @@ you should carefully research
       
       
       <p class="next">
-        次の例: <a href="base64-encoding">Base64 Encoding</a>.
+        次の例: <a href="base64-encoding">Base64エンコーディング</a>.
       </p>
       
       <p class="footer">

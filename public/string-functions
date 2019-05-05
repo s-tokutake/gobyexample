@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Go by Example: String Functions</title>
+    <title>Go by Example: 文字列関数</title>
     <link rel=stylesheet href="site.css">
   </head>
   <script type="text/javascript">
@@ -19,7 +19,7 @@
   </script>
   <body>
     <div class="example" id="string-functions">
-      <h2><a href="./">Go by Example</a>: String Functions</h2>
+      <h2><a href="./">Go by Example</a>: 文字列関数</h2>
       
       <table>
         
@@ -178,7 +178,7 @@ GoはUTF-8でエンコードされた文字列を使うので多くの場合そ�
       
       
       <p class="next">
-        次の例: <a href="string-formatting">String Formatting</a>.
+        次の例: <a href="string-formatting">文字列のフォーマッティング</a>.
       </p>
       
       <p class="footer">

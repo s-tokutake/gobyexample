@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Go by Example: Timeouts</title>
+    <title>Go by Example: タイムアウト</title>
     <link rel=stylesheet href="site.css">
   </head>
   <script type="text/javascript">
@@ -19,7 +19,7 @@
   </script>
   <body>
     <div class="example" id="timeouts">
-      <h2><a href="./">Go by Example</a>: Timeouts</h2>
+      <h2><a href="./">Go by Example</a>: タイムアウト</h2>
       
       <table>
         
@@ -180,7 +180,7 @@ examples of this next: timers and tickers.</p>
       
       
       <p class="next">
-        次の例: <a href="non-blocking-channel-operations">Non-Blocking Channel Operations</a>.
+        次の例: <a href="non-blocking-channel-operations">ノンブロッキングチャンネル操作</a>.
       </p>
       
       <p class="footer">

@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Go by Example: Variadic Functions</title>
+    <title>Go by Example: 可変長引数関数</title>
     <link rel=stylesheet href="site.css">
   </head>
   <script type="text/javascript">
@@ -19,7 +19,7 @@
   </script>
   <body>
     <div class="example" id="variadic-functions">
-      <h2><a href="./">Go by Example</a>: Variadic Functions</h2>
+      <h2><a href="./">Go by Example</a>: 可変長引数関数</h2>
       
       <table>
         
@@ -156,7 +156,7 @@ to form closures, which we&rsquo;ll look at next.</p>
       
       
       <p class="next">
-        次の例: <a href="closures">Closures</a>.
+        次の例: <a href="closures">クロージャ</a>.
       </p>
       
       <p class="footer">

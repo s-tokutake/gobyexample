@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Go by Example: Stateful Goroutines</title>
+    <title>Go by Example: 状態を持つゴルーチン</title>
     <link rel=stylesheet href="site.css">
   </head>
   <script type="text/javascript">
@@ -19,7 +19,7 @@
   </script>
   <body>
     <div class="example" id="stateful-goroutines">
-      <h2><a href="./">Go by Example</a>: Stateful Goroutines</h2>
+      <h2><a href="./">Go by Example</a>: 状態を持つゴルーチン</h2>
       
       <table>
         
@@ -289,7 +289,7 @@ program.</p>
       
       
       <p class="next">
-        次の例: <a href="sorting">Sorting</a>.
+        次の例: <a href="sorting">ソート</a>.
       </p>
       
       <p class="footer">

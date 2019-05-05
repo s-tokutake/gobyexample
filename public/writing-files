@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Go by Example: Writing Files</title>
+    <title>Go by Example: ファイル書き込み</title>
     <link rel=stylesheet href="site.css">
   </head>
   <script type="text/javascript">
@@ -19,7 +19,7 @@
   </script>
   <body>
     <div class="example" id="writing-files">
-      <h2><a href="./">Go by Example</a>: Writing Files</h2>
+      <h2><a href="./">Go by Example</a>: ファイル書き込み</h2>
       
       <table>
         
@@ -272,7 +272,7 @@ we&rsquo;ve just seen to the <code>stdin</code> and <code>stdout</code> streams.
       
       
       <p class="next">
-        次の例: <a href="line-filters">Line Filters</a>.
+        次の例: <a href="line-filters">ラインフィルタ</a>.
       </p>
       
       <p class="footer">

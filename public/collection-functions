@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Go by Example: Collection Functions</title>
+    <title>Go by Example: コレクション関数</title>
     <link rel=stylesheet href="site.css">
   </head>
   <script type="text/javascript">
@@ -19,7 +19,7 @@
   </script>
   <body>
     <div class="example" id="collection-functions">
-      <h2><a href="./">Go by Example</a>: Collection Functions</h2>
+      <h2><a href="./">Go by Example</a>: コレクション関数</h2>
       
       <table>
         
@@ -348,7 +348,7 @@ Goでは必要に応じてコレクション関数を定義するのが一般的
       
       
       <p class="next">
-        次の例: <a href="string-functions">String Functions</a>.
+        次の例: <a href="string-functions">文字列関数</a>.
       </p>
       
       <p class="footer">

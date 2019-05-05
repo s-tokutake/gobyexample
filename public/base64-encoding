@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Go by Example: Base64 Encoding</title>
+    <title>Go by Example: Base64エンコーディング</title>
     <link rel=stylesheet href="site.css">
   </head>
   <script type="text/javascript">
@@ -19,7 +19,7 @@
   </script>
   <body>
     <div class="example" id="base64-encoding">
-      <h2><a href="./">Go by Example</a>: Base64 Encoding</h2>
+      <h2><a href="./">Go by Example</a>: Base64エンコーディング</h2>
       
       <table>
         
@@ -173,7 +173,7 @@ but they both decode to the original string as desired.</p>
       
       
       <p class="next">
-        次の例: <a href="reading-files">Reading Files</a>.
+        次の例: <a href="reading-files">ファイル読み込み</a>.
       </p>
       
       <p class="footer">

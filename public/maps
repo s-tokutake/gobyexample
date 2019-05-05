@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Go by Example: Maps</title>
+    <title>Go by Example: マップ</title>
     <link rel=stylesheet href="site.css">
   </head>
   <script type="text/javascript">
@@ -19,7 +19,7 @@
   </script>
   <body>
     <div class="example" id="maps">
-      <h2><a href="./">Go by Example</a>: Maps</h2>
+      <h2><a href="./">Go by Example</a>: マップ</h2>
       
       <table>
         

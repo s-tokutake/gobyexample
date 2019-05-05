@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Go by Example: URL Parsing</title>
+    <title>Go by Example: URLのパース処理</title>
     <link rel=stylesheet href="site.css">
   </head>
   <script type="text/javascript">
@@ -19,7 +19,7 @@
   </script>
   <body>
     <div class="example" id="url-parsing">
-      <h2><a href="./">Go by Example</a>: URL Parsing</h2>
+      <h2><a href="./">Go by Example</a>: URLのパース処理</h2>
       
       <table>
         
@@ -218,7 +218,7 @@ pieces that we extracted.</p>
       
       
       <p class="next">
-        次の例: <a href="sha1-hashes">SHA1 Hashes</a>.
+        次の例: <a href="sha1-hashes">SHA1ハッシュ</a>.
       </p>
       
       <p class="footer">

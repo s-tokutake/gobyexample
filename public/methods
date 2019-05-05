@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Go by Example: Methods</title>
+    <title>Go by Example: メソッド</title>
     <link rel=stylesheet href="site.css">
   </head>
   <script type="text/javascript">
@@ -19,7 +19,7 @@
   </script>
   <body>
     <div class="example" id="methods">
-      <h2><a href="./">Go by Example</a>: Methods</h2>
+      <h2><a href="./">Go by Example</a>: メソッド</h2>
       
       <table>
         
@@ -185,7 +185,7 @@ naming related sets of methods: interfaces.</p>
       
       
       <p class="next">
-        次の例: <a href="interfaces">Interfaces</a>.
+        次の例: <a href="interfaces">インターフェース</a>.
       </p>
       
       <p class="footer">

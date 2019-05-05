@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Go by Example: Random Numbers</title>
+    <title>Go by Example: 乱数</title>
     <link rel=stylesheet href="site.css">
   </head>
   <script type="text/javascript">
@@ -19,7 +19,7 @@
   </script>
   <body>
     <div class="example" id="random-numbers">
-      <h2><a href="./">Go by Example</a>: Random Numbers</h2>
+      <h2><a href="./">Go by Example</a>: 乱数</h2>
       
       <table>
         
@@ -211,7 +211,7 @@ that Go can provide.</p>
       
       
       <p class="next">
-        次の例: <a href="number-parsing">Number Parsing</a>.
+        次の例: <a href="number-parsing">数値のパース処理</a>.
       </p>
       
       <p class="footer">

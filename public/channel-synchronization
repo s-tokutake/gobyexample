@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Go by Example: Channel Synchronization</title>
+    <title>Go by Example: チャンネル同期</title>
     <link rel=stylesheet href="site.css">
   </head>
   <script type="text/javascript">
@@ -19,7 +19,7 @@
   </script>
   <body>
     <div class="example" id="channel-synchronization">
-      <h2><a href="./">Go by Example</a>: Channel Synchronization</h2>
+      <h2><a href="./">Go by Example</a>: チャンネル同期</h2>
       
       <table>
         
@@ -166,7 +166,7 @@ started.</p>
       
       
       <p class="next">
-        次の例: <a href="channel-directions">Channel Directions</a>.
+        次の例: <a href="channel-directions">チャンネル方向</a>.
       </p>
       
       <p class="footer">

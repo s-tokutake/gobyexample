@@ -220,8 +220,10 @@ func parseExamples() []*Example {
 	examples := make([]*Example, 0)
 	for _, exampleName := range exampleNames {
 		if (exampleName != "") && !strings.HasPrefix(exampleName, "#") {
-			example := Example{Name: exampleName}
-			exampleID := strings.ToLower(exampleName)
+			id := strings.Split(exampleName, ",")[0]
+			name := strings.Split(exampleName, ",")[1]
+			example := Example{Name: name}
+			exampleID := strings.ToLower(id)
 			exampleID = strings.Replace(exampleID, " ", "-", -1)
 			exampleID = strings.Replace(exampleID, "/", "-", -1)
 			exampleID = strings.Replace(exampleID, "'", "", -1)
