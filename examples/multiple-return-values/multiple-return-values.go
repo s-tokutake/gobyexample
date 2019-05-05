@@ -1,27 +1,25 @@
-// Go has built-in support for _multiple return values_.
-// This feature is used often in idiomatic Go, for example
-// to return both result and error values from a function.
+// Goは_複数戻り値_をサポートします。
+// これはGoでは慣用的に使われます。
+// 例えば、結果とエラーを両方返す場合です。
 
 package main
 
 import "fmt"
 
-// The `(int, int)` in this function signature shows that
-// the function returns 2 `int`s.
+// この関数のシグネチャの`(int, int)`は
+// ふたつの`int`を返す関数であることを示します。
 func vals() (int, int) {
-    return 3, 7
+	return 3, 7
 }
 
 func main() {
 
-    // Here we use the 2 different return values from the
-    // call with _multiple assignment_.
-    a, b := vals()
-    fmt.Println(a)
-    fmt.Println(b)
+	// _多重代入_でふたつ異なる戻り値を取得します。
+	a, b := vals()
+	fmt.Println(a)
+	fmt.Println(b)
 
-    // If you only want a subset of the returned values,
-    // use the blank identifier `_`.
-    _, c := vals()
-    fmt.Println(c)
+	// 一部の戻り値だけ欲しいならブランク識別子`_`を使えます。
+	_, c := vals()
+	fmt.Println(c)
 }

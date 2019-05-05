@@ -1,8 +1,6 @@
-// We often want to execute Go code at some point in the
-// future, or repeatedly at some interval. Go's built-in
-// _timer_ and _ticker_ features make both of these tasks
-// easy. We'll look first at timers and then
-// at [tickers](tickers).
+// Goのコードを未来のある時点でで実行したい場合があります。
+// また、一定間隔で実行したい場合もあります。Goの組み込みの_timer_と_ticker_を
+// 使うとこのふたつは簡単に実現できます。まずはtimerを紹介し、次に[tickers](tickers)を紹介します。
 
 package main
 
@@ -11,29 +9,27 @@ import "fmt"
 
 func main() {
 
-    // Timers represent a single event in the future. You
-    // tell the timer how long you want to wait, and it
-    // provides a channel that will be notified at that
-    // time. This timer will wait 2 seconds.
-    timer1 := time.NewTimer(2 * time.Second)
+	// タイマーは未来の単一のイベントを表します。
+	// タイマーにどのくらい待ってほしいかを指定すると、
+	// タイマーはそのタイミングで通知をくれるチャンネルを提供してくれます。
+	// ここでは2秒待ちます。
+	timer1 := time.NewTimer(2 * time.Second)
 
-    // The `<-timer1.C` blocks on the timer's channel `C`
-    // until it sends a value indicating that the timer
-    // expired.
-    <-timer1.C
-    fmt.Println("Timer 1 expired")
+	// `<-timer1.C`はタイマーのチャンネル`C`で
+	// タイマーが時間が来たことを示す値を送信するまでブロックします。
+	<-timer1.C
+	fmt.Println("Timer 1 expired")
 
-    // If you just wanted to wait, you could have used
-    // `time.Sleep`. One reason a timer may be useful is
-    // that you can cancel the timer before it expires.
-    // Here's an example of that.
-    timer2 := time.NewTimer(time.Second)
-    go func() {
-        <-timer2.C
-        fmt.Println("Timer 2 expired")
-    }()
-    stop2 := timer2.Stop()
-    if stop2 {
-        fmt.Println("Timer 2 stopped")
-    }
+	// 単に待ちたいだけなら`time.Sleep`が使えます。
+	// タイマーが便利な理由のひとつは時間が来る前にキャンセルできるからです。
+	// ここでその例を示します。
+	timer2 := time.NewTimer(time.Second)
+	go func() {
+		<-timer2.C
+		fmt.Println("Timer 2 expired")
+	}()
+	stop2 := timer2.Stop()
+	if stop2 {
+		fmt.Println("Timer 2 stopped")
+	}
 }

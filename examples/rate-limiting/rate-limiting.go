@@ -1,8 +1,5 @@
-// <em>[Rate limiting](http://en.wikipedia.org/wiki/Rate_limiting)</em>
-// is an important mechanism for controlling resource
-// utilization and maintaining quality of service. Go
-// elegantly supports rate limiting with goroutines,
-// channels, and [tickers](tickers).
+// <em>[律速](http://en.wikipedia.org/wiki/Rate_limiting)</em>はリソース利用の制御とサービスの質の維持にとって重要な仕組みです。
+// Goはゴルーチンとチャンネルとtickers](tickers)を使って律速をエレガントにサポートします。
 
 package main
 
@@ -11,59 +8,51 @@ import "fmt"
 
 func main() {
 
-    // First we'll look at basic rate limiting. Suppose
-    // we want to limit our handling of incoming requests.
-    // We'll serve these requests off a channel of the
-    // same name.
-    requests := make(chan int, 5)
-    for i := 1; i <= 5; i++ {
-        requests <- i
-    }
-    close(requests)
+	// 最初は基本的な例です。処理するリクエスト数を制限したいとします。
+	// ここではrequestsという名のチャンネルでリクエストを処理します。
+	requests := make(chan int, 5)
+	for i := 1; i <= 5; i++ {
+		requests <- i
+	}
+	close(requests)
 
-    // This `limiter` channel will receive a value
-    // every 200 milliseconds. This is the regulator in
-    // our rate limiting scheme.
-    limiter := time.Tick(200 * time.Millisecond)
+	// `limiter`チャンネルは200ミリ秒ごとに値を受信します。
+	// これが律速の調整弁いなります。
+	limiter := time.Tick(200 * time.Millisecond)
 
-    // By blocking on a receive from the `limiter` channel
-    // before serving each request, we limit ourselves to
-    // 1 request every 200 milliseconds.
-    for req := range requests {
-        <-limiter
-        fmt.Println("request", req, time.Now())
-    }
+	// リクエストを処理する前のlimiter`チャンネルからの受信でブロックされることで
+	// 200ミリ秒に1リクエスト処理するという制限がかかります。
+	for req := range requests {
+		<-limiter
+		fmt.Println("request", req, time.Now())
+	}
 
-    // We may want to allow short bursts of requests in
-    // our rate limiting scheme while preserving the
-    // overall rate limit. We can accomplish this by
-    // buffering our limiter channel. This `burstyLimiter`
-    // channel will allow bursts of up to 3 events.
-    burstyLimiter := make(chan time.Time, 3)
+	// 全体の律速は一定に保ったままリクエストが短い間バーストするのはを許容したい
+	// 場合があります。これは`limiter`チャンネルをバッファありにすることで実現できます。
+	// この`burstyLimiter`チャンネルは3回までバーストを許容します。
+	burstyLimiter := make(chan time.Time, 3)
 
-    // Fill up the channel to represent allowed bursting.
-    for i := 0; i < 3; i++ {
-        burstyLimiter <- time.Now()
-    }
+	// チャンネルを埋めて許容されたバーストを表します。
+	for i := 0; i < 3; i++ {
+		burstyLimiter <- time.Now()
+	}
 
-    // Every 200 milliseconds we'll try to add a new
-    // value to `burstyLimiter`, up to its limit of 3.
-    go func() {
-        for t := range time.Tick(200 * time.Millisecond) {
-            burstyLimiter <- t
-        }
-    }()
+	// 200ミリ秒ごとに上限の3つまで新しい値を`burstyLimiter`に追加します。
+	go func() {
+		for t := range time.Tick(200 * time.Millisecond) {
+			burstyLimiter <- t
+		}
+	}()
 
-    // Now simulate 5 more incoming requests. The first
-    // 3 of these will benefit from the burst capability
-    // of `burstyLimiter`.
-    burstyRequests := make(chan int, 5)
-    for i := 1; i <= 5; i++ {
-        burstyRequests <- i
-    }
-    close(burstyRequests)
-    for req := range burstyRequests {
-        <-burstyLimiter
-        fmt.Println("request", req, time.Now())
-    }
+	// ここで5つのリクエストをシュミレートします。最初の3つは
+	// `burstyLimiter`のバースト能力の恩恵を受けます。
+	burstyRequests := make(chan int, 5)
+	for i := 1; i <= 5; i++ {
+		burstyRequests <- i
+	}
+	close(burstyRequests)
+	for req := range burstyRequests {
+		<-burstyLimiter
+		fmt.Println("request", req, time.Now())
+	}
 }

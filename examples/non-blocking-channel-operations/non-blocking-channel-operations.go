@@ -1,49 +1,45 @@
-// Basic sends and receives on channels are blocking.
-// However, we can use `select` with a `default` clause to
-// implement _non-blocking_ sends, receives, and even
-// non-blocking multi-way `select`s.
+// 基本的なチャンネルの送受信はブロッキングです。
+// しかし、`default`句のある`select`を使うことで
+// _ノンブロッキング_な送受信やノンブロッキングで複数チャンネルを扱う`select`を実装できます。
 
 package main
 
 import "fmt"
 
 func main() {
-    messages := make(chan string)
-    signals := make(chan bool)
+	messages := make(chan string)
+	signals := make(chan bool)
 
-    // Here's a non-blocking receive. If a value is
-    // available on `messages` then `select` will take
-    // the `<-messages` `case` with that value. If not
-    // it will immediately take the `default` case.
-    select {
-    case msg := <-messages:
-        fmt.Println("received message", msg)
-    default:
-        fmt.Println("no message received")
-    }
+	// これがノンブロッキングな受信です。`messages`の値が利用可能なら
+	// `select`は`<-messages`の`case`を選択し値を取得します。
+	// そうでないなら即座に`default`を選択します。
+	select {
+	case msg := <-messages:
+		fmt.Println("received message", msg)
+	default:
+		fmt.Println("no message received")
+	}
 
-    // A non-blocking send works similarly. Here `msg`
-    // cannot be sent to the `messages` channel, because
-    // the channel has no buffer and there is no receiver.
-    // Therefore the `default` case is selected.
-    msg := "hi"
-    select {
-    case messages <- msg:
-        fmt.Println("sent message", msg)
-    default:
-        fmt.Println("no message sent")
-    }
+	// ノンブロッキングな送信も同様です。ここでは`msg`は`messages`チャンネルに送信されません。
+	// チャンネルがバッファなしであり、対応する受信がないからです。
+	// それゆえ、`default`が選択されます。
+	msg := "hi"
+	select {
+	case messages <- msg:
+		fmt.Println("sent message", msg)
+	default:
+		fmt.Println("no message sent")
+	}
 
-    // We can use multiple `case`s above the `default`
-    // clause to implement a multi-way non-blocking
-    // select. Here we attempt non-blocking receives
-    // on both `messages` and `signals`.
-    select {
-    case msg := <-messages:
-        fmt.Println("received message", msg)
-    case sig := <-signals:
-        fmt.Println("received signal", sig)
-    default:
-        fmt.Println("no activity")
-    }
+	// 複数の`case`を`default`の前に書くことでノンブロッキングで
+	// 複数チャンネルを扱うselectを実装できます。
+	// ここでは、`messages`と`signals`からの受信をノンブロッキングで行なっています。
+	select {
+	case msg := <-messages:
+		fmt.Println("received message", msg)
+	case sig := <-signals:
+		fmt.Println("received signal", sig)
+	default:
+		fmt.Println("no activity")
+	}
 }
