@@ -1,5 +1,4 @@
-# Note that arrays appear in the form `[v1 v2 v3 ...]`
-# when printed with `fmt.Println`.
+# `fmt.Println`をすると配列は`[v1 v2 v3 ...]`という形式で表示されます。
 $ go run arrays.go
 emp: [0 0 0 0 0]
 set: [0 0 0 0 100]
@@ -8,5 +7,5 @@ len: 5
 dcl: [1 2 3 4 5]
 2d:  [[0 1 2] [1 2 3]]
 
-# You'll see _slices_ much more often than arrays in
-# typical Go. We'll look at slices next.
+# 典型的なGoのコードでは配列よりも_スライス_を多く見かけます。
+# 次はスライスを見ましょう。
