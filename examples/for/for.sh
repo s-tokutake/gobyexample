@@ -10,6 +10,4 @@ loop
 3
 5
 
-# We'll see some other `for` forms later when we look at
-# `range` statements, channels, and other data
-# structures.
+# `range`文、チャンネルや他のデータ構造を紹介するときに`for`の別のかたちも見ます。 

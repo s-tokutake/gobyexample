@@ -123,9 +123,8 @@
         
         <tr>
           <td class="docs">
-            <p>When we run the program the <code>&quot;ping&quot;</code> message is
-successfully passed from one goroutine to another via
-our channel.</p>
+            <p>プログラムを実行すると<code>&quot;ping&quot;</code>メッセージがチャンネル経由でひとつの
+ゴルーチンから別のゴルーチンに渡されます。</p>
 
           </td>
           <td class="code leading">
@@ -139,10 +138,9 @@ our channel.</p>
         
         <tr>
           <td class="docs">
-            <p>By default sends and receives block until both the
-sender and receiver are ready. This property allowed
-us to wait at the end of our program for the <code>&quot;ping&quot;</code>
-message without having to use any other synchronization.</p>
+            <p>デフォルトでは送信者と受信者の両方が準備完了になるまで
+送信と受信はブロックされます。これによって他の同期の仕組みを使わなくても
+プログラムの最後で<code>&quot;ping&quot;</code>メッセージを待つことができます。</p>
 
           </td>
           <td class="code empty">
@@ -159,7 +157,7 @@ message without having to use any other synchronization.</p>
       </p>
       
       <p class="footer">
-        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/channels">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/s-tokutake/gobyexample-ja/blob/master/examples/channels">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
       </p>
     </div>
   </body>

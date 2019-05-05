@@ -139,8 +139,8 @@
         
         <tr>
           <td class="docs">
-            <p>Accepting a variable number of arguments is another nice
-feature of Go functions; we&rsquo;ll look at this next.</p>
+            <p>たくさんの引数を取れるのもGoの関数の優れた特徴です。
+次はそれを見てみます。</p>
 
           </td>
           <td class="code empty">
@@ -157,7 +157,7 @@ feature of Go functions; we&rsquo;ll look at this next.</p>
       </p>
       
       <p class="footer">
-        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/multiple-return-values">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/s-tokutake/gobyexample-ja/blob/master/examples/multiple-return-values">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
       </p>
     </div>
   </body>

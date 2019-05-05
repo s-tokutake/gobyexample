@@ -40,7 +40,7 @@
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/Q33iZYqqZaI"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/YLJMTe_4okX"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -136,7 +136,7 @@
         
         <tr>
           <td class="docs">
-            <p>ここではパースされたオプションと後続する可能性のある引数をダンプします。
+            <p>ここではパースされたオプションと後続する位置引数をダンプします。
 <code>*wordPtr</code>というかたちでポインタをデリファレンスして実際の
 オプション値を取得する必要があることに注意してください。</p>
 
@@ -174,8 +174,7 @@
         
         <tr>
           <td class="docs">
-            <p>Try out the built program by first giving it values for
-all flags.</p>
+            <p>まずすべてのフラグを渡してビルドしたプログラムを実行します。</p>
 
           </td>
           <td class="code leading">
@@ -193,8 +192,7 @@ all flags.</p>
         
         <tr>
           <td class="docs">
-            <p>Note that if you omit flags they automatically take
-their default values.</p>
+            <p>フラグを省略したらデフォルトの値が設定されます。</p>
 
           </td>
           <td class="code leading">
@@ -212,8 +210,7 @@ their default values.</p>
         
         <tr>
           <td class="docs">
-            <p>Trailing positional arguments can be provided after
-any flags.</p>
+            <p>末尾の位置引数はフラグの後に提供されます。</p>
 
           </td>
           <td class="code leading">
@@ -229,9 +226,8 @@ any flags.</p>
         
         <tr>
           <td class="docs">
-            <p>Note that the <code>flag</code> package requires all flags to
-appear before positional arguments (otherwise the flags
-will be interpreted as positional arguments).</p>
+            <p><code>flag</code>パッケージは位置引数の前にすべてのフラグが出現することを要求します。
+そうしないとフラグが位置引数だと解釈されるからです。</p>
 
           </td>
           <td class="code leading">
@@ -249,8 +245,8 @@ will be interpreted as positional arguments).</p>
         
         <tr>
           <td class="docs">
-            <p>Use <code>-h</code> or <code>--help</code> flags to get automatically
-generated help text for the command-line program.</p>
+            <p><code>-h</code>または<code>--help</code>フラグはコマンドラインプログラムのヘルプを
+自動的に生成します。</p>
 
           </td>
           <td class="code leading">
@@ -268,9 +264,8 @@ generated help text for the command-line program.</p>
         
         <tr>
           <td class="docs">
-            <p>If you provide a flag that wasn&rsquo;t specified to the
-<code>flag</code> package, the program will print an error message
-and show the help text again.</p>
+            <p><code>flag</code>パッケージで定義しなかったフラグを渡すと
+プログラムはエラーメッセージを表示し、ヘルプを表示します。</p>
 
           </td>
           <td class="code leading">
@@ -286,8 +281,7 @@ and show the help text again.</p>
         
         <tr>
           <td class="docs">
-            <p>Next we&rsquo;ll look at environment variables, another common
-way to parameterize programs.</p>
+            <p>次は環境変数です。これもプログラムをパラメータ化する一般的な方法です。</p>
 
           </td>
           <td class="code empty">
@@ -304,7 +298,7 @@ way to parameterize programs.</p>
       </p>
       
       <p class="footer">
-        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/command-line-flags">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/s-tokutake/gobyexample-ja/blob/master/examples/command-line-flags">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
       </p>
     </div>
   </body>

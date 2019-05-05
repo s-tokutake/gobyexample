@@ -140,8 +140,7 @@
         
         <tr>
           <td class="docs">
-            <p>Running the program computes the hash and prints it in
-a human-readable hex format.</p>
+            <p>実行するとハッシュを計算し人間が読めるhexフォーマットで表示します。</p>
 
           </td>
           <td class="code leading">
@@ -156,9 +155,8 @@ a human-readable hex format.</p>
         
         <tr>
           <td class="docs">
-            <p>You can compute other hashes using a similar pattern to
-the one shown above. For example, to compute MD5 hashes
-import <code>crypto/md5</code> and use <code>md5.New()</code>.</p>
+            <p>上と同じようなパターンで異なるハッシュを計算できます。
+例えば、MD5なら<code>crypto/md5</code>をインポートして、<code>md5.New()</code>です。</p>
 
           </td>
           <td class="code empty leading">
@@ -169,9 +167,7 @@ import <code>crypto/md5</code> and use <code>md5.New()</code>.</p>
         
         <tr>
           <td class="docs">
-            <p>Note that if you need cryptographically secure hashes,
-you should carefully research
-<a href="http://en.wikipedia.org/wiki/Cryptographic_hash_function">hash strength</a>!</p>
+            <p>暗号論的ハッシュが必要なら<a href="http://en.wikipedia.org/wiki/Cryptographic_hash_function">ハッシュの強度</a>ついてしっかりと調べてください。!</p>
 
           </td>
           <td class="code empty">
@@ -188,7 +184,7 @@ you should carefully research
       </p>
       
       <p class="footer">
-        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/sha1-hashes">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/s-tokutake/gobyexample-ja/blob/master/examples/sha1-hashes">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
       </p>
     </div>
   </body>

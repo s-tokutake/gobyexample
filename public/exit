@@ -117,8 +117,8 @@
         
         <tr>
           <td class="docs">
-            <p>If you run <code>exit.go</code> using <code>go run</code>, the exit
-will be picked up by <code>go</code> and printed.</p>
+            <p><code>go run</code>を使って<code>exit.go</code>を実行すると
+<code>go</code>が終了を取り出し結果を表示します。</p>
 
           </td>
           <td class="code leading">
@@ -132,8 +132,7 @@ will be picked up by <code>go</code> and printed.</p>
         
         <tr>
           <td class="docs">
-            <p>By building and executing a binary you can see
-the status in the terminal.</p>
+            <p>ビルドしてバイナリを実行するとステータスはターミナルで確認できます。</p>
 
           </td>
           <td class="code leading">
@@ -149,7 +148,7 @@ the status in the terminal.</p>
         
         <tr>
           <td class="docs">
-            <p>Note that the <code>!</code> from our program never got printed.</p>
+            <p><code>!</code>は決して表示されないことに注意してください。</p>
 
           </td>
           <td class="code empty">
@@ -162,7 +161,7 @@ the status in the terminal.</p>
       
       
       <p class="footer">
-        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/exit">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/s-tokutake/gobyexample-ja/blob/master/examples/exit">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
       </p>
     </div>
   </body>

@@ -1,7 +1,5 @@
-// A _line filter_ is a common type of program that reads
-// input on stdin, processes it, and then prints some
-// derived result to stdout. `grep` and `sed` are common
-// line filters.
+// _ラインフィルタ_は標準入力を受け取って処理し標準出力に結果を表示する
+// という一般的なプログラムです。`grep`や`sed`は一般的なラインフィルタです。
 
 // Here's an example line filter in Go that writes a
 // capitalized version of all input text. You can use this

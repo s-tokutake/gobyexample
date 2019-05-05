@@ -197,8 +197,8 @@ Goはゴルーチンとチャンネルとtickers](tickers)を使って律速を�
         
         <tr>
           <td class="docs">
-            <p>Running our program we see the first batch of requests
-handled once every ~200 milliseconds as desired.</p>
+            <p>プログラムを実行するリクエストの最初のバッチが
+想定どおり200ミリ秒ごとに処理されているのがわかります。</p>
 
           </td>
           <td class="code leading">
@@ -216,9 +216,8 @@ handled once every ~200 milliseconds as desired.</p>
         
         <tr>
           <td class="docs">
-            <p>For the second batch of requests we serve the first
-3 immediately because of the burstable rate limiting,
-then serve the remaining 2 with ~200ms delays each.</p>
+            <p>次のバッチは、バーストの設定により最初の3つのリクエストが即座に実行され
+その後ふたつのリクエストが200ミリ秒ごと遅れて実行されます。</p>
 
           </td>
           <td class="code">
@@ -241,7 +240,7 @@ then serve the remaining 2 with ~200ms delays each.</p>
       </p>
       
       <p class="footer">
-        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/rate-limiting">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/s-tokutake/gobyexample-ja/blob/master/examples/rate-limiting">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
       </p>
     </div>
   </body>

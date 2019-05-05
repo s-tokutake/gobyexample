@@ -2,8 +2,7 @@
 # バイナリを直接実行するといいでしょう。
 $ go build command-line-flags.go
 
-# Try out the built program by first giving it values for
-# all flags.
+# まずすべてのフラグを渡してビルドしたプログラムを実行します。
 $ ./command-line-flags -word=opt -numb=7 -fork -svar=flag
 word: opt
 numb: 7
@@ -11,8 +10,7 @@ fork: true
 svar: flag
 tail: []
 
-# Note that if you omit flags they automatically take
-# their default values.
+# フラグを省略したらデフォルトの値が設定されます。
 $ ./command-line-flags -word=opt
 word: opt
 numb: 42
@@ -20,16 +18,14 @@ fork: false
 svar: bar
 tail: []
 
-# Trailing positional arguments can be provided after
-# any flags.
+# 末尾の位置引数はフラグの後に提供されます。
 $ ./command-line-flags -word=opt a1 a2 a3
 word: opt
 ...
 tail: [a1 a2 a3]
 
-# Note that the `flag` package requires all flags to
-# appear before positional arguments (otherwise the flags
-# will be interpreted as positional arguments).
+# `flag`パッケージは位置引数の前にすべてのフラグが出現することを要求します。
+# そうしないとフラグが位置引数だと解釈されるからです。
 $ ./command-line-flags -word=opt a1 a2 a3 -numb=7
 word: opt
 numb: 42
@@ -37,8 +33,8 @@ fork: false
 svar: bar
 tail: [a1 a2 a3 -numb=7]
 
-# Use `-h` or `--help` flags to get automatically
-# generated help text for the command-line program.
+# `-h`または`--help`フラグはコマンドラインプログラムのヘルプを
+# 自動的に生成します。
 $ ./command-line-flags -h
 Usage of ./command-line-flags:
   -fork=false: a bool
@@ -46,13 +42,11 @@ Usage of ./command-line-flags:
   -svar="bar": a string var
   -word="foo": a string
 
-# If you provide a flag that wasn't specified to the
-# `flag` package, the program will print an error message
-# and show the help text again.
+# `flag`パッケージで定義しなかったフラグを渡すと
+# プログラムはエラーメッセージを表示し、ヘルプを表示します。
 $ ./command-line-flags -wat
 flag provided but not defined: -wat
 Usage of ./command-line-flags:
 ...
 
-# Next we'll look at environment variables, another common
-# way to parameterize programs.
+# 次は環境変数です。これもプログラムをパラメータ化する一般的な方法です。

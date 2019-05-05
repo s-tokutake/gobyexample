@@ -1,5 +1,5 @@
-# To try out our line filter, first make a file with a few
-# lowercase lines.
+# ラインフィルタを試してみましょう。
+# まず小文字の文字列を含んだのファイルを作ります。
 $ echo 'hello'   > /tmp/lines
 $ echo 'filter' >> /tmp/lines
 

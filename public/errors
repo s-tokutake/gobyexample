@@ -261,8 +261,7 @@ C言語で使われることがあるオーバーロードされた単一の結�
         
         <tr>
           <td class="docs">
-            <p>See this <a href="http://blog.golang.org/2011/07/error-handling-and-go.html">great post</a>
-on the Go blog for more on error handling.</p>
+            <p>エラー処理についてはGoブログの<a href="http://blog.golang.org/2011/07/error-handling-and-go.html">この素晴らしい記事</a>を参考にしてください。</p>
 
           </td>
           <td class="code empty">
@@ -279,7 +278,7 @@ on the Go blog for more on error handling.</p>
       </p>
       
       <p class="footer">
-        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/errors">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/s-tokutake/gobyexample-ja/blob/master/examples/errors">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
       </p>
     </div>
   </body>

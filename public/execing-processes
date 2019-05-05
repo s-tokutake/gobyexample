@@ -145,7 +145,7 @@
         
         <tr>
           <td class="docs">
-            <p>When we run our program it is replaced by <code>ls</code>.</p>
+            <p>このプログラムは実行すると<code>ls</code>に置き換わります。</p>
 
           </td>
           <td class="code leading">
@@ -162,10 +162,9 @@
         
         <tr>
           <td class="docs">
-            <p>Note that Go does not offer a classic Unix <code>fork</code>
-function. Usually this isn&rsquo;t an issue though, since
-starting goroutines, spawning processes, and exec&rsquo;ing
-processes covers most use cases for <code>fork</code>.</p>
+            <p>Goは従来のUnixの<code>fork</code>は提供しません。
+しかし、ゴルーチンの開始、プロセスの起動、プロセスの実行が
+<code>fork</code>を使う場合のほとんどのケースをカバーするため問題になりません。</p>
 
           </td>
           <td class="code empty">
@@ -182,7 +181,7 @@ processes covers most use cases for <code>fork</code>.</p>
       </p>
       
       <p class="footer">
-        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/mmcgrana/gobyexample/blob/master/examples/execing-processes">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+        by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | translated by <a href="https://twitter.com/tokutakes">@tokutakes</a> | <a href="https://github.com/s-tokutake/gobyexample-ja/blob/master/examples/execing-processes">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
       </p>
     </div>
   </body>
